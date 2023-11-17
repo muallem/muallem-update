@@ -69,7 +69,8 @@ class Kuan extends Component
                         $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                         $originalName = $file->getClientOriginalName();
                         
-                        $file->move('assets/files/attachment_materi', $fileName);
+                        // $file->move('assets/files/attachment_materi', $fileName);
+                        $file->move(public_path('assets/files/attachment_materi'), $fileName);
     
                         $materi = new Materi();
                         $materi->file_name = $originalName;
