@@ -150,7 +150,7 @@
                                     $file = $item['file'];
                                 @endphp
                                     <li class="list-group-item">
-                                        <a href="{{ asset("storage/app/public/attachments/$file") }}"
+                                        <a href="https://kitabah.muallem.id/assets/files/attachment_materi/{{ $file }}"
                                             class="text-decoration-none text-info "
                                             download="{{ $item['file_name'] }}"
                                         >

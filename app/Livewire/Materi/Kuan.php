@@ -68,6 +68,8 @@ class Kuan extends Component
                         // Process each uploaded file
                         $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                         $originalName = $file->getClientOriginalName();
+                        
+                        $file->move('assets/files/attachment_materi', $fileName);
                         $filePath = $file->storeAs('attachments', $fileName, 'public');
     
                         $materi = new Materi();
