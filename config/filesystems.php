@@ -36,19 +36,19 @@ return [
             'throw' => false,
         ],
 
-        // 'public' => [
-        //     'driver' => 'local',
-        //     'root' => storage_path('app/public'),
-        //     'url' => env('APP_URL').'/storage',
-        //     'visibility' => 'public',
-        //     'throw' => false,
-        // ],
         'public' => [
             'driver' => 'local',
-            'root' => public_path('muallem_kitabah'), // Update this line
-            'url' => env('APP_URL').'/muallem_kitabah',
+            'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
+            'throw' => false,
         ],
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => public_path(''), // Update this line
+        //     'url' => env('APP_URL').'/',
+        //     'visibility' => 'public',
+        // ],
 
         's3' => [
             'driver' => 's3',

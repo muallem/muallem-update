@@ -82,7 +82,6 @@ class Kuan extends Component
                         // 
                         // $file->move('assets/files/attachment_materi', $fileName);
                         $filePath = $file->storeAs('attachments', $fileName, 'public');
-                        // $path = $request->file('file')->store('muallem_kitabah/assets/files/attachment_materi');
 
     
                         $materi = new Materi();
