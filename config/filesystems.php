@@ -36,12 +36,18 @@ return [
             'throw' => false,
         ],
 
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => storage_path('app/public'),
+        //     'url' => env('APP_URL').'/storage',
+        //     'visibility' => 'public',
+        //     'throw' => false,
+        // ],
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'root' => public_path('muallem_kitabah'), // Update this line
+            'url' => env('APP_URL').'/muallem_kitabah',
             'visibility' => 'public',
-            'throw' => false,
         ],
 
         's3' => [

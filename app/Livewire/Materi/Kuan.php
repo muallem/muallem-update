@@ -68,9 +68,14 @@ class Kuan extends Component
                         // Process each uploaded file
                         $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                         $originalName = $file->getClientOriginalName();
+
+                        $destinationPath = public_path('muallem_kitabah/assets/files/attachment_materi'); 
+                        $file->move($destinationPath, $fileName);
+                        // $file->move(public_path('assets/files/attachment_materi'), $fileName);
                         
-                        // $file->move('assets/files/attachment_materi', $fileName);
-                        $file->move(public_path('assets/files/attachment_materi'), $fileName);
+                        // // $file->move('assets/files/attachment_materi', $fileName);
+                        // $path = $request->file('file')->store('muallem_kitabah/assets/files/attachment_materi');
+
     
                         $materi = new Materi();
                         $materi->file_name = $originalName;
