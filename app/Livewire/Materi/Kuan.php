@@ -69,10 +69,15 @@ class Kuan extends Component
                         $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                         $originalName = $file->getClientOriginalName();
 
-                        $basePath = base_path('public_html/muallem_kitabah');
-                        $destinationPath = $basePath. '/assets/files/attachment_materi'; 
-                        // Could not move the file "/tmp/phpv6MwmM" to "/home/n1488259/muallem-kitabah/public/muallem_kitabah/assets/files/attachment_materi/8ygpHUJjw2XnnTnKDDPT.svg"
+                        // $basePath = base_path('public_html/muallem_kitabah');
+                        // $destinationPath = $basePath. '/assets/files/attachment_materi'; 
+                        // $file->move($destinationPath, $fileName);
+                        $basePath = base_path();  // This points to "/home/n1488259/muallem-kitabah"
+                        $publicPath = public_path();  // This points to "/home/n1488259/public_html"
+
+                        $destinationPath = $publicPath . '/muallem_kitabah/assets/files/attachment_materi';
                         $file->move($destinationPath, $fileName);
+                        // Could not move the file "/tmp/phpv6MwmM" to "/home/n1488259/muallem-kitabah/public/muallem_kitabah/assets/files/attachment_materi/8ygpHUJjw2XnnTnKDDPT.svg"
                         // $file->move(public_path('assets/files/attachment_materi'), $fileName);
                         
                         // // $file->move('assets/files/attachment_materi', $fileName);
