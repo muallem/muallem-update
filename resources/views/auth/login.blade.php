@@ -12,7 +12,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
 </head>
 
 <body>
