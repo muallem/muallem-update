@@ -20,34 +20,30 @@ class AuthHelper
         $expired_time = Carbon::now()->format('Y-m-d').' 23:59:00';
         $token = Encoder::encode("mail@mail.com".';'.$expired_time, env('APP_SECRET_KEY'));
         
-        Session::put('token', $token);
-        Session::put('user_id', 4);
-        Session::put('user_name', 'Student');
-        Session::put('user_role', 'student');
         // Include the necessary parts of the pluggable.php file
-        // require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
+        require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
 
-        // try {
-        //     // Your login logic here
-        //     $user = User::where("user_email", $user_email)->first();
-        //     $hasher = new \PasswordHash(8, true);
-        //     if(!$user){
-        //         return response()->json(['message' => 'Not permitted', 'ok' => false], 402);
-        //     }
-        //     if (!$hasher->CheckPassword($password, $user->user_pass)) {
-        //         return response()->json(['message' => 'Not permitted', 'ok' => false], 402);
-        //     }
-        //     $expired_time = Carbon::now()->format('Y-m-d').' 23:59:00';
-        //     $token = Encoder::encode($user->user_email.';'.$expired_time, env('APP_SECRET_KEY'));
+        try {
+            // Your login logic here
+            $user = User::where("user_email", $user_email)->first();
+            $hasher = new \PasswordHash(8, true);
+            if(!$user){
+                return response()->json(['message' => 'Not permitted', 'ok' => false], 402);
+            }
+            if (!$hasher->CheckPassword($password, $user->user_pass)) {
+                return response()->json(['message' => 'Not permitted', 'ok' => false], 402);
+            }
+            $expired_time = Carbon::now()->format('Y-m-d').' 23:59:00';
+            $token = Encoder::encode($user->user_email.';'.$expired_time, env('APP_SECRET_KEY'));
 
-        //     Session::put('token', $token);
-        //     Session::put('user_id', $user->ID);
-        //     Session::put('user_name', $user->user_login);
-        //     Session::put('user_role', $user->role);
+            Session::put('token', $token);
+            Session::put('user_id', $user->ID);
+            Session::put('user_name', $user->user_login);
+            Session::put('user_role', $user->role);
             return response()->json(['message' => 'Success', 'ok' => true], 200);
-        // } catch (Exception $e) {
-        //     return $e;
-        // }
+        } catch (Exception $e) {
+            return $e;
+        }
     }
     public static function isSessionToken()
     {
