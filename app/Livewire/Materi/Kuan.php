@@ -69,7 +69,9 @@ class Kuan extends Component
                         $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                         $originalName = $file->getClientOriginalName();
 
-                        $destinationPath = public_path('muallem_kitabah/assets/files/attachment_materi'); 
+                        $basePath = base_path('public_html/muallem_kitabah');
+                        $destinationPath = $basePath. '/assets/files/attachment_materi'; 
+                        // Could not move the file "/tmp/phpv6MwmM" to "/home/n1488259/muallem-kitabah/public/muallem_kitabah/assets/files/attachment_materi/8ygpHUJjw2XnnTnKDDPT.svg"
                         $file->move($destinationPath, $fileName);
                         // $file->move(public_path('assets/files/attachment_materi'), $fileName);
                         
@@ -91,6 +93,7 @@ class Kuan extends Component
                     $materi_feedback->materi_id = $materi->id;
                     $materi_feedback->save();
                 }
+
     
                 // Reset the form fields
                 $this->reset(['files']);
