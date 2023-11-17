@@ -79,8 +79,9 @@ class Kuan extends Component
                         // $file->move($destinationPath, $fileName);
                         // Could not move the file "/tmp/phpv6MwmM" to "/home/n1488259/muallem-kitabah/public/muallem_kitabah/assets/files/attachment_materi/8ygpHUJjw2XnnTnKDDPT.svg"
                         // $file->move(public_path('assets/files/attachment_materi'), $fileName);
-                        
-                        $file->move('assets/files/attachment_materi', $fileName);
+                        // 
+                        // $file->move('assets/files/attachment_materi', $fileName);
+                        $filePath = $file->storeAs('attachments', $fileName, 'public');
                         // $path = $request->file('file')->store('muallem_kitabah/assets/files/attachment_materi');
 
     
