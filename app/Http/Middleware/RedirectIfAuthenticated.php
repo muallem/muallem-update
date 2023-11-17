@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Helpers\AuthHelper;
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
@@ -20,11 +21,19 @@ class RedirectIfAuthenticated
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+            if (AuthHelper::isSessionToken()) {
+                if(AuthHelper::isAdmin()){
+                    return redirect()->route('admin.index');
+                }
+                return redirect()->route('student.index');
             }
         }
+        $response = $next($request);
 
-        return $next($request);
+        // Handle 404 errors
+        if ($response->status() == 404) {
+            return redirect()->route('login.index'); // Redirect to the login route for 404 errors
+        }
+        return $response;
     }
 }
