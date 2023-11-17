@@ -116,7 +116,8 @@ class Kuan extends Component
         } catch (\Exception $e) {
             // Handle the exception, e.g., log the error
             // Emit failure event
-            $this->emit('onFailSweetAlert', 'Gagal Mengirim Data !');
+            $this->emit('consoleLog', $e);
+            $this->emit('onFailSweetAlert', $e);
         }
     }
     public function render()
