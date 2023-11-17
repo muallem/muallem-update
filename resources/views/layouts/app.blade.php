@@ -11,9 +11,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="{{asset('storage/bootstrap5/dist/assets/css/sweetalert2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/sweetalert2.min.css')}}">
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{{asset('storage/bootstrap5/dist/assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('storage/app/public/bootstrap5/dist/assets/css/main.css')}}">
     @livewireStyles
 </head>
 
@@ -87,11 +87,11 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
         <!-- core js file -->
-        <script src="{{asset('storage/bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
-        <script src="{{asset('storage/bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
         
         <!-- page js file -->
-        <script src="{{asset('storage/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
+        <script src="{{asset('storage/app/public/bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
         @livewireScripts
 
         <script>
