@@ -70,7 +70,6 @@ class Kuan extends Component
                         $originalName = $file->getClientOriginalName();
                         
                         $file->move('assets/files/attachment_materi', $fileName);
-                        $filePath = $file->storeAs('attachments', $fileName, 'public');
     
                         $materi = new Materi();
                         $materi->file_name = $originalName;
