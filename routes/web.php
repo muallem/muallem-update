@@ -21,20 +21,20 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login');
 });
 
-// Route::group(['middleware' => ['my.auth', 'admin']], function () {
+Route::group(['middleware' => ['my.auth', 'admin']], function () {
     Route::group(['controller' => AdminController::class, 'prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/materi', 'materi')->name('materi');
         Route::get('/rnd', 'rnd')->name('rnd');
     });
-// });
+});
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-// Route::group(['middleware' => ['my.auth', 'student']], function () {
+Route::group(['middleware' => ['my.auth', 'student']], function () {
     Route::group(['controller' => StudentController::class, 'prefix' => 'student', 'as' => 'student.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/kual', 'kual')->name('kual');
         Route::get('/kuan', 'kuan')->name('kuan');
         Route::get('/rnd', 'rnd')->name('rnd');
     });
-// });
+ });
