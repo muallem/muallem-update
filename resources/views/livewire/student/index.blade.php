@@ -8,6 +8,8 @@
             </blockquote>
             <hr>
             @if($data_judul->group)
+
+                <h6 class="form-label">Feedback</h6>
                 <blockquote class="blockquote border border-primary p-3">
                     <p>
                         @switch($data_judul->group)

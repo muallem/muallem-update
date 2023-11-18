@@ -15,7 +15,7 @@
                 <hr>
                 @if($data_judul->group)
                     <div class="w-100">
-                        <label class="form-label">Feedback</label>
+                        <h6 class="form-label">Feedback</h6>
                         
                         <blockquote class="blockquote border border-primary p-3">
                             <p>
