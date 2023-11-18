@@ -8,7 +8,21 @@
             </blockquote>
             <hr>
             @if($data_judul->group)
-                <div class="alert alert-success" role="alert">{{$data_judul->group}}</div>
+                <blockquote class="blockquote border border-primary p-3">
+                    <p>
+                        @switch($data_judul->group)
+                            @case(\App\Models\Judul::TYPE_KUAN)
+                                Kuantitatif (KUAN)
+                                @break
+                            @case(\App\Models\Judul::TYPE_KUAL)
+                                Kuanlitatif (KUAL)
+                                @break
+                            @case(\App\Models\Judul::TYPE_RND)
+                                Research And Development (RND)
+                                @break
+                        @endswitch
+                    </p>
+                </blockquote>
             @else
                 <div class="alert alert-warning" role="alert">Tunggu Feedback dari Dosen !</div>
             @endif
