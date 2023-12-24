@@ -20,7 +20,7 @@
             .tab-content {
                 font-size: 20px;
             }
-            .nav-tabs {
+            .nav-link {
                 font-size: 20px;
             }
         }

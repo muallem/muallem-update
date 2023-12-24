@@ -14,7 +14,7 @@
                     <ul class="nav nav-tabs nav-tabs-new2" role="tablist">
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-latar_belakang_masalah', 'kual-latar_belakang_masalah')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-latar_belakang_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-latar_belakang_masalah" aria-selected="true" role="tab" >
-                                <p>(Latar belakang Masalah) ‌خلفية البحث </p>
+                                (Latar belakang Masalah) ‌خلفية البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -28,7 +28,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-rumusan_masalah', 'kual-rumusan_masalah')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-rumusan_masalah" aria-selected="true" role="tab" >
-                                <p>(Rumusan Masalah)‌ أسئلة البحث </p>
+                                (Rumusan Masalah)‌ أسئلة البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -42,7 +42,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-tujuan_penelitian', 'kual-tujuan_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-tujuan_penelitian" aria-selected="true" role="tab" >
-                                <p>(Tujuan Penelitian)‌ أهداف البحث  </p>
+                                (Tujuan Penelitian)‌ أهداف البحث  
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -56,7 +56,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-manfaat_penelitian', 'kual-manfaat_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-manfaat_penelitian" aria-selected="true" role="tab" >
-                                <p>(Manfaat Penelitian)‌ فوائد البحث </p>
+                                (Manfaat Penelitian)‌ فوائد البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -70,7 +70,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-hipotesis_penelitian', 'kual-hipotesis_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-hipotesis_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-hipotesis_penelitian" aria-selected="true" role="tab" >
-                                <p>(Hipotesis Penelitian)‌ ‌فروض البحث</p>
+                                (Hipotesis Penelitian)‌ ‌فروض البحث
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -84,7 +84,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-ruang_lingkup_penelitian', 'kual-ruang_lingkup_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-ruang_lingkup_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-ruang_lingkup_penelitian" aria-selected="true" role="tab" >
-                                <p>(Ruang lingkup Penelitian)‌‌ حدود البحث    </p>
+                                (Ruang lingkup Penelitian)‌‌ حدود البحث    
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -98,7 +98,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-definisi_operasional', 'kual-definisi_operasional')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-definisi_operasional' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-definisi_operasional" aria-selected="true" role="tab" >
-                                <p>(Definisi Operasional)‌ تحديد المصطلحات </p>
+                                (Definisi Operasional)‌ تحديد المصطلحات 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -112,7 +112,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-kajian_terdahulu', 'kual-kajian_terdahulu')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-kajian_terdahulu' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-kajian_terdahulu" aria-selected="true" role="tab" >
-                                <p>(Kajian terdahulu)‌ الدراسات السابقة</p>
+                                (Kajian terdahulu)‌ الدراسات السابقة
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -126,7 +126,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-landasan_teori', 'kual-landasan_teori')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'kual-landasan_teori' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-landasan_teori" aria-selected="true" role="tab" >
-                                <p>(Landasan Teori) الفصل الثاني: الإطار النظري </p>
+                                (Landasan Teori) الفصل الثاني: الإطار النظري 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
