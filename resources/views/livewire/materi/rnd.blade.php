@@ -11,7 +11,7 @@
             
             <div class="card-body">
                 <form class="chat-input px-3" wire:submit.prevent='store'>
-                    <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-between" role="tablist">
+                    <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-latar_belakang_masalah', 'rnd-latar_belakang_masalah')">
                             <a style="font-size: 23px;" class="nav-link bg-primary text-white {{ $tab1 === 'rnd-latar_belakang_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-latar_belakang_masalah" aria-selected="true" role="tab" >
                                 (Latar belakang Masalah) خلفية البحث 
