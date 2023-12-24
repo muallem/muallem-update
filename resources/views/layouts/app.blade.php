@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
     @livewireStyles
     <style>
+        .nav-tabs.nav-tabs-new2>li>a.active {
+            background-color: #59d7f0;
+            color: black;
+        }
         @media only screen and (min-width: 769px) {
             .tab-content {
                 font-size: 20px;
-            }
-            .nav-tabs.nav-tabs-new2>li>a.active {
-                background-color: #59d7f0;
-                color: black;
             }
         }
     </style>
