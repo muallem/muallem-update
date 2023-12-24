@@ -19,7 +19,7 @@
         /* Default styles for the tabs */
         .nav-tabs-new2 .nav-item a.nav-link {
             font-size: 23px;
-            background-color: #4285f4; /* Default background color */
+            background-color: #2eacb3; /* Default background color */
             color: white; /* Default text color */
         }
 
@@ -27,6 +27,9 @@
         .nav-tabs-new2 .nav-item a.nav-link.active {
             background-color: #59d7f0; /* Background color for active tab */
             color: black; /* Text color for active tab */
+        }
+        .nav-tabs-new2 .nav-item a.nav-link:hover {
+            color: white; /* Text color on hover */
         }
         @media only screen and (min-width: 769px) {
             .tab-content {
