@@ -24,7 +24,7 @@
 
         <div class="row g-3 clearfix">
             <div class="col-lg-12 col-md-12">
-               @livewire('materi.kuan')
+               @livewire('materi.rnd')
             </div>
         </div>
 
