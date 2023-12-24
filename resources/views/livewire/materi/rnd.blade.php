@@ -14,7 +14,7 @@
                     <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-between" role="tablist">
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-latar_belakang_masalah', 'rnd-latar_belakang_masalah')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-latar_belakang_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-latar_belakang_masalah" aria-selected="true" role="tab" >
-                                (Latar belakang Masalah) ‌أ. خلفية البحث 
+                                (Latar belakang Masalah) خلفية البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -28,7 +28,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-rumusan_masalah', 'rnd-rumusan_masalah')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-rumusan_masalah" aria-selected="true" role="tab" >
-                                (Rumusan Masalah)‌ ب. أسئلة البحث 
+                                (Rumusan Masalah)‌أسئلة البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -42,7 +42,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-tujuan_penelitian', 'rnd-tujuan_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-tujuan_penelitian" aria-selected="true" role="tab" >
-                                (Tujuan Penelitian)‌ ج.	أهداف البحث  
+                                (Tujuan Penelitian)‌أهداف البحث  
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -56,7 +56,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-manfaat_penelitian', 'rnd-manfaat_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-manfaat_penelitian" aria-selected="true" role="tab" >
-                                (Manfaat Penelitian)‌ د.	فوائد البحث 
+                                (Manfaat Penelitian)‌فوائد البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -70,7 +70,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-hipotesis_penelitian', 'rnd-hipotesis_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-hipotesis_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-hipotesis_penelitian" aria-selected="true" role="tab" >
-                                (Hipotesis Penelitian)‌ ‌ه.	فروض البحث
+                                (Hipotesis Penelitian)‌ فروض البحث
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -84,7 +84,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-ruang_lingkup_penelitian', 'rnd-ruang_lingkup_penelitian')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-ruang_lingkup_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-ruang_lingkup_penelitian" aria-selected="true" role="tab" >
-                                (Ruang lingkup Penelitian)‌‌ و.	حدود البحث    
+                                (Ruang lingkup Penelitian)‌‌حدود البحث    
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -98,7 +98,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-definisi_operasional', 'rnd-definisi_operasional')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-definisi_operasional' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-definisi_operasional" aria-selected="true" role="tab" >
-                                (Definisi Operasional)‌ ز.	تحديد المصطلحات 
+                                (Definisi Operasional)‌تحديد المصطلحات 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -112,7 +112,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-spesifikasi_produk', 'rnd-spesifikasi_produk')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-spesifikasi_produk' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-spesifikasi_produk" aria-selected="true" role="tab" >
-                                (Spesifikasi Produk) ح‌.	مواصفات النتاج 
+                                (Spesifikasi Produk) مواصفات النتاج 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -126,7 +126,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('rnd-kajian_terdahulu', 'rnd-kajian_terdahulu')">
                             <a class="nav-link bg-primary text-white {{ $tab1 === 'rnd-kajian_terdahulu' ? ' active show' : '' }}" data-bs-toggle="tab" href="#rnd-kajian_terdahulu" aria-selected="true" role="tab" >
-                                (Kajian terdahulu)‌ ح.	الدراسات السابقة
+                                (Kajian terdahulu)‌الدراسات السابقة
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
