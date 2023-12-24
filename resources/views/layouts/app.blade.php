@@ -21,7 +21,7 @@
                 font-size: 20px;
             }
             .nav-link {
-                font-size: 20px;
+                font-size: 30px;
             }
         }
     </style>
