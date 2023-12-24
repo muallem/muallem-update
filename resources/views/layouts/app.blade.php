@@ -16,9 +16,17 @@
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
     @livewireStyles
     <style>
-        .nav-link {
-            background-color: #59d7f0;
-            color: black;
+        /* Default styles for the tabs */
+        .nav-tabs-new2 .nav-item a.nav-link {
+            font-size: 23px;
+            background-color: #4285f4; /* Default background color */
+            color: white; /* Default text color */
+        }
+
+        /* Styles for active tabs */
+        .nav-tabs-new2 .nav-item a.nav-link.active {
+            background-color: #59d7f0; /* Background color for active tab */
+            color: black; /* Text color for active tab */
         }
         @media only screen and (min-width: 769px) {
             .tab-content {
