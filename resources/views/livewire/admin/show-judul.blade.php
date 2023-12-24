@@ -24,7 +24,7 @@
                                         Kuantitatif (KUAN)
                                         @break
                                     @case(\App\Models\Judul::TYPE_KUAL)
-                                        Kuanlitatif (KUAL)
+                                        Kualitatif (KUAL)
                                         @break
                                     @case(\App\Models\Judul::TYPE_RND)
                                         Research And Development (RND)

@@ -34,8 +34,8 @@
                         @livewire('materi.kuan', ['student_id' => $thesis->student_id])
                         
                         @break
-                    @case(\App\Models\Judul::TYPE_KUAN)
-                        @livewire('materi.kuan', ['student_id' => $thesis->student_id])
+                    @case(\App\Models\Judul::TYPE_KUAL)
+                        @livewire('materi.kual', ['student_id' => $thesis->student_id])
                         
                         @break
                     @case(\App\Models\Judul::TYPE_RND)
