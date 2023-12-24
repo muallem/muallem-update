@@ -4,7 +4,7 @@
     <div class="user-account p-3 mb-3">
         <div class="d-flex mb-3 pb-3 border-bottom align-items-center">
             <div class="dropdown flex-grow-1">
-                <span>Welcome,</span>
+                <span>Welcome Update,</span>
                 <a href="#" class="dropdown-toggle user-name" data-bs-toggle="dropdown"><strong>{{Session::get('user_name')}}</strong></a>
                 <ul class="dropdown-menu p-2 shadow-sm">
                     <li><a href="{{route('logout')}}"><i class="fa fa-power-off me-2"></i>Logout</a></li>
