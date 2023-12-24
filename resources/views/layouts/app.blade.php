@@ -20,6 +20,10 @@
             .tab-content {
                 font-size: 20px;
             }
+            .nav-tabs.nav-tabs-new2>li>a.active {
+                background-color: #59d7f0;
+                color: black;
+            }
         }
     </style>
 </head>
