@@ -77,7 +77,7 @@
         
                             <div class="flex-grow-1">
                                 <ul class="nav navbar-nav flex-row justify-content-end align-items-center">
-                                    <li><a href="{{route('logout')}}" class="icon-menu"> LOG OUT <i class="fa fa-sign-out"></i></a></li>
+                                    <li><a href="{{route('logout')}}" class="icon-menu"> <span class="text-danger"> LOG OUT</span> <i class="fa fa-sign-out"></i></a></li>
                                 </ul>
                             </div>
                         </div>
