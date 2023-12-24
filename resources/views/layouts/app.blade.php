@@ -15,6 +15,13 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
     @livewireStyles
+    <style>
+        @media only screen and (min-width: 769px) {
+            .tab-content {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +74,7 @@
         
                             <div class="flex-grow-1">
                                 <ul class="nav navbar-nav flex-row justify-content-end align-items-center">
-                                    <li><a href="{{route('logout')}}" class="icon-menu"><i class="fa fa-sign-out"></i></a></li>
+                                    <li><a href="{{route('logout')}}" class="icon-menu"> LOG OUT <i class="fa fa-sign-out"></i></a></li>
                                 </ul>
                             </div>
                         </div>
