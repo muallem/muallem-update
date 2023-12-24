@@ -20,6 +20,9 @@
             .tab-content {
                 font-size: 20px;
             }
+            .nav-tabs {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
