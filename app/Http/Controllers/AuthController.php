@@ -25,6 +25,7 @@ class AuthController extends Controller
                 return redirect()->route('student.index');
             }
         }
+        return redirect()->route('login.index');
     }
 
     public function logout(Request $request)
