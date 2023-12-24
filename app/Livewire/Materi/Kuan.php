@@ -29,9 +29,9 @@ class Kuan extends Component
     ];
     public function mount()
     {
-        $this->tab1 = 'kuan-bab_1_pendahuluan';
-        $this->tab2 = 'kuan-bab_1_pendahuluan-latar_belakang';
-        $this->kode_materi = 'kuan-bab_1_pendahuluan-latar_belakang';
+        $this->tab1 = 'kuan-latar_belakang_masalah';
+        $this->tab2 = 'kuan-latar_belakang_masalah';
+        $this->kode_materi = 'kuan-latar_belakang_masalah';
         $this->getData();
     } 
 
