@@ -26,7 +26,7 @@
         /* Styles for active tabs */
         .nav-tabs-new2 .nav-item a.nav-link.active {
             background-color: #59d7f0; /* Background color for active tab */
-            color: black; /* Text color for active tab */
+            color: rgb(22, 85, 70); /* Text color for active tab */
         }
         .nav-tabs-new2 .nav-item a.nav-link:hover {
             color: white; /* Text color on hover */
