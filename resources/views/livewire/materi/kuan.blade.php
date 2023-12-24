@@ -12,7 +12,7 @@
             <div class="card-body">
                 <form class="chat-input px-3" wire:submit.prevent='store'>
                     <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-latar_belakang_masalah', 'kuan-latar_belakang_masalah')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-latar_belakang_masalah', 'kuan-latar_belakang_masalah')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-latar_belakang_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-latar_belakang_masalah" aria-selected="true" role="tab" >
                                 (Latar belakang Masalah) ‌خلفية البحث 
                                 @if(
@@ -26,7 +26,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-rumusan_masalah', 'kuan-rumusan_masalah')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-rumusan_masalah', 'kuan-rumusan_masalah')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-rumusan_masalah" aria-selected="true" role="tab" >
                                 (Rumusan Masalah)‌ أسئلة البحث 
                                 @if(
@@ -40,7 +40,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-tujuan_penelitian', 'kuan-tujuan_penelitian')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-tujuan_penelitian', 'kuan-tujuan_penelitian')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-tujuan_penelitian" aria-selected="true" role="tab" >
                                 (Tujuan Penelitian)‌ أهداف البحث  
                                 @if(
@@ -54,7 +54,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-manfaat_penelitian', 'kuan-manfaat_penelitian')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-manfaat_penelitian', 'kuan-manfaat_penelitian')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-manfaat_penelitian" aria-selected="true" role="tab" >
                                 (Manfaat Penelitian)‌ فوائد البحث 
                                 @if(
@@ -68,7 +68,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-hipotesis_penelitian', 'kuan-hipotesis_penelitian')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-hipotesis_penelitian', 'kuan-hipotesis_penelitian')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-hipotesis_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-hipotesis_penelitian" aria-selected="true" role="tab" >
                                 (Hipotesis Penelitian)‌ ‌فروض البحث
                                 @if(
@@ -82,7 +82,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-ruang_lingkup_penelitian', 'kuan-ruang_lingkup_penelitian')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-ruang_lingkup_penelitian', 'kuan-ruang_lingkup_penelitian')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-ruang_lingkup_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-ruang_lingkup_penelitian" aria-selected="true" role="tab" >
                                 (Ruang lingkup Penelitian)‌‌ حدود البحث    
                                 @if(
@@ -96,7 +96,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-definisi_operasional', 'kuan-definisi_operasional')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-definisi_operasional', 'kuan-definisi_operasional')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-definisi_operasional' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-definisi_operasional" aria-selected="true" role="tab" >
                                 (Definisi Operasional)‌ تحديد المصطلحات 
                                 @if(
@@ -110,7 +110,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-kajian_terdahulu', 'kuan-kajian_terdahulu')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-kajian_terdahulu', 'kuan-kajian_terdahulu')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-kajian_terdahulu' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-kajian_terdahulu" aria-selected="true" role="tab" >
                                 (Kajian terdahulu)‌ الدراسات السابقة
                                 @if(
@@ -124,7 +124,7 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-landasan_teori', 'kuan-landasan_teori')">
+                        <li class="nav-item my-1" role="presentation" wire:click="setKodeMateri('kuan-landasan_teori', 'kuan-landasan_teori')">
                             <a style="font-size: 23px;" class="nav-link {{ $tab1 === 'kuan-landasan_teori' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-landasan_teori" aria-selected="true" role="tab" >
                                 (Landasan Teori) الفصل الثاني: الإطار النظري 
                                 @if(
