@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
     @livewireStyles
     <style>
-        .nav-link.active {
+        .nav-link {
             background-color: #59d7f0;
             color: black;
         }
