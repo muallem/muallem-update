@@ -98,7 +98,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-definisi_operasional', 'kuan-definisi_operasional')">
                             <a class="nav-link {{ $tab1 === 'kuan-definisi_operasional' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-definisi_operasional" aria-selected="true" role="tab" >
-                                (Definisi Operasional)‌ز.	تحديد المصطلحات 
+                                (Definisi Operasional)‌ ز.	تحديد المصطلحات 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -112,7 +112,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-kajian_terdahulu', 'kuan-kajian_terdahulu')">
                             <a class="nav-link {{ $tab1 === 'kuan-kajian_terdahulu' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-kajian_terdahulu" aria-selected="true" role="tab" >
-                                (Kajian terdahulu)‌ح.	الدراسات السابقة
+                                (Kajian terdahulu)‌ ح.	الدراسات السابقة
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -126,7 +126,7 @@
                         </li>
                         <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-landasan_teori', 'kuan-landasan_teori')">
                             <a class="nav-link {{ $tab1 === 'kuan-landasan_teori' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-landasan_teori" aria-selected="true" role="tab" >
-                                (Landasan Teori)الفصل الثاني: الإطار النظري 
+                                (Landasan Teori) الفصل الثاني: الإطار النظري 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
@@ -141,8 +141,8 @@
                     </ul>
                     <div class="tab-content mt-3">
                         <div class="tab-pane {{ $tab2 === 'kuan-latar_belakang_masalah' ? ' active show' : '' }}" id="kuan-latar_belakang_masalah" role="tabpanel">
-                            <h4>Latar Belakang</h4>
-                            <p>
+                            <h4>(Latar belakang Masalah) ‌أ. خلفية البحث </h4>
+                            <p style="text-align: justify;">
                                 Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
                                 a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
                                 b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
@@ -151,82 +151,70 @@
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-rumusan_masalah' ? ' active show' : '' }}" id="kuan-rumusan_masalah" role="tabpanel">
-                            <h4>Rumusan Masalah</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Rumusan Masalah)‌ ب. أسئلة البحث </h4>
+                            <p style="text-align: justify;">
+                                Merupakan upaya untuk menyatakan secara tersurat pertanyaan-pertanyaan atau dalam bentuk kalimat pernyataan-pernyataan yang hendak dicarikan jawabannya. Penyampaian rumusan masalah harus relevan dengan judul, data, dan model yang akan diteliti.
+Pertanyaan penelitian dalam penelitian kuantitatif  harus menunjukkan pengaruh/hubungan/perbedaan antar variabel yang hendak diteliti. Sementara untuk penelitian kualitatif, pada bagian ini penulis harus membuat suatu formulasi pertanyaan penelitian (grand tour question) dan jika memungkinkan juga pertanyaan-pertanyaan lainnya yang merupakan turunan (sub question). Pertanyaan-pertanyaan tersebut seharusnya jelas, spesifik, tepat sasaran, dan memungkinkan untuk dijawab oleh penulis. Fokus penelitian menunjukkan secara tegas permasalahan dalam skripsi yang dicari pemecahannya. Fokus penelitian bertujuan untuk menjabarkan rumusan masalah. Fokus penelitian juga memuat proses penyederhanaan masalah yang rumit dan kompleks yang dirumuskan menjadi masalah yang dapat diteliti (researchable problems).
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-tujuan_penelitian' ? ' active show' : '' }}" id="kuan-tujuan_penelitian" role="tabpanel">
-                            <h4>Tujuan Penelitian</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Tujuan Penelitian)‌ ج.	أهداف البحث  </h4>
+                            <p style="text-align: justify;">
+                                Tujuan penelitian harus menunjukkan pernyataan yang berisi tentang tujuan yang ingin dicapai melalui proses penelitian. Tujuan penelitian harus terkait dengan pertanyaan-pertanyaan yang telah dirumuskan dalam rumusan masalah atau fokus penelitian.
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-manfaat_penelitian' ? ' active show' : '' }}" id="kuan-manfaat_penelitian" role="tabpanel">
-                            <h4>Manfaat Penelitian</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Manfaat Penelitian)‌ د.	فوائد البحث </h4>
+                            <p style="text-align: justify;">
+                                Manfaat penelitian berisi tentang sumbangan/kontribusi positif terkait dengan hasil penelitian. Manfaat penelitian terdiri dari manfaat teoritis maupun praktis. Untuk manfaat teoritis berisi keterkaitan hasil penelitian dengan pengembangan ilmu ekonomi/manajemen/akuntansi/syariah, seperti munculnya pandangan atau wawasan baru, atau perkembangan suatu teori, menguji teori, atau mengkritik teori. 
+                                Manfaat praktis, lebih mengarah pada aplikasi hasil penelitian, seperti sumbangan nyata yang dapat digunakan sebagai dasar kebijakan atas suatu keputusan yang sudah maupun yang akan dilakukan.
+                                
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-hipotesis_penelitian' ? ' active show' : '' }}" id="kuan-hipotesis_penelitian" role="tabpanel">
-                            <h4>Hipotesis Penelitian</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Hipotesis Penelitian)‌ ‌ه.	فروض البحث</h4>
+                            <p style="text-align: justify;">
+                                Hipotesis berisi rumusan secara singkat, lugas dan jelas yang dinyatakan dalam kalimat pernyataan. Dikatakan demikian, agar hipotesis dapat diuji atau dijawab sesuai dengan teknik analisis yang telah ditentukan. Tidak semua penelitian memerlukan hipotesis.
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-ruang_lingkup_penelitian' ? ' active show' : '' }}" id="kuan-ruang_lingkup_penelitian" role="tabpanel">
-                            <h4>Ruang Lingkup Penelitian</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Ruang lingkup Penelitian)‌‌ و.	حدود البحث    </h4>
+                            <p style="text-align: justify;">
+                                Batasan penelitian dibuat sesuai dengan ruang lingkup penelitian yang akan dilakukan dengan mempertimbangkan aspek-aspek metodologis, kelayakan di lapangan dan keterbatasan yang ada pada penulis tanpa mengorbankan kebermaknaan arti, konsep atau topik yang diteliti. Keterbatasan penelitian menunjuk suatu keadaan yang tidak bisa dihindari dalam peneliti. Ada 2 (dua) hal yang menjadi keterbatasan penelitian, yaitu: pertama, keterbatasan ruang lingkup kajian, dan kedua, keterbatasan yang bersumber dari aspek teknis penelitian.
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-definisi_operasional' ? ' active show' : '' }}" id="kuan-definisi_operasional" role="tabpanel">
-                            <h4>Definisi Operasional</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Definisi Operasional)‌ ز.	تحديد المصطلحات </h4>
+                            <p style="text-align: justify;">
+                                Dalam penelitian kuantitatif, definisi operasional adalah penjelasan operasionalisasi semua variabel yang dimasukkan dalam hipotesis. Definisi operasional menjelaskan karakteristik yang dapat diamati dalam rangka mengukur variabel. Pengukuran variabel adalah penentuan besaran, dimensi, atau kapasitas, biasanya terhadap satuan pengukuran. Penulis harus memberikan arti dan menjelaskan cara-cara atau langkah-langkah dalam mengukur variabel tersebut, termasuk menjabarkan indikator-indikator dari alat ukur penelitian. Penentuan indikator-indikator alat ukur penelitian harus mengacu pada tinjauan pustaka yang telah diuraikan sebelumnya, dan boleh membuat alat ukur sendiri jika pengukuran tersebut belum pernah dipakai oleh penulis sebelumnya.
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-kajian_terdahulu' ? ' active show' : '' }}" id="kuan-kajian_terdahulu" role="tabpanel">
-                            <h4>Kajian Terdahulu</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Kajian terdahulu)‌ ح.	الدراسات السابقة</h4>
+                            <p style="text-align: justify;">
+                                Dalam penelitian terdahulu dijelaskan adanya keterkaitan atau kesamaan masalah penelitian yang sedang dilakukan dengan penelitian sebelumnya. Untuk memperjelas posisi penelitian yang akan dilakukan, maka  dijabarkan letak persamaan dan perbedaan antara penelitian terdahulu dengan penelitian yang dilakukan. Selain itu, memungkinkan juga apabila ternyata belum ada peneliti sebelumnya yang membahas lingkup masalah penelitian yang dilakukan. 
 
                             </p>
                         </div>
                         <div class="tab-pane {{ $tab2 === 'kuan-landasan_teori' ? ' active show' : '' }}" id="kuan-landasan_teori" role="tabpanel">
-                            <h4>Landasan Teori</h4>
-                            <p>
-                                Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
-                                a.	Diawali dari pemikiran teoritis (termasuk keislaman) kemudian mengarah ke fakta empirik.
-                                b.	Diawali dari dunia empiric ke arah teoritik (termasuk keislaman).
-                                Dalam latar belakang, dapat juga mengemukakan adanya kesenjangan (gap) antara seharusnya/teori (das sollen) dan kenyataan (das sein), baik kesenjangan teoritik maupun praksis yang melatar belakangi masalah yang akan diteliti. Selain itu, latar belakang masalah sebaiknya memuat pula fakta-fakta yang relevan dengan masalah penelitian sebagai titik tolak dalam merumuskan masalah penelitian, dan alasan-alasan (empiris, teknis) mengapa masalah dikemukakan dalam penelitian itu dipandang penting untuk diteliti.
+                            <h4>(Landasan Teori) الفصل الثاني: الإطار النظري </h4>
+                            <p style="text-align: justify;">
+                                Bagian ini berisi kajian berbagai teori yang relevan dan kemutakhiran dengan masalah yang akan diteliti. Dalam kajian teori, peneliti melakukan sintesis terhadap teori yang relevan agar diperoleh legitimasi konseptual terhadap variabel yang akan diteliti. Unsur-unsur suatu teori hendaknya nampak secara jelas, seperti definisi, asumsi, hubungan antar variabel, dan daya penjelasannya terhadap masalah yang diteliti. 
+Bahan-bahan kajian teori dapat diangkat dari berbagai sumber seperti, buku teks, jurnal penelitian atau penelitian terdahulu, skripsi orang lain, laporan penelitian, makalah, laporan seminar dan diskusi ilmiah, terbitan-terbitan resmi pemerintah, dan atau yang bersumber dari website. Akan lebih baik jika kajian teoritis dan telaah terhadap temuan-temuan penelitian didasarkan pada sumber kepustakaan primer. 
+Kualitas hasil karya Ilmiah tidak berkaitan dengan banyaknya buku yang tercantum dalam daftar pustaka, tetapi pada kualitas pustaka yang digunakan. Hal ini karena tidak jarang dijumpai skripsi yang mencantumkan daftar kepustakaan yang sangat banyak, tetapi apabila ditelusuri keterkaitan antar isi kepustakaan dan masalah yang dibahas ridak terlalu jelas. Oleh karena itu, [emilihan sumber pustaka harus memenuhi dua persyaratan:
+a.	Kemutakhiran sumber bacaan, artinya sumber bacaan diupayakan yang kadaluwarsa untuk ditinggalkan.
+b.	Adanya keterkaitan antara isi bacaan dengan masalah yang dibahas.
+Langkah-langkah yang dilakukan dalam kajian teoritis melalui sumber-sumber bacaan adalah sebagai berikut:
+a.	Memetakan konsep (concept map) keilmuan dan keislaman dengan cara mengkaji teori-teori keilmuan dan keislaman yang berhubungan dengan konsep-konsep yang dipermasalahkan dan yang akan dipakai dalam analisis.  
+b.	Membahas secara sistematis teori-teori keislaman dan keilmuan sesuai dengan disiplin ilmu masing-masing jurusan, atau tema-tema yang dikehendaki. Di sini, mahasiswa perlu memperkaya diri dengan konsep-konsep atau isyarat-isyarat sains yang bertaburan di dalam Alqur'an dan Hadits. Dalam mengkaji ayat al-Quran harus merujuk pada penafsiran para ulama (kitab tafsir) dan buku teks.
+c.	Memadukan atau mengintegrasikan hasil-hasil kajian teori yang berisi jawaban sementara (hipotesis) terhadap rumusan masalah, atau rangkuman argumentasi teoritik yang akan digunakan dalam analisis hasil kajian dengan cara mencari titik kesamaan atau perpaduan antara sains dan Islam (atau konsep yang ada pada Alqur'an dan Hadis) sebagimana telah dijelaskan dalam Bab I bagian 1.5 Model penulisan Integrasi.
+
 
                             </p>
                         </div>
