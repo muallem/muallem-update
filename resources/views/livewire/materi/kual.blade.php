@@ -12,13 +12,13 @@
             <div class="card-body">
                 <form class="chat-input px-3" wire:submit.prevent='store'>
                     <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-between" role="tablist">
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-latar_belakang_masalah', 'kuan-latar_belakang_masalah')">
-                            <a class="nav-link {{ $tab1 === 'kuan-latar_belakang_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-latar_belakang_masalah" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-latar_belakang_masalah', 'kual-latar_belakang_masalah')">
+                            <a class="nav-link {{ $tab1 === 'kual-latar_belakang_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-latar_belakang_masalah" aria-selected="true" role="tab" >
                                 (Latar belakang Masalah) ‌أ. خلفية البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-latar_belakang_masalah']) && $data_feedback['kuan-latar_belakang_masalah'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-latar_belakang_masalah']) && $data_feedback['kual-latar_belakang_masalah'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -26,13 +26,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-rumusan_masalah', 'kuan-rumusan_masalah')">
-                            <a class="nav-link {{ $tab1 === 'kuan-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-rumusan_masalah" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-rumusan_masalah', 'kual-rumusan_masalah')">
+                            <a class="nav-link {{ $tab1 === 'kual-rumusan_masalah' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-rumusan_masalah" aria-selected="true" role="tab" >
                                 (Rumusan Masalah)‌ ب. أسئلة البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-rumusan_masalah']) && $data_feedback['kuan-rumusan_masalah'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-rumusan_masalah']) && $data_feedback['kual-rumusan_masalah'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -40,13 +40,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-tujuan_penelitian', 'kuan-tujuan_penelitian')">
-                            <a class="nav-link {{ $tab1 === 'kuan-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-tujuan_penelitian" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-tujuan_penelitian', 'kual-tujuan_penelitian')">
+                            <a class="nav-link {{ $tab1 === 'kual-tujuan_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-tujuan_penelitian" aria-selected="true" role="tab" >
                                 (Tujuan Penelitian)‌ ج.	أهداف البحث  
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-tujuan_penelitian']) && $data_feedback['kuan-tujuan_penelitian'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-tujuan_penelitian']) && $data_feedback['kual-tujuan_penelitian'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -54,13 +54,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-manfaat_penelitian', 'kuan-manfaat_penelitian')">
-                            <a class="nav-link {{ $tab1 === 'kuan-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-manfaat_penelitian" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-manfaat_penelitian', 'kual-manfaat_penelitian')">
+                            <a class="nav-link {{ $tab1 === 'kual-manfaat_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-manfaat_penelitian" aria-selected="true" role="tab" >
                                 (Manfaat Penelitian)‌ د.	فوائد البحث 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-manfaat_penelitian']) && $data_feedback['kuan-manfaat_penelitian'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-manfaat_penelitian']) && $data_feedback['kual-manfaat_penelitian'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -68,13 +68,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-hipotesis_penelitian', 'kuan-hipotesis_penelitian')">
-                            <a class="nav-link {{ $tab1 === 'kuan-hipotesis_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-hipotesis_penelitian" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-hipotesis_penelitian', 'kual-hipotesis_penelitian')">
+                            <a class="nav-link {{ $tab1 === 'kual-hipotesis_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-hipotesis_penelitian" aria-selected="true" role="tab" >
                                 (Hipotesis Penelitian)‌ ‌ه.	فروض البحث
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-hipotesis_penelitian']) && $data_feedback['kuan-hipotesis_penelitian'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-hipotesis_penelitian']) && $data_feedback['kual-hipotesis_penelitian'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -82,13 +82,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-ruang_lingkup_penelitian', 'kuan-ruang_lingkup_penelitian')">
-                            <a class="nav-link {{ $tab1 === 'kuan-ruang_lingkup_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-ruang_lingkup_penelitian" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-ruang_lingkup_penelitian', 'kual-ruang_lingkup_penelitian')">
+                            <a class="nav-link {{ $tab1 === 'kual-ruang_lingkup_penelitian' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-ruang_lingkup_penelitian" aria-selected="true" role="tab" >
                                 (Ruang lingkup Penelitian)‌‌ و.	حدود البحث    
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-ruang_lingkup_penelitian']) && $data_feedback['kuan-ruang_lingkup_penelitian'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-ruang_lingkup_penelitian']) && $data_feedback['kual-ruang_lingkup_penelitian'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -96,13 +96,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-definisi_operasional', 'kuan-definisi_operasional')">
-                            <a class="nav-link {{ $tab1 === 'kuan-definisi_operasional' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-definisi_operasional" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-definisi_operasional', 'kual-definisi_operasional')">
+                            <a class="nav-link {{ $tab1 === 'kual-definisi_operasional' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-definisi_operasional" aria-selected="true" role="tab" >
                                 (Definisi Operasional)‌ ز.	تحديد المصطلحات 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-definisi_operasional']) && $data_feedback['kuan-definisi_operasional'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-definisi_operasional']) && $data_feedback['kual-definisi_operasional'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -110,13 +110,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-kajian_terdahulu', 'kuan-kajian_terdahulu')">
-                            <a class="nav-link {{ $tab1 === 'kuan-kajian_terdahulu' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-kajian_terdahulu" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-kajian_terdahulu', 'kual-kajian_terdahulu')">
+                            <a class="nav-link {{ $tab1 === 'kual-kajian_terdahulu' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-kajian_terdahulu" aria-selected="true" role="tab" >
                                 (Kajian terdahulu)‌ ح.	الدراسات السابقة
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-kajian_terdahulu']) && $data_feedback['kuan-kajian_terdahulu'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-kajian_terdahulu']) && $data_feedback['kual-kajian_terdahulu'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -124,13 +124,13 @@
                                 @endif
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kuan-landasan_teori', 'kuan-landasan_teori')">
-                            <a class="nav-link {{ $tab1 === 'kuan-landasan_teori' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kuan-landasan_teori" aria-selected="true" role="tab" >
+                        <li class="nav-item" role="presentation" wire:click="setKodeMateri('kual-landasan_teori', 'kual-landasan_teori')">
+                            <a class="nav-link {{ $tab1 === 'kual-landasan_teori' ? ' active show' : '' }}" data-bs-toggle="tab" href="#kual-landasan_teori" aria-selected="true" role="tab" >
                                 (Landasan Teori) الفصل الثاني: الإطار النظري 
                                 @if(
                                     \App\Helpers\AuthHelper::isAdmin() &&
                                     (
-                                        (isset($data_feedback['kuan-landasan_teori']) && $data_feedback['kuan-landasan_teori'][0]['feedback'] === Null)
+                                        (isset($data_feedback['kual-landasan_teori']) && $data_feedback['kual-landasan_teori'][0]['feedback'] === Null)
                                     )
                                 )
                                 
@@ -140,7 +140,7 @@
                         </li>
                     </ul>
                     <div class="tab-content mt-3">
-                        <div class="tab-pane {{ $tab2 === 'kuan-latar_belakang_masalah' ? ' active show' : '' }}" id="kuan-latar_belakang_masalah" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-latar_belakang_masalah' ? ' active show' : '' }}" id="kual-latar_belakang_masalah" role="tabpanel">
                             <h4>(Latar belakang Masalah) ‌أ. خلفية البحث </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Latar belakang masalah mengungkapkan alasan-alasan mengapa sesuatu dipermasalahkan sebagai kajian dalam skripsi, sehingga pembaca dapat mengetahui apa yang diteliti dan mengapa penelitian dilakukan. Serta menjelaskan rasionalitas atau justifikasi penelitian dilihat dari latar belakang permasalahan yang diteliti atau pemunculan problem akademik.	Penyusunan latar belakang masalah setidaknya dapat dilakukan melalui dua pendekatan, yaitu :
@@ -156,7 +156,7 @@
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-rumusan_masalah' ? ' active show' : '' }}" id="kuan-rumusan_masalah" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-rumusan_masalah' ? ' active show' : '' }}" id="kual-rumusan_masalah" role="tabpanel">
                             <h4>(Rumusan Masalah)‌ ب. أسئلة البحث </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Merupakan upaya untuk menyatakan secara tersurat pertanyaan-pertanyaan atau dalam bentuk kalimat pernyataan-pernyataan yang hendak dicarikan jawabannya. Penyampaian rumusan masalah harus relevan dengan judul, data, dan model yang akan diteliti.
@@ -166,51 +166,52 @@
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-tujuan_penelitian' ? ' active show' : '' }}" id="kuan-tujuan_penelitian" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-tujuan_penelitian' ? ' active show' : '' }}" id="kual-tujuan_penelitian" role="tabpanel">
                             <h4>(Tujuan Penelitian)‌ ج.	أهداف البحث  </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Tujuan penelitian harus menunjukkan pernyataan yang berisi tentang tujuan yang ingin dicapai melalui proses penelitian. Tujuan penelitian harus terkait dengan pertanyaan-pertanyaan yang telah dirumuskan dalam rumusan masalah atau fokus penelitian.
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-manfaat_penelitian' ? ' active show' : '' }}" id="kuan-manfaat_penelitian" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-manfaat_penelitian' ? ' active show' : '' }}" id="kual-manfaat_penelitian" role="tabpanel">
                             <h4>(Manfaat Penelitian)‌ د.	فوائد البحث </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Manfaat penelitian berisi tentang sumbangan/kontribusi positif terkait dengan hasil penelitian. Manfaat penelitian terdiri dari manfaat teoritis maupun praktis. Untuk manfaat teoritis berisi keterkaitan hasil penelitian dengan pengembangan ilmu ekonomi/manajemen/akuntansi/syariah, seperti munculnya pandangan atau wawasan baru, atau perkembangan suatu teori, menguji teori, atau mengkritik teori. 
+                            </p>
+                            <p style="text-align: justify;" class="mt-3">
                                 Manfaat praktis, lebih mengarah pada aplikasi hasil penelitian, seperti sumbangan nyata yang dapat digunakan sebagai dasar kebijakan atas suatu keputusan yang sudah maupun yang akan dilakukan.
-                                
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-hipotesis_penelitian' ? ' active show' : '' }}" id="kuan-hipotesis_penelitian" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-hipotesis_penelitian' ? ' active show' : '' }}" id="kual-hipotesis_penelitian" role="tabpanel">
                             <h4>(Hipotesis Penelitian)‌ ‌ه.	فروض البحث</h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Hipotesis berisi rumusan secara singkat, lugas dan jelas yang dinyatakan dalam kalimat <strong> pernyataan </strong>. Dikatakan demikian, agar hipotesis dapat diuji atau dijawab sesuai dengan teknik analisis yang telah ditentukan. Tidak semua penelitian memerlukan hipotesis.
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-ruang_lingkup_penelitian' ? ' active show' : '' }}" id="kuan-ruang_lingkup_penelitian" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-ruang_lingkup_penelitian' ? ' active show' : '' }}" id="kual-ruang_lingkup_penelitian" role="tabpanel">
                             <h4>(Ruang lingkup Penelitian)‌‌ و.	حدود البحث    </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Batasan penelitian dibuat sesuai dengan ruang lingkup penelitian yang akan dilakukan dengan mempertimbangkan aspek-aspek metodologis, kelayakan di lapangan dan keterbatasan yang ada pada penulis tanpa mengorbankan kebermaknaan arti, konsep atau topik yang diteliti. Keterbatasan penelitian menunjuk suatu keadaan yang tidak bisa dihindari dalam peneliti. Ada 2 (dua) hal yang menjadi keterbatasan penelitian, yaitu: pertama, keterbatasan ruang lingkup kajian, dan kedua, keterbatasan yang bersumber dari aspek teknis penelitian.
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-definisi_operasional' ? ' active show' : '' }}" id="kuan-definisi_operasional" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-definisi_operasional' ? ' active show' : '' }}" id="kual-definisi_operasional" role="tabpanel">
                             <h4>(Definisi Operasional)‌ ز.	تحديد المصطلحات </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Dalam penelitian kuantitatif, definisi operasional adalah penjelasan operasionalisasi semua variabel yang dimasukkan dalam hipotesis. Definisi operasional menjelaskan karakteristik yang dapat diamati dalam rangka mengukur variabel. Pengukuran variabel adalah penentuan besaran, dimensi, atau kapasitas, biasanya terhadap satuan pengukuran. Penulis harus memberikan arti dan menjelaskan cara-cara atau langkah-langkah dalam mengukur variabel tersebut, termasuk menjabarkan indikator-indikator dari alat ukur penelitian. Penentuan indikator-indikator alat ukur penelitian harus mengacu pada tinjauan pustaka yang telah diuraikan sebelumnya, dan boleh membuat alat ukur sendiri jika pengukuran tersebut belum pernah dipakai oleh penulis sebelumnya.
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-kajian_terdahulu' ? ' active show' : '' }}" id="kuan-kajian_terdahulu" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-kajian_terdahulu' ? ' active show' : '' }}" id="kual-kajian_terdahulu" role="tabpanel">
                             <h4>(Kajian terdahulu)‌ ح.	الدراسات السابقة</h4>
                             <p style="text-align: justify;" class="mt-3">
-                                Dalam penelitian terdahulu dijelaskan adanya keterkaitan atau kesamaan masalah penelitian yang sedang dilakukan dengan penelitian sebelumnya. Untuk memperjelas posisi penelitian yang akan dilakukan, maka  dijabarkan letak persamaan dan perbedaan antara penelitian terdahulu dengan penelitian yang dilakukan. Selain itu, memungkinkan juga apabila ternyata belum ada peneliti sebelumnya yang membahas lingkup masalah penelitian yang dilakukan. 
+                                Dalam penelitian terdahulu dijelaskan adanya keterkaitan atau kesamaan masalah penelitian yang sedang dilakukan dengan penelitian sebelumnya. Untuk memperjelas posisi penelitian yang akan dilakukan, maka  dijabarkan letak persamaan dan perbedaan antara penelitian terdahulu dengan penelitian yang dilakukan. Selain itu, memungkinkan juga apabila ternyata belum ada peneliti sebelumnya yang membahas lingkup masalah penelitian yang dilakukan. Hasil penelitian terdahulu perlu dikemukakan, disamping dalam bentuk deskripsi, juga dalam theoretical mapping, yang disajikan dalam tabel berikut:  
 
                             </p>
                         </div>
-                        <div class="tab-pane {{ $tab2 === 'kuan-landasan_teori' ? ' active show' : '' }}" id="kuan-landasan_teori" role="tabpanel">
+                        <div class="tab-pane {{ $tab2 === 'kual-landasan_teori' ? ' active show' : '' }}" id="kual-landasan_teori" role="tabpanel">
                             <h4>(Landasan Teori) الفصل الثاني: الإطار النظري </h4>
                             <p style="text-align: justify;" class="mt-3">
                                 Bagian ini berisi kajian berbagai teori yang relevan dan kemutakhiran dengan masalah yang akan diteliti. Dalam kajian teori, peneliti melakukan sintesis terhadap teori yang relevan agar diperoleh legitimasi konseptual terhadap variabel yang akan diteliti. Unsur-unsur suatu teori hendaknya nampak secara jelas, seperti definisi, asumsi, hubungan antar variabel, dan daya penjelasannya terhadap masalah yang diteliti. 
