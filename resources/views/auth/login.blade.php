@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>:: Kitabah :: Login</title>
+    <title>Kitabah</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Lucid HR & Project Admin Dashboard Template with Bootstrap 5x">
-    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+    <meta name="description" content="Menjadi seorang pendidik merupakan profesi yang sangat mulia, persiapan maksimal sangat dibutuhkan agar proses mengajar kita berhasil dengan sempurna, tingkatkan potensi mengajar diri anda bersama mentor Muallem">
+    <meta name="author" content="muhammadyunus1072@gmail.com">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('Logo.jpg')}}" type="image/x-icon">
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
