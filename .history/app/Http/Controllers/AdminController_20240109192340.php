@@ -32,7 +32,7 @@ class AdminController extends Controller
         // return LessonDetail::get();
         return Lesson::with([
             'lesson_titles' => function($query){
-                return $query->select('id', 'lesson_id', 'lesson_title');
+                return $query->select('id', 'lesson_title');
             },
             'lesson_titles.lesson_details'
         ])->get();
