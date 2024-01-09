@@ -164,7 +164,6 @@ return [
         /*
          * Application Service Providers...
          */
-        Maatwebsite\Excel\ExcelServiceProvider::class,
         Livewire\LivewireServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
@@ -186,7 +185,6 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ])->toArray(),
 
 ];
