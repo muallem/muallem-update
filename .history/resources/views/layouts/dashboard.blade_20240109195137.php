@@ -117,7 +117,7 @@
                         <ul class="main-menu metismenu list-unstyled">
                             <li>
                                 <a href="#" class="text-decoration-none text-dark" aria-expanded="false">
-                                    <i class="fa fa-book"></i>
+                                    <i class="fa fa-user"></i>
                                     <span>Materi</span> 
                                 </a>
                             </li>

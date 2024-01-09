@@ -20,7 +20,7 @@
             <div class="col-lg-12 col-md-12">
                 <div class="card mb-3 single_post">
                     <div class="card-body">
-                        @livewire('dashboard.materi')
+                        @livewire('admin.show-judul', ['thesis_id' => $thesis_id])
                     </div>
                 </div>
             </div>
