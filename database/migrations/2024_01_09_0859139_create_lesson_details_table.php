@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('lesson_details', function (Blueprint $table) {
             $table->id();
             $table->text('lesson_body')->nullable();
-            $table->bigInteger('lesson_titles_id')->unsigned();
+            $table->bigInteger('lesson_title_id')->unsigned();
             $table->timestamps();
         });
     }
