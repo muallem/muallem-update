@@ -20,7 +20,7 @@
                                 
                             </li>
                             <li class="ms-5"><a href="{{route('admin.judul', ['thesis_id' => $item['id']])}}"><i class="fa fa-file-text"></i> Judul {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
-                            <li class="ms-5"><a href="{{route('admin.materi', ['thesis_id' => $item['id']])}}"><i class="fa fa-tasks"></i> CONTOH BARU {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}</a></li>
+                            <li class="ms-5"><a href="{{route('admin.materi', ['thesis_id' => $item['id']])}}"><i class="fa fa-tasks"></i> Materi {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}</a></li>
                         @endforeach
                     </ul>
                 </nav>
