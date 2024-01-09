@@ -114,14 +114,14 @@
                         </div>
 
                         <!-- nav tab: menu list -->
-                        <ul class="main-menu metismenu list-unstyled">
-                            <li>
-                                <a href="#" class="text-decoration-none text-dark" aria-expanded="false">
-                                    <i class="fa fa-user"></i>
-                                    <span>baru</span> 
-                                </a>
-                            </li>
+                        <ul class="nav nav-tabs text-center mb-2" role="tablist">
+                            
+                                <li class="nav-item flex-fill"><a class="nav-link active" data-bs-toggle="tab" href="#admin_menu" role="tab">Admin</a></li>
+                            
+                                <li class="nav-item flex-fill"><a class="nav-link active" id="student_menu_nav_link" data-bs-toggle="tab" href="#student_menu" role="tab">Student</a></li>
+                            
                         </ul>
+                        @livewire('coba.index')
                     </div> 
                 </div>  
         
