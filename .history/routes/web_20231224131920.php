@@ -24,7 +24,6 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => ['my.auth', 'admin']], function () {
     Route::group(['controller' => AdminController::class, 'prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/', 'index')->name('index');
-        Route::get('/dashboard', '/dashboard')->name('dashboard');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/materi', 'materi')->name('materi');
         Route::get('/rnd', 'rnd')->name('rnd');

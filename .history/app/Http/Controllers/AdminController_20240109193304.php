@@ -29,7 +29,7 @@ class AdminController extends Controller
      */
     public function dashboard()
     {
-        return 'Dashboard';
+        
     }
     public function index()
     {
