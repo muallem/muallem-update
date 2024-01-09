@@ -30,6 +30,7 @@
                                     <li><a href="emp-departments.html">Departments</a></li>
                                 </ul>
                             </li>
+                            <li class="ms-5"><a href="{{route('admin.materi', ['thesis_id' => $item['id']])}}"><i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}</a></li>
                         @endforeach
                     </ul>
                 </nav>
