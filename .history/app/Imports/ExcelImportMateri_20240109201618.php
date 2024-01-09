@@ -18,6 +18,5 @@ class ExcelImportMateri implements ToModel
         $lesson = new Lesson();
         $lesson->lesson_chapter = $title;
         $lesson->save();
-        return null;
     }
 }
