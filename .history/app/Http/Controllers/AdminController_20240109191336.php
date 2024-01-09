@@ -30,7 +30,7 @@ class AdminController extends Controller
     {
         return Lesson::with([
             'lesson_titles',
-            'lesson_titles.lesson_details'
+            'lesson_details'
         ]);
         return view('admin.index');
     }

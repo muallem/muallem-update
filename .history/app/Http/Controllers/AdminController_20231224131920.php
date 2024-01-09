@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Judul;
-use App\Models\Lesson;
 use App\Models\Materi;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
@@ -28,10 +27,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return Lesson::with([
-            'lesson_titles',
-            'lesson_titles.lesson_details'
-        ]);
         return view('admin.index');
     }
     public function materi(Request $request)
