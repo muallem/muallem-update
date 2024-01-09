@@ -8,7 +8,6 @@ use App\Models\Lesson;
 use App\Models\Materi;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
-use App\Models\LessonDetail;
 use Illuminate\Http\Request;
 use App\Models\MateriFeedback;
 use Illuminate\Support\Facades\DB;
