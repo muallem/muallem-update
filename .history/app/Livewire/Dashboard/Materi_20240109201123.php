@@ -25,7 +25,6 @@ class Materi extends Component
 
         try {
             // DB::beginTransaction();
-            Log::error('Chapter: ' . $name);
             $path = $this->input_file->store('temp');
             Excel::import(new ExcelImportMateri(), Storage::path($path));
             // DB::commit();
