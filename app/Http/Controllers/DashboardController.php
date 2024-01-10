@@ -27,7 +27,7 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
+    public function materi()
     {
         return view('admin.dashboard.materi.index');
     }
@@ -46,7 +46,7 @@ class DashboardController extends Controller
         // ])->get();
         return view('admin.index');
     }
-    public function materi(Request $request)
+    public function materi_old(Request $request)
     {
         $thesis = Judul::where('id', $request->thesis_id)->with('user')->first();
 
