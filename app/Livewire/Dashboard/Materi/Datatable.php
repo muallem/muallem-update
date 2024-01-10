@@ -70,6 +70,7 @@ class Datatable extends Component
                     </form>";
 
                     $html = "<div class='row'>
+                        $editHtml
                         $destroyHtml                 
                     </div>";
 
