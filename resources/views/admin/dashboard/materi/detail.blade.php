@@ -45,7 +45,7 @@
                                                 <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
 
                                                     @php
-                                                        $i = 1;
+                                                        $i = 0;
                                                     @endphp
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <li class="nav-item my-1" role="presentation" >
@@ -61,7 +61,7 @@
                                                 </ul>
                                                 <div class="tab-content mt-3">
                                                     @php
-                                                        $i = 1;
+                                                        $i = 0;
                                                     @endphp
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <div class="tab-pane {{($i == 0) ? 'active show' : ''}}" id="{{str_replace(' ', '_', $item->title ."-". $item->id)}}" role="tabpanel">
