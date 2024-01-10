@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Dashboard\Materi;
+namespace App\Livewire\Dashboard\Category;
 
 use App\Models\Lesson;
 use Livewire\Component;
@@ -10,13 +10,6 @@ use Illuminate\Database\Eloquent\Builder;
 class Datatable extends Component
 {
     use WithDatatable;
-
-    // Filter
-    public $end_date;
-    public $start_date;
-    public $filter_jenis;
-    public $filter_payor;
-
 
     protected $listeners = [
         'addFilter',
@@ -51,13 +44,13 @@ class Datatable extends Component
     public function getQuery(): Builder
     {
 
-        $query = Lesson::with('lesson_details');
+        $query = Category::query();
 
         return $query;
     }
 
     public function getView(): string
     {
-        return 'livewire.dashboard.materi.datatable';
+        return 'livewire.dashboard.category.datatable';
     }
 }

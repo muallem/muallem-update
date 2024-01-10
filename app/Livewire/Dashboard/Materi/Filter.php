@@ -4,6 +4,7 @@ namespace App\Livewire\Dashboard\Materi;
 
 use App\Models\Lesson;
 use Livewire\Component;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
 use App\Imports\ExcelImportMateri;
@@ -17,11 +18,18 @@ class Filter extends Component
     use WithFileUploads;
     // Modal Import
     public $input_file;
-    public $name;
+    public $input_category;
+    public $input_name;
+    public $categories = [];
     protected $rules = [
-        'name' => 'required',
+        'input_name' => 'required',
+        'input_category' => 'required',
         'input_file' => 'required|mimes:xlsx,xls',
     ];
+
+    public function mount(){
+        $this->categories = Category::all();
+    }
 
     public function import()
     {
@@ -31,13 +39,14 @@ class Filter extends Component
             $fileName = Str::random(20) . '.' . $this->input_file->getClientOriginalExtension();
             $path = $this->input_file->storeAs('lessons', $fileName, 'public');
             $lesson = new Lesson();
-            $lesson->chapter = $this->name;
+            $lesson->chapter = $this->input_name;
+            $lesson->category_id = $this->input_category;
             if($lesson->save()){
                 Excel::import(new ExcelImportMateri($lesson->id), Storage::path('public/'.$path));
             }
             DB::commit();
             $this->emit('onSuccessSweetAlert', 'Berhasil Menyimpan Data!');
-            $this->reset(['name', 'input_file']);
+            $this->reset(['input_name', 'input_file', 'input_category']);
 
         } catch (\Exception $e) {
             $this->emit("consoleLog", $e->getMessage());

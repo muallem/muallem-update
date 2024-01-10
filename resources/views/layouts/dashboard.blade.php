@@ -116,9 +116,15 @@
                         <!-- nav tab: menu list -->
                         <ul class="main-menu metismenu list-unstyled">
                             <li>
-                                <a href="#" class="text-decoration-none text-dark" aria-expanded="false">
+                                <a href="{{ route('dashboard.materi') }}" class="text-decoration-none text-dark" aria-expanded="false">
                                     <i class="fa fa-book"></i>
                                     <span>Materi</span> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('dashboard.category') }}" class="text-decoration-none text-dark" aria-expanded="false">
+                                    <i class="fa fa-th-large"></i>
+                                    <span>Kategori</span> 
                                 </a>
                             </li>
                         </ul>

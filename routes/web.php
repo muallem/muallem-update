@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StudentController;
 
 /*
@@ -22,9 +22,10 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => ['my.auth', 'admin']], function () {
-    Route::group(['controller' => AdminController::class, 'prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/dashboard', 'dashboard')->name('dashboard');
+        Route::get('/category', 'category')->name('category');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/materi', 'materi')->name('materi');
         Route::get('/rnd', 'rnd')->name('rnd');

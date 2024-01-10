@@ -14,7 +14,7 @@ use App\Models\MateriFeedback;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
-class AdminController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -29,7 +29,11 @@ class AdminController extends Controller
      */
     public function dashboard()
     {
-        return view('admin.dashboard.index');
+        return view('dashboard.index');
+    }
+    public function category()
+    {
+        return view('dashboard.category');
     }
     public function index()
     {
