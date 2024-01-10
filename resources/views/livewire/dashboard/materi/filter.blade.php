@@ -21,7 +21,7 @@
                     <div class="modal-body import_modal">
                         <div class="form-group mb-2">
                             <label>Nama Materi</label>
-                            <input type="text" wire:model.lazy="name" class="form-control" placeholder="Nama Materi" required>
+                            <input type="text" wire:model.lazy="input_name" class="form-control" placeholder="Nama Materi" required>
                         </div>
                         
                         <select class="form-control mb-2" wire:model="input_category" required>
@@ -30,7 +30,7 @@
                                 <option value="{{$value->id}}">{{ $value->name }}</option>
                             @endforeach
                         </select>
-                        
+
                         <div class="form-group mb-2">
                             <label>File Lampiran</label>
                             <input type="file" wire:model.lazy="input_file" class="form-control" required>
