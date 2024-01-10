@@ -30,7 +30,7 @@ class Materi extends Component
             $fileName = Str::random(20) . '.' . $this->input_file->getClientOriginalExtension();
             $path = $this->input_file->storeAs('lessons', $fileName, 'public');
             $lesson = new Lesson();
-            $lesson->chapter = $this->name;
+            $lesson->lesson_chapter = $this->name;
             if($lesson->save()){
                 Excel::import(new ExcelImportMateri($lesson->id), Storage::path('public/'.$path));
             }

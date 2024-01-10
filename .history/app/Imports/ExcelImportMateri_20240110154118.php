@@ -26,8 +26,8 @@ class ExcelImportMateri implements ToModel
 
         $lesson_detail = new LessonDetail();
         $lesson_detail->lesson_id = $this->lesson_id;
-        $lesson_detail->title = $title;
-        $lesson_detail->body = $body;
+        $lesson_detail->lesson_title = $title;
+        $lesson_detail->lesson_body = $body;
         $lesson_detail->save();
         
         return null;

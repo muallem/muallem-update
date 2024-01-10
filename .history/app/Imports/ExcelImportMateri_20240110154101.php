@@ -23,13 +23,17 @@ class ExcelImportMateri implements ToModel
     {
         $title = $row[0];
         $body = $row[1];
-
-        $lesson_detail = new LessonDetail();
-        $lesson_detail->lesson_id = $this->lesson_id;
-        $lesson_detail->title = $title;
-        $lesson_detail->body = $body;
-        $lesson_detail->save();
         
+        $lesson = new Lesson();
+        $lesson->lesson_chapter = $this->name;
+        if($lesson->save())
+        {
+            $lesson_detail = new LessonDetail();
+            $lesson_detail->lesson_id = $lesson->id;
+            $lesson_detail->lesson_title = $title;
+            $lesson_detail->lesson_body = $body;
+            $lesson_detail->save();
+        }
         return null;
     }
 }
