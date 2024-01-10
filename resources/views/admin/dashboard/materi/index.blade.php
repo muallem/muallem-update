@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>:: Lucid HR BS5 :: Ui Modals</title>
+    <title>:: Lucid HR BS5 :: Bootstrap UI</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Lucid HR & Project Admin Dashboard Template with Bootstrap 5x">
@@ -13,6 +13,63 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
+
+    <!-- Just Demo not include in project -->
+    <style>
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .highlight pre code {
+            font-size: inherit;
+            color: #212529;
+        }
+
+        .nt {
+            color: #2f6f9f;
+        }
+
+        .na {
+            color: #4f9fcf;
+        }
+
+        .s {
+            color: #d44950;
+        }
+
+        pre.prettyprint {
+            background-color: #eee;
+            border: 0px;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .atv,
+        .str {
+            color: #05AE0E;
+        }
+
+        .tag,
+        .pln,
+        .kwd {
+            color: #3472F7;
+        }
+
+        .atn {
+            color: #2C93FF;
+        }
+
+        .pln {
+            color: #333;
+        }
+
+        .com {
+            color: #999;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -198,7 +255,9 @@
                             <li><a href="index.html"><i class="fa fa-tachometer"></i><span>HR Dashboard</span></a></li>
                             <li><a href="app-holidays.html"><i class="fa fa-list-ul"></i><span>Holidays</span></a></li>
                             <li><a href="app-events.html"><i class="fa fa-calendar"></i><span>Events</span></a></li>
-                            <li><a href="app-activities.html"><i class="fa fa-file-text-o"></i><span>Activities</span></a></li>
+                            <li><a href="app-activities.html"><i
+                                        class="fa fa-file-text-o"></i>Activities</a>
+                            </li>
                             <li><a href="app-social.html"><i class="fa fa-globe"></i><span>HR Social</span></a></li>
                             <li>
                                 <a href="#Employees" class="has-arrow"><i class="fa fa-users"></i><span>Employees</span></a>
@@ -290,7 +349,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#FileManager" class="has-arrow"><i class="fa fa-folder"></i><span>File Manager</span></a>
+                                <a href="#FileManager" class="has-arrow"><i
+                                        class="fa fa-folder"></i><span>File
+                                        Manager</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="file-dashboard.html">Dashboard</a></li>
                                     <li><a href="file-documents.html">Documents</a></li>
@@ -327,19 +388,21 @@
                                 </ul>
                             </li>
                             <li class="active mm-active">
-                                <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>UI Elements</span></a>
+                                <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i>
+                                    <span>UI
+                                        Elements</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="ui-typography.html">Typography</a></li>
                                     <li><a href="ui-tabs.html">Tabs</a></li>
                                     <li><a href="ui-buttons.html">Buttons</a></li>
-                                    <li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
+                                    <li class="active"><a href="ui-bootstrap.html">Bootstrap UI</a></li>
                                     <li><a href="ui-icons.html">Icons</a></li>
                                     <li><a href="ui-notifications.html">Notifications</a></li>
                                     <li><a href="ui-colors.html">Colors</a></li>
                                     <li><a href="ui-dialogs.html">Dialogs</a></li>
                                     <li><a href="ui-list-group.html">List Group</a></li>
                                     <li><a href="ui-media-object.html">Media Object</a></li>
-                                    <li class="active"><a href="ui-modals.html">Modals</a></li>
+                                    <li><a href="ui-modals.html">Modals</a></li>
                                     <li><a href="ui-nestable.html">Nestable</a></li>
                                     <li><a href="ui-progressbars.html">Progress Bars</a></li>
                                     <li><a href="ui-range-sliders.html">Range Sliders</a></li>
@@ -480,11 +543,11 @@
                 <div class="block-header py-lg-4 py-3">
                     <div class="row g-3">
                         <div class="col-md-6 col-sm-12">
-                            <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Modals</h2>
+                            <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Bootstrap UI</h2>
                             <ul class="breadcrumb mb-0">
                                 <li class="breadcrumb-item"><a href="index.html">Lucid</a></li>
                                 <li class="breadcrumb-item">UI Elements</li>
-                                <li class="breadcrumb-item active">Modals</li>
+                                <li class="breadcrumb-item active">Bootstrap UI</li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-sm-12 text-md-end">
@@ -514,39 +577,462 @@
                 </div>
 
                 <div class="row g-3">
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-6 col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h6 class="card-title">Modal Default Size</h6>
+                                <h6 class="card-title">Alert Messages</h6>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <img class="img-thumbnail img-fluid" src="../dist/assets/images/model1.jpg" alt="User">
-                                </a>
+                                <div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+                                <div class="alert alert-secondary" role="alert">A simple secondary alert—check it out!</div>
+                                <div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
+                                <div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
+                                <div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>
+                                <div class="alert alert-info" role="alert">A simple info alert—check it out!</div>
+                                <div class="alert alert-light" role="alert">A simple light alert—check it out!</div>
+                                <div class="alert alert-dark" role="alert">A simple dark alert—check it out!</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-6 col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h6 class="card-title">Modal Large Size</h6>
+                                <h6 class="card-title">Alert Messages with Link</h6>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#largeModal">
-                                    <img class="img-thumbnail img-fluid" src="../dist/assets/images/model1.jpg" alt="User">
-                                </a>
+                                <div class="alert alert-primary" role="alert">A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-secondary" role="alert">A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-success" role="alert">A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-danger" role="alert">A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-warning" role="alert">A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-info" role="alert">A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-light" role="alert">A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                <div class="alert alert-dark" role="alert">A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h6 class="card-title">Modal Small Size</h6>
+                                <h6 class="card-title">Alert Messages With Icon</h6>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#smallModal">
-                                    <img class="img-thumbnail img-fluid" src="../dist/assets/images/model3.jpg" alt="User">
-                                </a>
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <i class="fa fa-info-circle"></i> The system is running well
+                                </div>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <i class="fa fa-check-circle"></i> Your settings have been succesfully saved
+                                </div>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <i class="fa fa-warning"></i> Warning, check your permission settings
+                                </div>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <i class="fa fa-times-circle"></i> Your account has been suspended
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Labels</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>We restyled the default options for labels and we added the filled class, that can be used in any combination.</p>
+                                <span class="badge bg-secondary">Default</span>
+                                <span class="badge bg-primary">Primary</span>
+                                <span class="badge bg-success">Success</span>
+                                <span class="badge bg-info">Info</span>
+                                <span class="badge bg-warning">Warning</span>
+                                <span class="badge bg-danger">Danger</span>
+                                <hr>
+<pre class="prettyprint prettyprinted"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge bg-secondary"</span><span class="tag">&gt;</span><span class="pln">Default</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge bg-primary"</span><span class="tag">&gt;</span><span class="pln">Primary</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge bg-success"</span><span class="tag">&gt;</span><span class="pln">Success</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge bg-info"</span><span class="tag">&gt;</span><span class="pln">Info</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge bg-warning"</span><span class="tag">&gt;</span><span class="pln">Warning</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge bg-danger"</span><span class="tag">&gt;</span><span class="pln">Danger</span><span class="tag">&lt;/span&gt;</span></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Modals</h6>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Large modal</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Small modal</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">modal with button</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Vertically centered</button>
+                
+                                <!-- larg modal -->
+                                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title h4" id="myLargeModalLabel">Large modal</h5>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Woohoo, you're reading this text in a modal!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Small modal -->
+                                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title h4" id="mySmallModalLabel">Small modal</h5>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Woohoo, you're reading this text in a modal!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Modal with btn -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Woohoo, you're reading this text in a modal!</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Vertically centered -->
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Cras mattis consectetur orbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Accordion</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Accordion Item #1
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                                                the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Accordion Item #2
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                                                the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Accordion Item #3
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                                                the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-lg-6 col-md-12">
+                                        <h6>Accordion Link</h6>
+                                        <p>
+                                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                Link with href
+                                            </a>
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                Button with data-target
+                                            </button>
+                                        </p>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-lg-6 col-md-12">
+                                        <h6 class="card-title">Multiple targets Accordion</h6>
+                                        <p>
+                                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                                Toggle both elements
+                                            </button>
+                                        </p>
+                                        <div class="row g-3">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                                    <div class="card card-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                    <div class="card card-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Pagination</h6>
+                            </div>
+                            <div class="card-body">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                                <hr />
+                                <h6 class="card-title">Working with icons</h6>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <hr />
+                                <h6 class="card-title">Disabled and active states</h6>
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Tooltips</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="demo-button">
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">Tooltip on right</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">Tooltip on left</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Popovers</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="demo-button">
+                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on top</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on right</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on bottom</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on left</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-trigger="hover" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on Hover</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Position</h6>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Common values</h6>
+                                <figure class="highlight">
+<pre class="mb-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-static"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-fixed"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-sticky"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+                                </figure>
+                                <hr>
+                                <h6 class="card-title">Sticky top</h6>
+                                <figure class="highlight">
+                                    <pre class="mb-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sticky-top"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+                                </figure>
+                                <div class="p-3 mb-2 bg-primary text-white sticky-top">.sticky-top</div>
+                                <hr>
+                                <h6 class="card-title">Fixed top</h6>
+                                <figure class="highlight">
+                                    <pre class="mb-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fixed-bottom"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+                                </figure>
+                                <hr>
+                                <h6 class="card-title">Fixed bottom</h6>
+                                <figure class="highlight">
+                                    <pre class="mb-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fixed-bottom"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Borders</h6>
+                            </div>
+                            <div class="card-body bd-example-border-utils">
+                                <div class="d-flex">
+                                    <span class="border"></span>
+                                    <span class="border-top"></span>
+                                    <span class="border-end"></span>
+                                    <span class="border-bottom"></span>
+                                    <span class="border-start"></span>
+                                </div>
+                                <hr>
+                                <h6 class="card-title">Subtractive</h6>
+                                <span class="border-0"></span>
+                                <span class="border border-top-0"></span>
+                                <span class="border border-end-0"></span>
+                                <span class="border border-bottom-0"></span>
+                                <span class="border border-start-0"></span>
+                                <hr>
+                                <h6 class="card-title">Border color</h6>
+                                <span class="border border-primary"></span>
+                                <span class="border border-secondary"></span>
+                                <span class="border border-success"></span>
+                                <span class="border border-danger"></span>
+                                <span class="border border-warning"></span>
+                                <span class="border border-info"></span>
+                                <span class="border border-light"></span>
+                                <span class="border border-dark"></span>
+                                <span class="border border-white"></span>
+                                <hr>
+                                <h6 class="card-title">Border Width</h6>
+                                <span class="border border-1"></span>
+                                <span class="border border-2"></span>
+                                <span class="border border-3"></span>
+                                <span class="border border-4"></span>
+                                <span class="border border-5"></span>
+                                <hr>
+                                <h6 class="card-title">Border-radius</h6>
+                                <img src="http://via.placeholder.com/75x75" class="rounded" alt="...">
+                                <img src="http://via.placeholder.com/75x75" class="rounded-top" alt="...">
+                                <img src="http://via.placeholder.com/75x75" class="rounded-end" alt="...">
+                                <img src="http://via.placeholder.com/75x75" class="rounded-bottom" alt="...">
+                                <img src="http://via.placeholder.com/75x75" class="rounded-start" alt="...">
+                                <img src="http://via.placeholder.com/75x75" class="rounded-circle" alt="...">
+                                <img src="http://via.placeholder.com/150x75" class="rounded-pill" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Shadows</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
+                                <div class="shadow-sm p-3 mb-5 bg-white rounded">Small shadow</div>
+                                <div class="shadow p-3 mb-5 bg-white rounded">Regular shadow</div>
+                                <div class="shadow-lg p-3 mb-5 bg-white rounded">Larger shadow</div>
+                                <figure class="highlight">
+                                    <pre class="mb-0"><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow-none p-3 mb-5 bg-light rounded"</span><span class="nt">&gt;</span>No shadow<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow-sm p-3 mb-5 bg-white rounded"</span><span class="nt">&gt;</span>Small shadow<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow p-3 mb-5 bg-white rounded"</span><span class="nt">&gt;</span>Regular shadow<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow-lg p-3 mb-5 bg-white rounded"</span><span class="nt">&gt;</span>Larger shadow<span class="nt">&lt;/div&gt;</span></code></pre>
+                                </figure>
                             </div>
                         </div>
                     </div>
@@ -556,75 +1042,22 @@
         </div>
 
     </div>
-
-    <!-- Modal Dialogs ========= -->
-    <!-- Default Size -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan vitae eros sit amet Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc
-                    nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Large Size -->
-    <div class="modal fade" id="largeModal" tabindex="-1" aria-labelledby="largeModal" aria-hidden="false">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan vitae eros sit amet Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc
-                    nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Small Size -->
-    <div class="modal fade" id="smallModal" tabindex="-1" aria-labelledby="smallModal" aria-hidden="false">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan vitae eros sit amet Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc
-                    nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
 <!-- core js file -->
 <script src="{{asset('bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
+<script src="{{asset('bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
 
 <!-- page js file -->
 <script src="{{asset('bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>
 </body>
 </html>
