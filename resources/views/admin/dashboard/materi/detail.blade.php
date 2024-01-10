@@ -48,8 +48,6 @@
                                                         <li class="nav-item my-1" role="presentation" >
                                                             <a style="font-size: 23px;" class="nav-link" data-bs-toggle="tab" href="#{{$item->title ."-". $item->id}}" aria-selected="true" role="tab" >
                                                                 {{$item->title}}
-                                                                <i class="fa fa-exclamation-circle"></i>
-                                                                @endif
                                                             </a>
                                                         </li>
                                                     @endforeach
