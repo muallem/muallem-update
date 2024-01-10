@@ -59,7 +59,7 @@ class Datatable extends Component
                 'searchable' => false,
                 'render' => function ($item) {
                     $route = route('dashboard.materi.detail', ['id' => $item->id]);
-                    $showHtml = "<a type='button' class='btn btn-sm btn-info' href='$route' target='_blank'>
+                    $showHtml = "<a type='button' class='btn btn-sm btn-info d-inline' href='$route' target='_blank'>
                         <i class='fa fa-eye'></i>
                         Lihat
                     </a>";
