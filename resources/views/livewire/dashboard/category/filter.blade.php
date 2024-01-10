@@ -1,7 +1,7 @@
 
 <div class="row">
     <div class="col-sm-12 mb-3">
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#importModal">
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="fa fa-plus"></i>
             Tambah Kategori
         </button>
