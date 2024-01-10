@@ -45,7 +45,7 @@
                                                 <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <li class="nav-item my-1" role="presentation" >
-                                                            <a style="font-size: 23px;" class="nav-link {{($index == 0) ? 'show' : ''}}" data-bs-toggle="tab" href="#{{$item->title ."-". $item->id}}" aria-selected="true" role="tab" >
+                                                            <a style="font-size: 23px;" class="nav-link {{($index == 0) ? 'show' : ''}}" data-bs-toggle="tab" href="#{{str_replace(' ', '_', $item->title ."-". $item->id)}}" aria-selected="true" role="tab" >
                                                                 {{$item->title}}
                                                             </a>
                                                         </li>
@@ -53,7 +53,7 @@
                                                 </ul>
                                                 <div class="tab-content mt-3">
                                                     @foreach ($lesson->lesson_details as $index => $item)
-                                                        <div class="tab-pane {{($index == 0) ? 'active show' : ''}}" id="{{$item->title ."-". $item->id}}" role="tabpanel">
+                                                        <div class="tab-pane {{($index == 0) ? 'active show' : ''}}" id="{{str_replace(' ', '_', $item->title ."-". $item->id)}}" role="tabpanel">
                                                             <h4>{{$item->title}}</h4>
                                                             <p style="text-align: justify;" class="mt-3">
                                                                 {{$item->body}}
