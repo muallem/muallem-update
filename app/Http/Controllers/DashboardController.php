@@ -29,11 +29,11 @@ class DashboardController extends Controller
      */
     public function dashboard()
     {
-        return view('dashboard.index');
+        return view('admin.dashboard.materi.index');
     }
     public function category()
     {
-        return view('dashboard.category');
+        return view('admin.dashboard.category.index');
     }
     public function index()
     {

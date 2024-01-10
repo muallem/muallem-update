@@ -10,7 +10,7 @@
                     <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Kitabah</h2>
                     <ul class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Materi</li>
                     </ul>
                 </div>
             </div>
