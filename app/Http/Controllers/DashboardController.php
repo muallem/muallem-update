@@ -46,6 +46,11 @@ class DashboardController extends Controller
         // ])->get();
         return view('admin.index');
     }
+    public function materi_detail($id)
+    {
+        return Lesson::where('id', $id)->with('lesson_details')->first();
+        // return view('admin.', ['id' => $id]);
+    }
     public function materi_old(Request $request)
     {
         $thesis = Judul::where('id', $request->thesis_id)->with('user')->first();

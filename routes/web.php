@@ -28,6 +28,7 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
         Route::get('/category', 'category')->name('category');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/materi', 'materi')->name('materi');
+        Route::get('/materi/{id}', 'materi_detail')->name('materi.detail');
         Route::get('/rnd', 'rnd')->name('rnd');
     });
 });
