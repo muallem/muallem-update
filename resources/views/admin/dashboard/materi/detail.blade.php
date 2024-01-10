@@ -43,36 +43,24 @@
                                         <div class="card-body">
                                             {{-- <form class="chat-input px-3" wire:submit.prevent='store'> --}}
                                                 <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
-
-                                                    @php
-                                                        $i = 0;
-                                                    @endphp
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <li class="nav-item my-1" role="presentation" >
-                                                            <a style="font-size: 23px;" class="nav-link {{($i == 2) ? 'active show' : ''}}" data-bs-toggle="tab" href="#{{str_replace(' ', '_', $item->title ."-". $item->id)}}" aria-selected="true" role="tab" >
+                                                            <a style="font-size: 23px;" class="nav-link {{($index == 0) ? 'active show' : ''}}" data-bs-toggle="tab" href="#{{preg_replace('/\s+/', '', $item->title . '-' . $item->id)}}" aria-selected="true" role="tab" >
                                                                 {{$item->title}}
                                                             </a>
                                                         </li>
 
-                                                        @php
-                                                            $i += 1;
-                                                        @endphp
                                                     @endforeach
                                                 </ul>
                                                 <div class="tab-content mt-3">
-                                                    @php
-                                                        $i = 0;
-                                                    @endphp
+                                                    
                                                     @foreach ($lesson->lesson_details as $index => $item)
-                                                        <div class="tab-pane {{($i == 2) ? 'active show' : ''}}" id="{{str_replace(' ', '_', $item->title ."-". $item->id)}}" role="tabpanel">
+                                                        <div class="tab-pane {{($index == 2) ? 'active show' : ''}}" id="{{preg_replace('/\s+/', '_', $item->title . '-' . $item->id)}}" role="tabpanel">
                                                             <h4>{{$item->title}}</h4>
                                                             <p style="text-align: justify;" class="mt-3">
                                                                 {{$item->body}}
                                                             </p>
                                                         </div>
-                                                        @php
-                                                            $i += 1;
-                                                        @endphp
                                                     @endforeach
                                                 </div>
                                                     
