@@ -32,10 +32,10 @@ class Datatable extends Component
     {
         return [
             [
-                'key' => 'id',
-                'name' => 'Data',
+                'key' => 'name',
+                'name' => 'Nama Kategori',
                 'render' => function ($item) {
-                    return $item;
+                    return $item->name;
                 },
             ],
         ];

@@ -27,6 +27,8 @@ class Filter extends Component
 
             DB::commit();
             $this->emit('onSuccessSweetAlert', 'Berhasil Menyimpan Data!');
+            $this->emit('refreshDatatable');
+            $this->emit('onSuccessStore');
             $this->reset(['input_name']);
 
         } catch (\Exception $e) {
