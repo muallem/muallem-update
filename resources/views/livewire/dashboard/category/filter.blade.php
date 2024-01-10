@@ -23,7 +23,7 @@
                     <div class="modal-body import_modal">
                         <div class="form-group mb-2">
                             <label>Nama Kategori</label>
-                            <input type="text" wire:model.lazy="name" class="form-control" required>
+                            <input type="text" wire:model.lazy="input_name" class="form-control" required>
                         </div>
                     </div>
                     <div class="modal-footer">
