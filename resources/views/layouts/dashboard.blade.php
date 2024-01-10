@@ -15,28 +15,6 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{asset('bootstrap5/dist/assets/css/main.css')}}">
     @livewireStyles
-    <style>
-        /* Default styles for the tabs */
-        .nav-tabs-new2 .nav-item a.nav-link {
-            font-size: 23px;
-            background-color: #2eacb3; /* Default background color */
-            color: white; /* Default text color */
-        }
-
-        /* Styles for active tabs */
-        .nav-tabs-new2 .nav-item a.nav-link.active {
-            background-color: #59d7f0; /* Background color for active tab */
-            color: rgb(22, 85, 70); /* Text color for active tab */
-        }
-        .nav-tabs-new2 .nav-item a.nav-link:hover {
-            color: white; /* Text color on hover */
-        }
-        @media only screen and (min-width: 769px) {
-            .tab-content {
-                font-size: 20px;
-            }
-        }
-    </style>
 </head>
 
 <body>
