@@ -9,7 +9,7 @@
 
     {{-- Import Modal --}}
 
-    <div class="modal fade" id="exampleModal" tabindex="99999" aria-labelledby="exampleModal" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" data-backdrop="static" aria-labelledby="exampleModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
