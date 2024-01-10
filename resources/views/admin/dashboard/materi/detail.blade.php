@@ -18,13 +18,6 @@
         </div>
 
         <div class="row g-3">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        @livewire('dashboard.materi.filter')
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-12 col-md-12">
                 <div class="card mb-3 single_post">
                     <div class="card">

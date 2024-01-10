@@ -52,6 +52,14 @@ class Datatable extends Component
                     return $item->chapter;
                 },
             ],
+            [
+                'sortable' => false,
+                'searchable' => false,
+                'name' => 'Nama Kategori',
+                'render' => function ($item) {
+                    return $item->category->name;
+                },
+            ],
 
             [
                 'name' => 'Aksi',
@@ -88,7 +96,7 @@ class Datatable extends Component
     public function getQuery(): Builder
     {
 
-        $query = Lesson::query();
+        $query = Lesson::with('category');
 
         return $query;
     }
