@@ -59,7 +59,7 @@ class Datatable extends Component
                 'searchable' => false,
                 'render' => function ($item) {
                     $route = route('dashboard.materi.detail', ['id' => $item->id]);
-                    $editHtml = "<a href='$route' class='btn btn-primary'><i class='fas fa-eye mr-2'></i> Lihat</button>";
+                    $editHtml = "<a href='$route' class='btn btn-primary'><i class='fas fa-eye mr-2'></i> Lihat</a>";
 
                     $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\">"
                         . method_field('DELETE') . csrf_field() .
