@@ -49,7 +49,7 @@
                                                     @endphp
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <li class="nav-item my-1" role="presentation" >
-                                                            <a style="font-size: 23px;" class="nav-link {{($i == 0) ? 'active show' : ''}}" data-bs-toggle="tab" href="#{{str_replace(' ', '_', $item->title ."-". $item->id)}}" aria-selected="true" role="tab" >
+                                                            <a style="font-size: 23px;" class="nav-link {{($i == 2) ? 'active show' : ''}}" data-bs-toggle="tab" href="#{{str_replace(' ', '_', $item->title ."-". $item->id)}}" aria-selected="true" role="tab" >
                                                                 {{$item->title}}
                                                             </a>
                                                         </li>
@@ -64,7 +64,7 @@
                                                         $i = 0;
                                                     @endphp
                                                     @foreach ($lesson->lesson_details as $index => $item)
-                                                        <div class="tab-pane {{($i == 0) ? 'active show' : ''}}" id="{{str_replace(' ', '_', $item->title ."-". $item->id)}}" role="tabpanel">
+                                                        <div class="tab-pane {{($i == 2) ? 'active show' : ''}}" id="{{str_replace(' ', '_', $item->title ."-". $item->id)}}" role="tabpanel">
                                                             <h4>{{$item->title}}</h4>
                                                             <p style="text-align: justify;" class="mt-3">
                                                                 {{$item->body}}
