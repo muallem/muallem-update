@@ -60,7 +60,7 @@ class Datatable extends Component
                 'render' => function ($item) {
                     $route = route('dashboard.materi.detail', ['id' => $item->id]);
                     $showHtml = "<div class='col-auto'>
-                        <a type='button' class='btn btn-sm btn-info' href='$route' target='_blank'>
+                        <a type='button' class='btn btn-info' href='$route' target='_blank'>
                             <i class='fa fa-eye'></i>
                             Lihat
                         </a>
