@@ -30,7 +30,48 @@
                     <div class="card">
                         <div class="card-body">
                             {{var_dump($lesson)}}
-                            {{-- @livewire('dashboard.materi.datatable') --}}
+                            <div class="">
+                                <div class="position-relative">
+                                    <div wire:loading.block>
+                                        <div class="position-absolute w-100 h-100">
+                                            <div class="w-100 h-100 bg-primary" style="background-color: grey; opacity:0.2"></div>
+                                        </div>
+                                        <h5 class="position-absolute shadow bg-white p-2 rounded"
+                                            style="top: 50%;left: 50%;transform: translate(-50%, -50%);">Loading...</h5>
+                                    </div>
+                                    <div class="card">
+                                        
+                                        <div class="card-body">
+                                            {{-- <form class="chat-input px-3" wire:submit.prevent='store'> --}}
+                                                <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
+                                                    @foreach ($lesson->lesson_detail as $item)
+                                                        <li class="nav-item my-1" role="presentation" >
+                                                            <a style="font-size: 23px;" class="nav-link" data-bs-toggle="tab" href="#{{$item->title ."-". $item->id}}" aria-selected="true" role="tab" >
+                                                                {{$item->title}}
+                                                                <i class="fa fa-exclamation-circle"></i>
+                                                                @endif
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                                <div class="tab-content mt-3">
+                                                    @foreach ($lesson->lesson_detail as $item)
+                                                        <div class="tab-pane" id="{{$item->title ."-". $item->id}}" role="tabpanel">
+                                                            <h4>{{$item->title}}</h4>
+                                                            <p style="text-align: justify;" class="mt-3">
+                                                                {{$item->body}}
+                                                            </p>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                                    
+                                
+                                                
+                                            {{-- </form> --}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
