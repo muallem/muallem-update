@@ -30,7 +30,7 @@ class Materi extends Component
             $fileName = Str::random(20) . '.' . $this->input_file->getClientOriginalExtension();
             $path = $this->input_file->storeAs('lessons', $fileName, 'public');
 
-            // Excel::import(new ExcelImportMateri($this->name), Storage::path('public/'.$path));
+            Excel::import(new ExcelImportMateri($this->name), Storage::path('public/'.$path));
             DB::commit();
             $this->emit('onSuccessSweetAlert', 'Berhasil Menyimpan Data!');
             $this->reset(['name', 'input_file']);
