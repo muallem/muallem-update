@@ -3,19 +3,20 @@
     <div class="col-sm-12 mb-3">
         <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#importModal">
             <i class="fa fa-download"></i>
-            Import Data
+            Import Materi
         </button>
     </div>
 
     {{-- Import Modal --}}
-    <div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModal" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" wire:ignore.self>
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Import Materi</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title h4" id="myLargeModalLabel">Import Materi</h5>
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
-                
                 <form wire:submit.prevent="import">
                     <div class="modal-body import_modal">
                         <div class="form-group mb-2">
