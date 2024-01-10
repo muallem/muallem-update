@@ -25,7 +25,7 @@
                         </div>
                         
                         <select class="form-control mb-2" wire:model="input_category" required>
-                            <option>Pilih Kategori</option>
+                            <option value="">Pilih Kategori</option>
                             @foreach ($categories as $key => $value)
                                 <option value="{{$value->id}}">{{ $value->name }}</option>
                             @endforeach

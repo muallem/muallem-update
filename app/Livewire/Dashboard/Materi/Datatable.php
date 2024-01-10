@@ -35,14 +35,42 @@ class Datatable extends Component
         }
     }
 
+    public function destroy($id)
+    {
+        $item = Lesson::find($id);
+        $item->delete();
+        $this->emit('onSuccessSweetAlert', 'Data Berhasil Dihapus!');
+    }
+
     public function getColumns(): array
     {
         return [
             [
-                'key' => 'id',
-                'name' => 'Data',
+                'key' => 'chapter',
+                'name' => 'Nama Materi',
                 'render' => function ($item) {
-                    return $item;
+                    return $item->chapter;
+                },
+            ],
+
+            [
+                'name' => 'Aksi',
+                'sortable' => false,
+                'searchable' => false,
+                'render' => function ($item) {
+                    $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\">"
+                        . method_field('DELETE') . csrf_field() .
+                        "<button type='submit' class='btn btn-danger'
+                            onclick=\"return confirm('Delete Data?')\">
+                            <i class='fa fa-trash mr-2'></i> Hapus
+                        </button>
+                    </form>";
+
+                    $html = "<div class='row'>
+                        $destroyHtml                 
+                    </div>";
+
+                    return $html;
                 },
             ],
         ];
@@ -51,7 +79,7 @@ class Datatable extends Component
     public function getQuery(): Builder
     {
 
-        $query = Lesson::with('lesson_details');
+        $query = Lesson::query();
 
         return $query;
     }
