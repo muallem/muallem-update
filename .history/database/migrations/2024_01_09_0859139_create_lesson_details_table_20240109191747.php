@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('lesson_details', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('lesson_id')->unsigned();
-            $table->string('lesson_title')->nullable();
             $table->text('lesson_body')->nullable();
+            $table->bigInteger('lesson_title_id')->unsigned();
             $table->timestamps();
         });
     }

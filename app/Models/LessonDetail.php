@@ -10,8 +10,9 @@ class LessonDetail extends Model
     use HasFactory;
 
     protected $fillable = [
+        'lesson_id',
+        'lesson_title',
         'lesson_body',
-        'lesson_title_id',
     ];
 
     protected $hidden = [

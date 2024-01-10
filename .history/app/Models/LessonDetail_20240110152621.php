@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LessonTitle extends Model
+class LessonDetail extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'lesson_title',
         'lesson_id',
+        'lesson_title',
+        'lesson_body',
     ];
 
     protected $hidden = [
@@ -23,8 +24,4 @@ class LessonTitle extends Model
 
     protected $guarded = ['id'];
 
-    public function lesson_details()
-    {
-        return $this->hasMany(LessonDetail::class, 'lesson_title_id', 'id');
-    }
 }
