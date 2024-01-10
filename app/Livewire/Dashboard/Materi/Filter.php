@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Dashboard;
+namespace App\Livewire\Dashboard\Materi;
 
 use App\Models\Lesson;
 use Livewire\Component;
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Log;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 
-class Materi extends Component
+class Filter extends Component
 {
     use WithFileUploads;
     // Modal Import
@@ -47,6 +47,6 @@ class Materi extends Component
 
     public function render()
     {
-        return view('livewire.dashboard.materi');
+        return view('livewire.dashboard.materi.filter');
     }
 }

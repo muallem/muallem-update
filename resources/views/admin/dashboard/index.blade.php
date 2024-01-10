@@ -19,8 +19,13 @@
         <div class="row g-3 clearfix">
             <div class="col-lg-12 col-md-12">
                 <div class="card mb-3 single_post">
-                    <div class="card-body">
-                        @livewire('dashboard.materi')
+                    <div class="card">
+                        <div class="card-header">
+                            @livewire('dashboard.materi.filter')
+                        </div>
+                        <div class="card-body">
+                            @livewire('dashboard.materi.datatable')
+                        </div>
                     </div>
                 </div>
             </div>
