@@ -8,16 +8,14 @@
     </div>
 
     {{-- Import Modal --}}
-    <div class="modal fade" id="importModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        wire:ignore.self>
+    <div class="modal fade show" id="importModal" tabindex="-1" aria-labelledby="importModal" style="display: block;" aria-modal="true" role="dialog" wire:ignore.self>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="importModalLabel">Import Data</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title">Import Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                
                 <form wire:submit.prevent="import">
                     <div class="modal-body import_modal">
                         <div class="form-group mb-2">
