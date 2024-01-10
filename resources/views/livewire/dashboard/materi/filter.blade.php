@@ -1,7 +1,7 @@
 
 <div class="row">
     <div class="col-sm-12 mb-3">
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#importModal">
+        <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#importModal">
             <i class="fa fa-download"></i>
             Import Materi
         </button>
@@ -21,14 +21,16 @@
                     <div class="modal-body import_modal">
                         <div class="form-group mb-2">
                             <label>Nama Materi</label>
-                            <input type="text" wire:model.lazy="name" class="form-control" required>
+                            <input type="text" wire:model.lazy="name" class="form-control" placeholder="Nama Materi" required>
                         </div>
                         
-                        <select class="form-control" wire:model="input_category" required>
+                        <select class="form-control mb-2" wire:model="input_category" required>
+                            <option>Pilih Kategori</option>
                             @foreach ($categories as $key => $value)
                                 <option value="{{$value->id}}">{{ $value->name }}</option>
                             @endforeach
                         </select>
+                        
                         <div class="form-group mb-2">
                             <label>File Lampiran</label>
                             <input type="file" wire:model.lazy="input_file" class="form-control" required>
