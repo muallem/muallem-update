@@ -29,7 +29,7 @@ class Materi extends Component
             DB::beginTransaction();
             Log::error('Chapter: ' . $this->name);
             $fileName = Str::random(20) . '.' . $this->input_file->getClientOriginalExtension();
-            // $this->emit('consoleLog', $fileName);
+            $this->emit('consoleLog', $fileName);
             $path = $this->input_file->storeAs('lessons', $fileName, 'public');
             Excel::import(new ExcelImportMateri(), Storage::path($path));
             DB::commit();
