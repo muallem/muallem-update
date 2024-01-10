@@ -23,7 +23,7 @@ class RedirectIfAuthenticated
         foreach ($guards as $guard) {
             if (AuthHelper::isSessionToken()) {
                 if(AuthHelper::isAdmin()){
-                    return redirect()->route('admin.index');
+                    return redirect()->route('dashboard.index');
                 }
                 return redirect()->route('student.index');
             }
