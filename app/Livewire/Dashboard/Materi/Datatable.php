@@ -2,9 +2,10 @@
 
 namespace App\Livewire\Dashboard\Materi;
 
+use App\Models\Lesson;
+use Livewire\Component;
 use App\Traits\WithDatatable;
 use Illuminate\Database\Eloquent\Builder;
-use Livewire\Component;
 
 class Datatable extends Component
 {
