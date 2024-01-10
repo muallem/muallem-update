@@ -115,14 +115,20 @@
             </div>
 
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
-        <!-- core js file -->
-        <script src="{{asset('bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
-        <script src="{{asset('bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
-        
-        <!-- page js file -->
-        <script src="{{asset('bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
+<!-- core js file -->
+<script src="{{asset('bootstrap5/dist/assets/bundles/libscripts.bundle.js')}}"></script>
+<script src="{{asset('bootstrap5/dist/assets/bundles/sweetalert2.bundle.js')}}"></script>
+
+<!-- page js file -->
+<script src="{{asset('bootstrap5/dist/assets/bundles/mainscripts.bundle.js')}}"></script>
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>
         @livewireScripts
 
         <script>
