@@ -97,8 +97,7 @@
                 </nav>
         
 
-                <div id="left-sidebar" class="sidebar">
-                    
+                <div id="left-sidebar" class="sidebar metismenu">       
                     <!-- Sidbar menu -->
                     <div>
                         <div class="user-account p-3 mb-3">
