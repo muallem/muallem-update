@@ -27,6 +27,12 @@ class Datatable extends Component
             $this->$key = $value;
         }
     }
+    public function destroy($id)
+    {
+        $item = Category::find($id);
+        $item->delete();
+        $this->emit('onSuccessSweetAlert', 'Data Berhasil Dihapus!');
+    }
 
     public function getColumns(): array
     {
@@ -36,6 +42,27 @@ class Datatable extends Component
                 'name' => 'Nama Kategori',
                 'render' => function ($item) {
                     return $item->name;
+                },
+            ],
+
+            [
+                'name' => 'Aksi',
+                'sortable' => false,
+                'searchable' => false,
+                'render' => function ($item) {
+                    $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\">"
+                        . method_field('DELETE') . csrf_field() .
+                        "<button type='submit' class='btn btn-danger'
+                            onclick=\"return confirm('Delete Data?')\">
+                            <i class='fa fa-trash mr-2'></i> Hapus
+                        </button>
+                    </form>";
+
+                    $html = "<div class='row'>
+                        $destroyHtml                 
+                    </div>";
+
+                    return $html;
                 },
             ],
         ];
