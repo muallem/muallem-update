@@ -28,7 +28,7 @@
                 style="top: 50%;left: 50%;transform: translate(-50%, -50%);">Loading...</h5>
         </div>
         <div class="table-responsive">
-            <table class="table table-bordered text-nowrap w-100 h-100">
+            <table class="table text-nowrap w-100 h-100">
                 <thead>
                     <tr>
                         @foreach ($columns as $col)

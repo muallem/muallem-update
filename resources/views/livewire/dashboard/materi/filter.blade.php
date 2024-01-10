@@ -43,3 +43,14 @@
         </div>
     </div>
 </div>
+
+
+@push('js')
+    <script>
+        document.addEventListener('livewire:load', function() {
+            window.livewire.on('onSuccessStore', (message) => {
+                $('#importModal').modal('hide');
+            });
+        });
+    </script>
+@endpush
