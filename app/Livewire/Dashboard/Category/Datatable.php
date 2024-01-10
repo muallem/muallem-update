@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Dashboard\Category;
 
-use App\Models\Lesson;
 use Livewire\Component;
+use App\Models\Category;
 use App\Traits\WithDatatable;
 use Illuminate\Database\Eloquent\Builder;
 
