@@ -50,7 +50,7 @@ class DashboardController extends Controller
     {
 
         $lesson = Lesson::where('id', $id)->with('lesson_details')->first()->toArray();
-        return view('admin.dashboard.materi.detail', compact($lesson));
+        return view('admin.dashboard.materi.detail', compact('lesson'));
         // return view('admin.', ['id' => $id]);
     }
     public function materi_old(Request $request)
