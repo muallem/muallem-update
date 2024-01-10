@@ -66,7 +66,7 @@ class Datatable extends Component
                         </a>
                     </div>";
 
-                    $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\" class='d-inline-block'>"
+                    $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\" class='col-auto'>"
                         . method_field('DELETE') . csrf_field() .
                         "<button type='submit' class='btn btn-danger'
                             onclick=\"return confirm('Delete Data?')\">
