@@ -6,7 +6,9 @@
                 <h4>{{$data_judul->wpjs_users->user_login}}</h4>
             </div>
         </div>
-        {{var_dump($category_choice)}}
+        @foreach ($category_choice as $index => $item)
+            {{$index ."-". $item}}
+        @endforeach
         <div class="card mb-3">
             <div class="card-body">
                 <h6>Judul : </h6>
