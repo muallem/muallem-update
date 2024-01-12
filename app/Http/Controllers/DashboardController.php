@@ -27,10 +27,11 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function lesson($id)
+    public function lesson($id, $judul_id)
     {
-        
+        return $judul_id;
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
+        // $judul = Judul::;
         return view('admin.lesson', compact('lesson'));
     }
     public function materi()

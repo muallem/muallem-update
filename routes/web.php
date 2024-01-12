@@ -25,7 +25,7 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
     Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/dashboard', 'dashboard')->name('dashboard');
-        Route::get('/lesson/{id}', 'lesson')->name('lesson');
+        Route::get('/lesson/{id}/{judul_id}', 'lesson')->name('lesson');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/rnd', 'rnd')->name('rnd');
     });

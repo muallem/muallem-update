@@ -78,24 +78,13 @@
                 </div>
                 
                 <div class="card">
-                    <div class="chat_app d-flex">
-                        
+                    <div class="chat_app d-flex justify-content-center">
                         <div class="chat">
                             <div class="chat-header d-flex justify-content-between align-items-center p-3 border-bottom">
                                 <div class="left d-flex">
-                                    <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <img class="avatar rounded" src="../dist/assets/images/xs/avatar2.jpg" alt="avatar" />
-                                    </button>
                                     <div class="chat-about ps-2">
                                         <h6 class="mb-0">Aiden Chavez</h6>
-                                        <small class="text-muted">Last seen: 2 hours ago</small>
                                     </div>
-                                </div>
-                                <div class="right d-md-block d-none text-end">
-                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-camera"></i></a>
-                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-video-camera"></i></a>
-                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-cog"></i></a>
-                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-question"></i></a>
                                 </div>
                             </div>
                             <div class="chat-history p-3">
