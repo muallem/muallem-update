@@ -29,7 +29,9 @@ class DashboardController extends Controller
      */
     public function lesson($id)
     {
-        return $id;
+        
+        $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
+        return view('admin.lesson', compact('lesson'));
     }
     public function materi()
     {
