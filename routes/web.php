@@ -25,6 +25,14 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
     Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/dashboard', 'dashboard')->name('dashboard');
+        Route::get('/judul', 'judul')->name('judul');
+        Route::get('/rnd', 'rnd')->name('rnd');
+    });
+});
+Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
+    Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/dashboard', 'dashboard')->name('dashboard');
         Route::get('/category', 'category')->name('category');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/materi', 'materi')->name('materi');

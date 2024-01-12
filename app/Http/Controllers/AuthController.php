@@ -21,7 +21,11 @@ class AuthController extends Controller
             if(AuthHelper::isAdmin())
             {
                 return redirect()->route('dashboard.index');
-            }else{
+            }else if(AuthHelper::isSuperAdmin()){
+                return redirect()->route('dashboard.index');
+            }
+            else
+            {
                 return redirect()->route('student.index');
             }
         }
