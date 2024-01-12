@@ -27,6 +27,10 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function lesson($id)
+    {
+        return $id;
+    }
     public function materi()
     {
         return view('admin.dashboard.materi.index');
