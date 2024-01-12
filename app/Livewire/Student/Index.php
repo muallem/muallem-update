@@ -16,7 +16,7 @@ class Index extends Component
     public function render()
     {
         $student_id = session()->get('user_id');
-        $this->data_judul = Judul::where('student_id', $student_id)->first();
+        $this->data_judul = Judul::where('student_id', $student_id)->with('category')->first();
         return view('livewire.student.index');
     }
 }
