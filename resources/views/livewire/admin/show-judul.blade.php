@@ -13,23 +13,13 @@
                     <p>{{$data_judul->title}}</p>
                 </blockquote>
                 <hr>
-                @if($data_judul->group)
+                @if($data_judul->category_id)
                     <div class="w-100">
                         <h6 class="form-label">Feedback</h6>
                         
                         <blockquote class="blockquote border border-primary p-3">
                             <p>
-                                @switch($data_judul->group)
-                                    @case(\App\Models\Judul::TYPE_KUAN)
-                                        Kuantitatif (KUAN)
-                                        @break
-                                    @case(\App\Models\Judul::TYPE_KUAL)
-                                        Kualitatif (KUAL)
-                                        @break
-                                    @case(\App\Models\Judul::TYPE_RND)
-                                        Research And Development (RND)
-                                        @break
-                                @endswitch
+                                {{$data_judul->category->name}}
                             </p>
                         </blockquote>
                     </div>

@@ -33,7 +33,7 @@ class ShowJudul extends Component
 
     public function render()
     {
-        $this->data_judul = Judul::where('id', $this->thesis_id)->with('user')->first();
+        $this->data_judul = Judul::where('id', $this->thesis_id)->with('user', 'category')->first();
         return view('livewire.admin.show-judul');
     }
 }
