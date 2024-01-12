@@ -28,7 +28,7 @@
                                 @if (!empty($item['category']))
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
                                         @foreach ($item['category']['lessons'] as $lesson)
-                                        <li><a href="{{route('')}}">{{$lesson['chapter']}}</a></li>
+                                        <li><a href="{{route('dashboard.lesson', ['id' => $lesson['id']])}}">{{$lesson['chapter']}}</a></li>
                                         @endforeach
                                     </ul>
                                 @endif
