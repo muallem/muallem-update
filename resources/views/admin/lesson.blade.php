@@ -83,7 +83,7 @@
                             <div class="chat-header d-flex justify-content-between align-items-center p-3 border-bottom">
                                 <div class="left d-flex">
                                     <div class="chat-about ps-2">
-                                        <h6 class="mb-0">Aiden Chavez</h6>
+                                        <h6 class="mb-0">{{$judul->user->user_login}}</h6>
                                     </div>
                                 </div>
                             </div>
