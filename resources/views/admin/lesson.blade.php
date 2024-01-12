@@ -136,12 +136,12 @@
                                         </blockquote>
                                     </div>
                                 @else
-                                    <div class="input-group">
+                                    <div class="input-group mb-3">
                                         <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
                                         <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
                                     </div>
                                     <div class="input-group">
-                                        <button type="button" class="btn btn-success">Selesai</button>
+                                        <button type="button" class="btn btn-success d-block">Selesai</button>
                                     </div>
                                 @endif
                             </div>
