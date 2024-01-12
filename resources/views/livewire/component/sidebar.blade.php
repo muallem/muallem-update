@@ -21,5 +21,4 @@
             <li class="nav-item flex-fill"><a class="nav-link active" id="student_menu_nav_link" data-bs-toggle="tab" href="#student_menu" role="tab">Student</a></li>
         @endif
     </ul>
-    @livewire('coba.index')
 </div>
