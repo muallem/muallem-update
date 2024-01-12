@@ -35,7 +35,7 @@ Route::group(['middleware' => ['my.auth', 'student']], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/kual', 'kual')->name('kual');
         Route::get('/kuan', 'kuan')->name('kuan');
-        Route::get('/lesson/{id}/{judul_id}', 'lesson')->name('lesson');
+        Route::get('/lesson/{id}/{judul_id}', [StudentController::class, 'lesson'])->name('lesson');
         Route::get('/rnd', 'rnd')->name('rnd');
     });
  });
