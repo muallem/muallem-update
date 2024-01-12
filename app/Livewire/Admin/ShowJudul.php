@@ -17,7 +17,7 @@ class ShowJudul extends Component
     ];
 
     public function mount(){
-        $this->category_choice = Category::pluck('id', 'name');
+        $this->category_choice = Category::pluck('name', 'id');
     }
 
     public function setFeedback($feedback)
