@@ -4,6 +4,7 @@ namespace App\Livewire\Admin;
 
 use App\Models\Judul;
 use Livewire\Component;
+use App\Models\Category;
 
 class ShowJudul extends Component
 {
@@ -16,7 +17,7 @@ class ShowJudul extends Component
     ];
 
     public function mount(){
-        $this->category_choice = Category::pluck('name');
+        $this->category_choice = Category::pluck('id', 'name');
     }
 
     public function setFeedback($feedback)
