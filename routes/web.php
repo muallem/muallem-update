@@ -30,6 +30,15 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
         Route::get('/rnd', 'rnd')->name('rnd');
     });
 });
+Route::group(['middleware' => ['my.auth', 'student']], function () {
+    Route::group(['controller' => StudentController::class, 'prefix' => 'student', 'as' => 'student.'], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/kual', 'kual')->name('kual');
+        Route::get('/kuan', 'kuan')->name('kuan');
+        Route::get('/lesson/{id}/{judul_id}', 'lesson')->name('lesson');
+        Route::get('/rnd', 'rnd')->name('rnd');
+    });
+ });
 Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
     Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
         Route::get('/category', 'category')->name('category');
@@ -38,12 +47,4 @@ Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
     });
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::group(['middleware' => ['my.auth', 'student']], function () {
-    Route::group(['controller' => StudentController::class, 'prefix' => 'student', 'as' => 'student.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('/kual', 'kual')->name('kual');
-        Route::get('/kuan', 'kuan')->name('kuan');
-        Route::get('/lesson/{id}/{judul_id}', [DashboardController::class, 'lesson'])->name('lesson');
-        Route::get('/rnd', 'rnd')->name('rnd');
-    });
- });
+
