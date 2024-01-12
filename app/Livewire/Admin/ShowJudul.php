@@ -10,9 +10,14 @@ class ShowJudul extends Component
     public $thesis_id;
     public $data_judul;
 
+    public $category_choice = [];
     protected $listeners = [
         'refreshStudentIndex' => '$refresh',
     ];
+
+    public function mount(){
+        $this->category_choice = Category::pluck('name');
+    }
 
     public function setFeedback($feedback)
     {
