@@ -83,7 +83,11 @@
                             <div class="chat-header d-flex justify-content-between align-items-center p-3 border-bottom">
                                 <div class="left d-flex">
                                     <div class="chat-about ps-2">
-                                        <h6 class="mb-0">{{$judul->user->user_login}}</h6>
+                                        @if(\App\Helpers\AuthHelper::isAdmin())
+                                            <h6 class="mb-0">{{$judul->user->user_login}}</h6>
+                                        @else
+                                            <h6 class="mb-0">Admin</h6>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
