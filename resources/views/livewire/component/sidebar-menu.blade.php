@@ -53,7 +53,6 @@
                                         @endforeach
                                     </ul>
                             </li>
-                            <li><a href="{{route('student.kuan')}}"><i class="fa fa-tasks"></i> Kuan</a></li>
                         @endif
                     </ul>
                 </nav>
