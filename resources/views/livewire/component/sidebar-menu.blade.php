@@ -26,12 +26,11 @@
                                     <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}
                                 </a>
                                 @if (!empty($item['category']))
-                                    {{var_dump($item['category']['lessons'])}}
-                                    {{-- <ul class="list-unstyled mm-collapse" style="height: 0px;">
-                                        @foreach ($item['category'] as $category)
-                                        <li><a href="emp-all.html">{{$category}}</a></li>
+                                    <ul class="list-unstyled mm-collapse" style="height: 0px;">
+                                        @foreach ($item['category']['lessons'] as $lesson)
+                                        <li><a href="emp-all.html">{{$lesson['chapter']}}</a></li>
                                         @endforeach
-                                    </ul> --}}
+                                    </ul>
                                 @endif
                                 </li>
                         @endforeach
