@@ -21,7 +21,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login');
 });
 
-Route::group(['middleware' => ['my.auth', 'admin']], function () {
+Route::group(['middleware' => ['my.auth', 'admin', 'superadmin']], function () {
     Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('/dashboard', 'dashboard')->name('dashboard');
@@ -31,13 +31,9 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
 });
 Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
     Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('/dashboard', 'dashboard')->name('dashboard');
         Route::get('/category', 'category')->name('category');
-        Route::get('/judul', 'judul')->name('judul');
         Route::get('/materi', 'materi')->name('materi');
         Route::get('/materi/{id}', 'materi_detail')->name('materi.detail');
-        Route::get('/rnd', 'rnd')->name('rnd');
     });
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
