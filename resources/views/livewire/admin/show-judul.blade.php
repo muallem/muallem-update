@@ -6,9 +6,6 @@
                 <h4>{{$data_judul->wpjs_users->user_login}}</h4>
             </div>
         </div>
-        @foreach ($category_choice as $index => $item)
-            {{$index ."-". $item}}
-        @endforeach
         <div class="card mb-3">
             <div class="card-body">
                 <h6>Judul : </h6>
@@ -40,10 +37,11 @@
                     <div class="w-100">
                         <label class="form-label">Feedback</label>
                         
-                        <select class="form-control" id="select_feedback">
+                        <select class="form-control" id="select_feedback" required>
                             <option value="" selected>Pilih Feedback</option>
-                            @foreach (\App\Models\Judul::TYPE_CHOICE as $key => $value)
-                                <option value="{{ $key }}">{{ $value }}</option>
+
+                            @foreach ($category_choice as $index => $item)
+                                <option value="{{$index}}">{{$item}}</option>
                             @endforeach
                         </select>
                     </div>
