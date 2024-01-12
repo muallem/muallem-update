@@ -135,14 +135,16 @@
                                             </p>
                                         </blockquote>
                                     </div>
-                                @elseif(!$judul->is_done && \App\Helpers\AuthHelper::isAdmin())
+                                @elseif(!$judul->is_done)
                                     <div class="input-group mb-3">
                                         <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
                                         <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
                                     </div>
-                                    <div class="input-group">
-                                        <button type="button" class="btn btn-success w-100">Selesai</button>
-                                    </div>
+                                    @if (\App\Helpers\AuthHelper::isAdmin())
+                                        <div class="input-group">
+                                            <button type="button" class="btn btn-success w-100">Selesai</button>
+                                        </div>
+                                    @endif
                                 @endif
                             </div>
                         </div>
