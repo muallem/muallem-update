@@ -25,13 +25,15 @@
                                 <a href="#" class="has-arrow" aria-expanded="true">
                                     <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}
                                 </a>
-                                {{-- <ul class="list-unstyled mm-collapse" style="height: 0px;"> --}}
-                                    {{var_dump($item['category'])}}
-                                    {{-- @foreach ($item['category'] as $category) --}}
-                                        {{-- <li><a href="emp-all.html">{{$category}}</a></li> --}}
-                                    {{-- @endforeach --}}
-                                {{-- </ul> --}}
-                            </li>
+                                @if (!empty($item['category']))
+                                    {{var_dump($item['category']['lessons'])}}
+                                    {{-- <ul class="list-unstyled mm-collapse" style="height: 0px;">
+                                        @foreach ($item['category'] as $category)
+                                        <li><a href="emp-all.html">{{$category}}</a></li>
+                                        @endforeach
+                                    </ul> --}}
+                                @endif
+                                </li>
                         @endforeach
                     </ul>
                 </nav>
