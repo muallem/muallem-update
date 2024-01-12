@@ -18,7 +18,7 @@ class AuthHelper
     public static function login($user_email, $password)
     {
         $expired_time = Carbon::now()->format('Y-m-d').' 23:59:00';
-        $token = Encoder::encode("mail@mail.com".';'.$expired_time, env('APP_SECRET_KEY'));
+        $token = Encoder::encode($user_email.';'.$expired_time, env('APP_SECRET_KEY'));
         
         // Include the necessary parts of the pluggable.php file
         require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
