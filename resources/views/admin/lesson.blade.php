@@ -76,6 +76,75 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="card">
+                    <div class="chat_app d-flex">
+                        
+                        <div class="chat">
+                            <div class="chat-header d-flex justify-content-between align-items-center p-3 border-bottom">
+                                <div class="left d-flex">
+                                    <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <img class="avatar rounded" src="../dist/assets/images/xs/avatar2.jpg" alt="avatar" />
+                                    </button>
+                                    <div class="chat-about ps-2">
+                                        <h6 class="mb-0">Aiden Chavez</h6>
+                                        <small class="text-muted">Last seen: 2 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="right d-md-block d-none text-end">
+                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-camera"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-video-camera"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-cog"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-sm btn-outline-secondary"><i class="fa fa-question"></i></a>
+                                </div>
+                            </div>
+                            <div class="chat-history p-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="clearfix">
+                                        <div class="message-data text-end mb-3 me-3">
+                                            <span class="small text-muted me-2">10:10 AM, Today</span>
+                                            <img class="avatar sm rounded-circle" src="../dist/assets/images/xs/avatar7.jpg" alt="avatar">
+                                        </div>
+                                        <div class="message other-message d-inline-block float-end"> Hi Aiden, how are you? How is the project coming along?</div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="message-data mb-3">
+                                            <span class="small text-muted me-3">10:12 AM, Today</span>
+                                        </div>
+                                        <div class="message my-message d-inline-block">Are we meeting today?
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="message-data mb-3">
+                                            <span class="small text-muted me-3">10:15 AM, Today</span>
+                                        </div>
+                                        <div class="message my-message d-inline-block">Project has been already finished and I have results to show you.</div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="message-data text-end mb-3 me-3">
+                                            <span class="small text-muted me-2">10:10 AM, Today</span>
+                                            <img class="avatar sm rounded-circle" src="../dist/assets/images/xs/avatar7.jpg" alt="avatar">
+                                        </div>
+                                        <div class="message other-message d-inline-block float-end"> Hi Aiden, how are you? How is the project coming along?</div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="message-data mb-3">
+                                            <span class="small text-muted me-3">10:12 AM, Today</span>
+                                        </div>
+                                        <div class="message my-message d-inline-block">Are we meeting today?
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="chat-message p-3 border-top">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
