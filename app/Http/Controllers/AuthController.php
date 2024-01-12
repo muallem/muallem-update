@@ -18,10 +18,8 @@ class AuthController extends Controller
         $result = AuthHelper::login($request->user_email, $request->password);
         if($result->getData()->message === 'Success' && $result->getData()->ok)
         {
-            if(AuthHelper::isAdmin())
+            if(AuthHelper::isAdmin() || AuthHelper::isSuperAdmin())
             {
-                return redirect()->route('dashboard.index');
-            }else if(AuthHelper::isSuperAdmin()){
                 return redirect()->route('dashboard.index');
             }
             else

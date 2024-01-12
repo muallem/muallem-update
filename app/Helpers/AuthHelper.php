@@ -70,7 +70,7 @@ class AuthHelper
 
     public static function isAdmin()
     {
-        if(Session::get('user_role') == 'admin' || Session::get('user_role') == 'superadmin'){
+        if(Session::get('user_role') == 'admin'){
             return true;
         }
         return false;
