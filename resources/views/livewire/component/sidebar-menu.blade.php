@@ -42,21 +42,20 @@
                 <nav class="sidebar-nav">
                     <ul class="metismenu list-unstyled">
                         <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Judul</a></li>
-                        @if($thesis_student)
-                            @switch($thesis_student->group)
-                                @case(\App\Models\Judul::TYPE_KUAN)
-                                    <li><a href="{{route('student.kuan')}}"><i class="fa fa-tasks"></i> Kuan</a></li>
-                                    
-                                    @break
-                                @case(\App\Models\Judul::TYPE_KUAL)
-                                    <li><a href="{{route('student.kual')}}"><i class="fa fa-tasks"></i> Kual</a></li>
-                                    
-                                    @break
-                                @case(\App\Models\Judul::TYPE_RND)
-                                    <li><a href="{{route('student.rnd')}}"><i class="fa fa-tasks"></i> RND</a></li>
-                                    
-                                    @break
-                            @endswitch
+                        @if($thesis_student->category_id)
+                            <li class="ms-5">
+                                <a href="#" class="has-arrow" aria-expanded="true">
+                                    <i class="fa fa-tasks"></i> {{$thesis_student->category->name}} 
+                                </a>
+                                @if (!empty($thesis_student->category->lesson))
+                                    <ul class="list-unstyled mm-collapse" style="height: 0px;">
+                                        @foreach ($thesis_student['category']['lessons'] as $lesson)
+                                        <li><a href="{{route('dashboard.lesson', ['id' => $lesson['id'], 'judul_id' => $item['id']])}}">{{$lesson['chapter']}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </li>
+                            <li><a href="{{route('student.kuan')}}"><i class="fa fa-tasks"></i> Kuan</a></li>
                         @endif
                     </ul>
                 </nav>
