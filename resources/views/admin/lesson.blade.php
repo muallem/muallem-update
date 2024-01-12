@@ -126,10 +126,24 @@
                                 </ul>
                             </div>
                             <div class="chat-message p-3 border-top">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
-                                    <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
-                                </div>
+                                @if ($judul->is_done && !\App\Helpers\AuthHelper::isAdmin())
+                                    
+                                    <div class="w-100">
+                                        <blockquote class="blockquote border border-primary p-3">
+                                            <p>
+                                                Lanjut ke tahap selanjutnya !
+                                            </p>
+                                        </blockquote>
+                                    </div>
+                                @else
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
+                                    </div>
+                                    <div class="input-group">
+                                        <button type="button" class="btn btn-success">Selesai</button>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>

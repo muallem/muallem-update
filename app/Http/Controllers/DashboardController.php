@@ -31,8 +31,8 @@ class DashboardController extends Controller
     {
         return $judul_id;
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
-        // $judul = Judul::;
-        return view('admin.lesson', compact('lesson'));
+        $judul = Judul::find($judul_id);
+        return view('admin.lesson', compact('lesson', 'judul'));
     }
     public function materi()
     {
