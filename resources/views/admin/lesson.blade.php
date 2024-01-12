@@ -126,6 +126,7 @@
                                 </ul>
                             </div>
                             <div class="chat-message p-3 border-top">
+                                {{var_dump($judul)}}
                                 @if ($judul->is_done && !\App\Helpers\AuthHelper::isAdmin())
                                     
                                     <div class="w-100">
