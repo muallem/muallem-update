@@ -23,7 +23,7 @@ class ShowJudul extends Component
     public function setFeedback($feedback)
     {
         $data = Judul::find($this->thesis_id);
-        $data->group = $feedback;
+        $data->category_id = $feedback;
         if($data->save())
         {
             $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Feedback !');
