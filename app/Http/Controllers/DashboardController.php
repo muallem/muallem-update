@@ -29,7 +29,6 @@ class DashboardController extends Controller
      */
     public function lesson($id, $judul_id)
     {
-        return $judul_id;
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         $judul = Judul::find($judul_id);
         return view('admin.lesson', compact('lesson', 'judul'));
