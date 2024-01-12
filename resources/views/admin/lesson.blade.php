@@ -135,7 +135,7 @@
                                             </p>
                                         </blockquote>
                                     </div>
-                                @else
+                                @elseif(!$judul->is_done && \App\Helpers\AuthHelper::isAdmin())
                                     <div class="input-group mb-3">
                                         <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
                                         <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
