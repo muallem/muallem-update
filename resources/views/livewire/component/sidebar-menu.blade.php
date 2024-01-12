@@ -42,7 +42,7 @@
                 <nav class="sidebar-nav">
                     <ul class="metismenu list-unstyled">
                         <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Judul</a></li>
-                        {{var_dump($thesis_student)}}
+                        {{dd($thesis_student)}}
                         @if($thesis_student->category_id)
                             <li class="ms-5">
                                 <a href="#" class="has-arrow" aria-expanded="true">
