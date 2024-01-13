@@ -18,6 +18,7 @@ class Detail extends Component
     use WithFileUploads;
 
     public $lesson_detail;
+    public $lesson_detail_id;
     public $judul;
     public $files = [];
 
@@ -26,6 +27,7 @@ class Detail extends Component
     ];
     public function mount($lesson_detail_id)
     {
+        $this->lesson_detail_id = $lesson_detail_id;
         // $this->judul = Judul::where('id', $judul_id)->with('user')->first();
         $this->getData();
     } 
@@ -47,6 +49,7 @@ class Detail extends Component
 
 
                     $lesson_detail_attachment = new LessonDetailAttachment();
+                    $lesson_detail_attachment->lesson_detail_id = $this->lesson_detail_id;
                     $lesson_detail_attachment->name = $originalName;
                     $lesson_detail_attachment->file = $fileName;
                     $lesson_detail_attachment->remarks_id = session()->get('user_id');
