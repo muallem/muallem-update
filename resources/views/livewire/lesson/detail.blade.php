@@ -23,7 +23,7 @@
             <div class="chat-history p-3">
                 {{$lesson_detail->id}}
                 <br>
-                {{$lesson_detail->status->name}}
+                {{(empty($lesson_detail->status)) ? "BOLEH UPLOAD" : $lesson_detail->status->name}}
                 <ul class="list-unstyled mb-0">
                     <li class="clearfix">
                         <div class="message-data text-end mb-3 me-3">
