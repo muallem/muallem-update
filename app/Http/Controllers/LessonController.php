@@ -8,6 +8,7 @@ use App\Models\Lesson;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
 class LessonController extends Controller
@@ -25,7 +26,7 @@ class LessonController extends Controller
      */
     public function show($id)
     {
-        return enc($id);
+        return Crypt::encryptString($id);
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', $judul_id)->with('user')->first();
         return view('admin.lesson', compact('lesson', 'judul'));
