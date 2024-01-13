@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                @livewire('lesson.detail', ['lesson_id' => $id])
+                @livewire('lesson.detail', ['lesson_detail_id' => $id])
             </div>
         </div>
 

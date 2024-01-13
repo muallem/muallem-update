@@ -21,10 +21,10 @@ class Detail extends Component
     protected $listeners = [
         'refreshData' => '$refresh',
     ];
-    public function mount($id)
+    public function mount($lesson_detail_id)
     {
         // $this->judul = Judul::where('id', $judul_id)->with('user')->first();
-        $this->lesson_detail = LessonDetail::find($id);
+        $this->lesson_detail = LessonDetail::find($lesson_detail_id);
     } 
     public function render()
     {
