@@ -27,7 +27,8 @@ class StudentController extends Controller
     {
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', $judul_id)->with('user')->first();
-        return view('admin.lesson', compact('lesson', 'judul'));
+        return redirect()->route('lesson_detail', ['id' => $lesson->lesson_details[0]->id]);
+        // return view('admin.lesson', compact('lesson', 'judul'));
     }
     public function index()
     {
