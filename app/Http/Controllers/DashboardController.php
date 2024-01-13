@@ -12,6 +12,7 @@ use App\Models\LessonDetail;
 use Illuminate\Http\Request;
 use App\Models\MateriFeedback;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller
@@ -31,8 +32,7 @@ class DashboardController extends Controller
     {
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', $judul_id)->with('user')->first();
-
-        return redirect()->route('lesson_detail', ['id' => $lesson->lesson_details[0]->id]);
+        return redirect()->route('lesson_detail', ['id' => Crypt::encryptString($lesson->lesson_details[0]->id)]);
         // return view('admin.lesson', compact('lesson', 'judul'));
     }
     public function materi()

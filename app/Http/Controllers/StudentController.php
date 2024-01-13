@@ -8,6 +8,7 @@ use App\Models\Lesson;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
@@ -27,7 +28,7 @@ class StudentController extends Controller
     {
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', $judul_id)->with('user')->first();
-        return redirect()->route('lesson_detail', ['id' => $lesson->lesson_details[0]->id]);
+        return redirect()->route('lesson_detail', ['id' => Crypt::encryptString($lesson->lesson_details[0]->id)]);
         // return view('admin.lesson', compact('lesson', 'judul'));
     }
     public function index()
