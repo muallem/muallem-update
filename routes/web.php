@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::group(['middleware' => ['my.auth', 'student']], function () {
         Route::get('/lesson/{id}/{judul_id}', [StudentController::class, 'lesson'])->name('lesson');
         Route::get('/rnd', 'rnd')->name('rnd');
     });
- });
+});
 Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
     Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
         Route::get('/category', 'category')->name('category');
@@ -46,5 +47,6 @@ Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
         Route::get('/materi/{id}', 'materi_detail')->name('materi.detail');
     });
 });
+Route::get('/lesson_detail/{id}', [LessonController::class, 'show'])->name('lesson_detail');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
