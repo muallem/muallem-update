@@ -26,7 +26,7 @@
                     @foreach ($lesson_detail->attachments as $attachment)
                         
                         @if (\App\Helpers\AuthHelper::isAdmin())
-                            @if ($attachment->remarks_type === \App\Models\LessonDetailAttachemnt::REMARKS_TYPE_ADMIN)
+                            @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
                                 <li class="clearfix">
                                     <div class="message-data text-end mb-3 me-3">
                                         <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
@@ -59,7 +59,7 @@
                                 </li>
                             @endif
                         @else
-                            @if ($attachment->remarks_type === \App\Models\LessonDetailAttachemnt::REMARKS_TYPE_ADMIN)
+                            @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
                                 <li class="clearfix">
                                     <div class="message-data mb-3">
                                         <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
