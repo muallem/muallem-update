@@ -93,26 +93,6 @@
                         @endif
                         {{$attachment->name}}
                     @endforeach
-                    <li class="clearfix">
-                        <div class="message-data mb-3">
-                            <span class="small text-muted me-3">10:15 AM, Today</span>
-                        </div>
-                        <div class="message my-message d-inline-block">Project has been already finished and I have results to show you.</div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="message-data text-end mb-3 me-3">
-                            <span class="small text-muted me-2">10:10 AM, Today</span>
-                            <img class="avatar sm rounded-circle" src="../dist/assets/images/xs/avatar7.jpg" alt="avatar">
-                        </div>
-                        <div class="message other-message d-inline-block float-end"> Hi Aiden, how are you? How is the project coming along?</div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="message-data mb-3">
-                            <span class="small text-muted me-3">10:12 AM, Today</span>
-                        </div>
-                        <div class="message my-message d-inline-block">Are we meeting today?
-                        </div>
-                    </li>
                 </ul>
             </div>
             <div class="chat-message p-3 border-top">
