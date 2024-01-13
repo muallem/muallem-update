@@ -24,4 +24,9 @@ class LessonDetail extends Model
 
     protected $guarded = ['id'];
 
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+    }
+
 }

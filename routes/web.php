@@ -47,6 +47,6 @@ Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
         Route::get('/materi/{id}', 'materi_detail')->name('materi.detail');
     });
 });
-Route::get('/lesson_detail/{id}', [LessonController::class, 'show'])->name('lesson_detail');
+Route::get('/lesson_detail/{lesson_detail_id}', [LessonController::class, 'show'])->name('lesson_detail');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
