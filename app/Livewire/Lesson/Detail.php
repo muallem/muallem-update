@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use App\Models\LessonDetail;
 use Livewire\WithFileUploads;
 use App\Models\MateriFeedback;
+use Illuminate\Support\Facades\Crypt;
 
 class Detail extends Component
 {
@@ -24,7 +25,7 @@ class Detail extends Component
     public function mount($lesson_detail_id)
     {
         // $this->judul = Judul::where('id', $judul_id)->with('user')->first();
-        $this->lesson_detail = LessonDetail::find($lesson_detail_id);
+        $this->lesson_detail = LessonDetail::find(Crypt::decryptString($lesson_detail_id));
     } 
     public function render()
     {
