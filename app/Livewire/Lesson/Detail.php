@@ -28,7 +28,7 @@ class Detail extends Component
     public function mount($lesson_detail_id)
     {
         $this->lesson_detail_id = $lesson_detail_id;
-        // $this->judul = Judul::where('id', $judul_id)->with('user')->first();
+        $this->judul = Judul::where('id', $judul_id)->with('user')->first();
         $this->getData();
     } 
 

@@ -13,7 +13,7 @@
                     <div class="chat-about ps-2">
                         @if(\App\Helpers\AuthHelper::isAdmin())
                             {{-- <h6 class="mb-0">{{$judul->user->user_login}}</h6> --}}
-                            <h6 class="mb-0">Nama</h6>
+                            <h6 class="mb-0">{{}}</h6>
                         @else
                             <h6 class="mb-0">Admin</h6>
                         @endif
