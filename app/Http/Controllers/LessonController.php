@@ -30,6 +30,6 @@ class LessonController extends Controller
         $id = $id;
         $lesson_detail = LessonDetail::where('id', Crypt::decryptString($id))->with('lesson')->first();
         $lesson = Lesson::where('id', $lesson_detail->lesson->id)->with('lesson_details', 'category')->first();
-        return view('admin.lesson', compact('id', 'lesson'));
+        return view('admin.lesson', compact('id', 'lesson', 'lesson_detail'));
     }
 }
