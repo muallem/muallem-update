@@ -73,7 +73,7 @@
                 @elseif($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
-                        <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
+                        <input type="file" class="form-control">
                         <button type="submit" class="btn btn-info">Kirim</button>
                     </div>
                     @if (\App\Helpers\AuthHelper::isAdmin())
