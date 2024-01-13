@@ -91,7 +91,6 @@
                                 </li>
                             @endif
                         @endif
-                        {{$attachment->name}}
                     @endforeach
                 </ul>
             </div>
