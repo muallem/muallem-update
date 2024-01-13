@@ -20,25 +20,79 @@
                     </div>
                 </div>
             </div>
-            @foreach ($lesson_detail->attachments as $attachment)
-                {{$attachment->name}}
-            @endforeach
             <div class="chat-history p-3">
                 <ul class="list-unstyled mb-0">
-                    <li class="clearfix">
-                        <div class="message-data text-end mb-3 me-3">
-                            <span class="small text-muted me-2">10:10 AM, Today</span>
-                            <img class="avatar sm rounded-circle" src="../dist/assets/images/xs/avatar7.jpg" alt="avatar">
-                        </div>
-                        <div class="message other-message d-inline-block float-end"> Hi Aiden, how are you? How is the project coming along?</div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="message-data mb-3">
-                            <span class="small text-muted me-3">10:12 AM, Today</span>
-                        </div>
-                        <div class="message my-message d-inline-block">Are we meeting today?
-                        </div>
-                    </li>
+
+                    @foreach ($lesson_detail->attachments as $attachment)
+                        
+                        @if (\App\Helpers\AuthHelper::isAdmin())
+                            @if ($attachment->remarks_type === \App\Models\LessonDetailAttachemnt::REMARKS_TYPE_ADMIN)
+                                <li class="clearfix">
+                                    <div class="message-data text-end mb-3 me-3">
+                                        <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                    </div>
+                                    <div class="message other-message d-inline-block float-end"> 
+                                        <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
+                                            class="text-decoration-none text-info "
+                                            download="{{ $attachment->name }}"
+                                        >
+                                        <i class="fa fa-book"></i>
+                                            {{ $attachment->name }}
+                                        </a>
+                                    </div>
+                                </li>
+                            @else
+
+                                <li class="clearfix">
+                                    <div class="message-data mb-3">
+                                        <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                    </div>
+                                    <div class="message my-message d-inline-block">
+                                        <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
+                                            class="text-decoration-none text-info "
+                                            download="{{ $attachment->name }}"
+                                        >
+                                        <i class="fa fa-book"></i>
+                                            {{ $attachment->name }}
+                                        </a>
+                                    </div>
+                                </li>
+                            @endif
+                        @else
+                            @if ($attachment->remarks_type === \App\Models\LessonDetailAttachemnt::REMARKS_TYPE_ADMIN)
+                                <li class="clearfix">
+                                    <div class="message-data mb-3">
+                                        <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                    </div>
+                                    <div class="message my-message d-inline-block">
+                                        <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
+                                            class="text-decoration-none text-info "
+                                            download="{{ $attachment->name }}"
+                                        >
+                                        <i class="fa fa-book"></i>
+                                            {{ $attachment->name }}
+                                        </a>
+                                    </div>
+                                </li>
+                            @else
+                                <li class="clearfix">
+                                    <div class="message-data text-end mb-3 me-3">
+                                        <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                    </div>
+                                    <div class="message other-message d-inline-block float-end"> 
+                                        <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
+                                            class="text-decoration-none text-info "
+                                            download="{{ $attachment->name }}"
+                                        >
+                                        <i class="fa fa-book"></i>
+                                            {{ $attachment->name }}
+                                        </a>
+                                    </div>
+                                </li>
+                            @endif
+                        @endif
+                        {{$attachment->name}}
+                    @endforeach
                     <li class="clearfix">
                         <div class="message-data mb-3">
                             <span class="small text-muted me-3">10:15 AM, Today</span>
