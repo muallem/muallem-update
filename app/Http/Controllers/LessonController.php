@@ -26,10 +26,7 @@ class LessonController extends Controller
      */
     public function show($id)
     {
-        // return Crypt::encryptString($id);
-        return Crypt::decryptString($id);
-        $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
-        $judul = Judul::where('id', $judul_id)->with('user')->first();
-        return view('admin.lesson', compact('lesson', 'judul'));
+        $id = $id;
+        return view('admin.lesson', compact('id'));
     }
 }
