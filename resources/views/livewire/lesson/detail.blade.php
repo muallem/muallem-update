@@ -21,9 +21,6 @@
                 </div>
             </div>
             <div class="chat-history p-3">
-                {{$lesson_detail->id}}
-                <br>
-                {{(empty($lesson_detail->status) || ($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)) ? "BOLEH UPLOAD" : $lesson_detail->status->name}}
                 <ul class="list-unstyled mb-0">
                     <li class="clearfix">
                         <div class="message-data text-end mb-3 me-3">
@@ -61,8 +58,10 @@
                     </li>
                 </ul>
             </div>
-            {{-- <div class="chat-message p-3 border-top">
-                @if ($judul->is_done && !\App\Helpers\AuthHelper::isAdmin())
+            <div class="chat-message p-3 border-top">
+
+                
+                @if ((empty($lesson_detail->status) || ($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)) && !\App\Helpers\AuthHelper::isAdmin())
                     
                     <div class="w-100">
                         <blockquote class="blockquote border border-primary p-3">
@@ -71,18 +70,19 @@
                             </p>
                         </blockquote>
                     </div>
-                @elseif(!$judul->is_done)
+                @elseif($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
                         <input type="text" class="form-control" placeholder="Enter text here..." aria-label="Enter text here...">
+                        <button type="submit" class="btn btn-info">Kirim</button>
                     </div>
                     @if (\App\Helpers\AuthHelper::isAdmin())
                         <div class="input-group">
-                            <button type="button" class="btn btn-success w-100">Selesai</button>
+                            <button type="button" class="btn btn-success w-100" wire:click="closeLesson()">Selesai</button>
                         </div>
                     @endif
                 @endif
-            </div> --}}
+            </div>
         </div>
     </div>
 </div>
