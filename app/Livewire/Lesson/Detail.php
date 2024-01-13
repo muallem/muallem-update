@@ -49,7 +49,7 @@ class Detail extends Component
                     $filePath = $file->storeAs('lesson_detail_attachments', $fileName, 'public');
                     
                     $lesson_detail_attachment = new LessonDetailAttachment();
-                    $lesson_detail_attachment->lesson_detail_id = $this->lesson_detail_id;
+                    $lesson_detail_attachment->lesson_detail_id = Crypt::decryptString($this->lesson_detail_id);
                     $lesson_detail_attachment->name = $originalName;
                     $lesson_detail_attachment->file = $fileName;
                     $lesson_detail_attachment->remarks_id = session()->get('user_id');
