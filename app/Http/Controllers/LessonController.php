@@ -7,6 +7,7 @@ use App\Models\Judul;
 use App\Models\Lesson;
 use App\Models\Thesis;
 use App\Helpers\AuthHelper;
+use App\Models\LessonDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
