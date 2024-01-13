@@ -28,5 +28,9 @@ class LessonDetail extends Model
     {
         return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
     }
+    public function status()
+    {
+        return $this->belongsTo(LessonDetailStatus::class, 'id', 'lesson_detail_id');
+    }
 
 }

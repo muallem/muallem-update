@@ -10,6 +10,8 @@ class LessonDetailStatus extends Model
 {   
     use HasFactory, SoftDeletes;
 
+    const STATUS_SELESAI = 'SELESAI';
+
     protected $fillable = [
         'lesson_detail_id',
         'name',

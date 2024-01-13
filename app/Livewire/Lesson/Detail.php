@@ -25,7 +25,7 @@ class Detail extends Component
     public function mount($lesson_detail_id)
     {
         // $this->judul = Judul::where('id', $judul_id)->with('user')->first();
-        $this->lesson_detail = LessonDetail::find(Crypt::decryptString($lesson_detail_id));
+        $this->lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->with('status')->first();
     } 
     public function render()
     {
