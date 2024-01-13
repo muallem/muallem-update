@@ -34,7 +34,7 @@ class Detail extends Component
 
     public function getData()
     {
-        $this->lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->with('attachments', 'status')->first();
+        $this->lesson_detail = LessonDetail::where('id', Crypt::decryptString($this->lesson_detail_id))->with('attachments', 'status')->first();
     }
 
     public function store()
@@ -45,8 +45,9 @@ class Detail extends Component
                     // Process each uploaded file
                     $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                     $originalName = $file->getClientOriginalName();
-                    $filePath = $file->storeAs('lesson_detail_attachments', $fileName, 'public');
 
+                    $filePath = $file->storeAs('lesson_detail_attachments', $fileName, 'public');
+                    $this->emit('consoleLog', $filePath);
 
                     $lesson_detail_attachment = new LessonDetailAttachment();
                     $lesson_detail_attachment->lesson_detail_id = $this->lesson_detail_id;
