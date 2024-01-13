@@ -23,7 +23,7 @@ class Detail extends Component
     public $files = [];
 
     protected $listeners = [
-        'refreshData' => '$refresh',
+        'getData',
     ];
     public function mount($lesson_detail_id)
     {
@@ -47,8 +47,7 @@ class Detail extends Component
                     $originalName = $file->getClientOriginalName();
 
                     $filePath = $file->storeAs('lesson_detail_attachments', $fileName, 'public');
-                    $this->emit('consoleLog', $filePath);
-
+                    
                     $lesson_detail_attachment = new LessonDetailAttachment();
                     $lesson_detail_attachment->lesson_detail_id = $this->lesson_detail_id;
                     $lesson_detail_attachment->name = $originalName;
@@ -59,11 +58,12 @@ class Detail extends Component
                     }else{
                         $lesson_detail_attachment->remarks_type = LessonDetailAttachment::REMARKS_TYPE_STUDENT;
                     }
+                    $this->emit('consoleLog', $lesson_detail_attachment);
                     $lesson_detail_attachment->save();
                 }
                 // Reset the form fields
                 $this->reset(['files']);
-                $this->emit('refreshData');
+                $this->emit('getData');
                 // Emit success event
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
             }
