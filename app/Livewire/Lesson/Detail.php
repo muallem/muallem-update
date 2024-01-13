@@ -28,7 +28,6 @@ class Detail extends Component
     } 
     public function render()
     {
-        $this->getData();
         return view('livewire.lesson.detail');
     }
 }
