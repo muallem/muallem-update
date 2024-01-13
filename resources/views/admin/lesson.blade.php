@@ -44,7 +44,7 @@
                                                 <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <li class="nav-item my-1" role="presentation" >
-                                                            <a style="font-size: 23px;" class="nav-link {{($index == 0) ? 'active show' : ''}}" data-bs-toggle="tab" href="#{{preg_replace('/\s+/', '_', $item->title . '-' . $item->id)}}" aria-selected="true" role="tab" >
+                                                            <a style="font-size: 23px;" class="nav-link {{($index == 0) ? 'active show' : ''}}" href="{{route('lesson_detail', ['lesson_id' => Crypt::decryptString($item->id)])}}" aria-selected="true" role="tab" >
                                                                 {{$item->title}}
                                                             </a>
                                                         </li>
