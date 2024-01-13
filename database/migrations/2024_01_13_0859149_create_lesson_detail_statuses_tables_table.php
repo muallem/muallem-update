@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('lesson_detail_id')->unsigned();
             $table->string('name');
+            $table->timestamps();
         });
     }
 
