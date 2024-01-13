@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LessonDetail extends Model
+class LessonDetailAttachment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'lesson_id',
+        'lesson_detail_id',
         'title',
         'body',
     ];
@@ -26,15 +26,11 @@ class LessonDetail extends Model
 
     public function lesson()
     {
-        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+        return $this->belongsTo(LessonDetail::class, 'lesson_detail_id', 'id');
     }
     public function status()
     {
         return $this->belongsTo(LessonDetailStatus::class, 'id', 'lesson_detail_id');
-    }
-    public function attachments()
-    {
-        return $this->hasMany(LessonDetailAttachment::class, 'lesson_detail_id', 'id');
     }
 
 }

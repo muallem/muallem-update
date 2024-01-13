@@ -20,6 +20,9 @@
                     </div>
                 </div>
             </div>
+            @foreach ($lesson_detail->attachments as $attachment)
+                {{$attachment->name}}
+            @endforeach
             <div class="chat-history p-3">
                 <ul class="list-unstyled mb-0">
                     <li class="clearfix">
@@ -71,11 +74,14 @@
                         </blockquote>
                     </div>
                 @elseif($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)
-                    <div class="input-group mb-3">
-                        <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
-                        <input type="file" class="form-control">
-                        <button type="submit" class="btn btn-info">Kirim</button>
-                    </div>
+
+                    <form wire:submit.prevent='store'>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
+                            <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
+                            <button type="submit" class="btn btn-info">Kirim</button>
+                        </div>
+                    </form>
                     @if (\App\Helpers\AuthHelper::isAdmin())
                         <div class="input-group">
                             <button type="button" class="btn btn-success w-100" wire:click="closeLesson()">Selesai</button>
