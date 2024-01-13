@@ -27,8 +27,13 @@ class Detail extends Component
     public function mount($lesson_detail_id)
     {
         // $this->judul = Judul::where('id', $judul_id)->with('user')->first();
-        $this->lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->with('attachments', 'status')->first();
+        $this->getData();
     } 
+
+    public function getData()
+    {
+        $this->lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->with('attachments', 'status')->first();
+    }
 
     public function store()
     {
@@ -59,7 +64,8 @@ class Detail extends Component
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengirim Data !');
             }
         } catch (\Throwable $th) {
-            //throw $th;
+            $this->emit('onFailSweetAlert', 'Gagal Mengirim Data !');
+            
         }
     }
     public function render()

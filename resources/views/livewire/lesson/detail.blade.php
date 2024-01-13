@@ -78,7 +78,7 @@
                     <form wire:submit.prevent='store'>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
-                            <input wire:model="files" class="form-control" type="file" id="fileInput" multiple>
+                            <input wire:model="files" class="form-control" type="file" id="fileInput" multiple required>
                             <button type="submit" class="btn btn-info">Kirim</button>
                         </div>
                     </form>
