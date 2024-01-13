@@ -9,6 +9,9 @@ class LessonDetailAttachment extends Model
 {
     use HasFactory;
 
+    const REMARKS_TYPE_ADMIN = 'Admin';
+    const REMARKS_TYPE_STUDENT = 'Student';
+
     protected $fillable = [
         'lesson_detail_id',
         'title',

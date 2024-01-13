@@ -11,6 +11,7 @@ use App\Models\LessonDetail;
 use Livewire\WithFileUploads;
 use App\Models\MateriFeedback;
 use Illuminate\Support\Facades\Crypt;
+use App\Models\LessonDetailAttachment;
 
 class Detail extends Component
 {
@@ -33,31 +34,24 @@ class Detail extends Component
     {
         try {
             if ($this->files) {
-                    foreach ($this->files as $file) {
-                        // Process each uploaded file
-                        $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
-                        $originalName = $file->getClientOriginalName();
-                        $filePath = $file->storeAs('attachments', $fileName, 'public');
+                foreach ($this->files as $file) {
+                    // Process each uploaded file
+                    $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
+                    $originalName = $file->getClientOriginalName();
+                    $filePath = $file->storeAs('lesson_detail_attachments', $fileName, 'public');
 
 
-                        $materi = new Materi();
-                        $materi->file_name = $originalName;
-                        $materi->file = $fileName;
-                        $materi->kode_materi = $this->kode_materi;
-                        $materi->student_id = session()->get('user_id');
-                        $materi->save();
-
-                    if (!AuthHelper::isAdmin()) {
+                    $lesson_detail_attachment = new LessonDetailAttachment();
+                    $lesson_detail_attachment->name = $originalName;
+                    $lesson_detail_attachment->file = $fileName;
+                    $lesson_detail_attachment->remarks_id = session()->get('user_id');
+                    if(AuthHelper::isAdmin()){
+                        $lesson_detail_attachment->remarks_type = LessonDetailAttachment::REMARKS_TYPE_ADMIN;
+                    }else{
+                        $lesson_detail_attachment->remarks_type = LessonDetailAttachment::REMARKS_TYPE_STUDENT;
                     }
-
-                    $materi_feedback = new MateriFeedback();
-                    $materi_feedback->student_id = $materi->student_id;
-                    $materi_feedback->kode_materi = $materi->kode_materi;
-                    $materi_feedback->materi_id = $materi->id;
-                    $materi_feedback->save();
+                    $lesson_detail_attachment->save();
                 }
-
-
                 // Reset the form fields
                 $this->reset(['files']);
                 $this->emit('refreshData');
