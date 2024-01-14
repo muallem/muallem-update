@@ -97,7 +97,9 @@
             <div class="chat-message p-3 border-top">
 
                 
-                @if ((empty($lesson_detail->status) || ($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)) && !\App\Helpers\AuthHelper::isAdmin())
+                @if (
+                    ($lesson_detail->status_name === \App\Models\LessonDetailStatus::STATUS_SELESAI)
+                     && !\App\Helpers\AuthHelper::isAdmin())
                     
                     <div class="w-100">
                         <blockquote class="blockquote border border-primary p-3">
@@ -106,7 +108,7 @@
                             </p>
                         </blockquote>
                     </div>
-                @elseif($lesson_detail->status->name != \App\Models\LessonDetailStatus::STATUS_SELESAI)
+                @elseif($lesson_detail->status_name != \App\Models\LessonDetailStatus::STATUS_SELESAI)
 
                     <form wire:submit.prevent='store'>
                         <div class="input-group mb-3">
@@ -117,7 +119,7 @@
                     </form>
                     @if (\App\Helpers\AuthHelper::isAdmin())
                         <div class="input-group">
-                            <button type="button" class="btn btn-success w-100" wire:click="closeLesson()">Selesai</button>
+                            <button type="button" class="btn btn-success w-100" wire:click="closeLesson('{{$lesson_detail->id}}', '{{$student_id}}')">Selesai</button>
                         </div>
                     @endif
                 @endif

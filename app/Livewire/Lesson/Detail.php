@@ -36,12 +36,18 @@ class Detail extends Component
         $this->getData();
     } 
 
+    public function closeLesson($lesson_detail_id, $student_id)
+    {
+        $this->emit('consoleLog', "$lesson_detail_id - $student_id");
+    }
     public function getData()
     {
-        $this->lesson_detail = LessonDetail::select('lesson_detail.*', 'lesson_detail_statuses.name')
-        ->leftJoin('lesson_detail_statuses', 'lesson_detail.id', '=', 'lesson_detail_statuses.lesson_detail_id')
-        ->where('lesson_detail_statuses.student_id', $this->student_id)
-        ->where('id', Crypt::decryptString($this->lesson_detail_id))
+        $this->lesson_detail = LessonDetail::select('lesson_details.*', 'lesson_detail_statuses.name as status_name')
+        ->leftJoin('lesson_detail_statuses', function ($join) {
+            $join->on('lesson_details.id', '=', 'lesson_detail_statuses.lesson_detail_id')
+                ->where('lesson_detail_statuses.student_id', $this->student_id);
+        })
+        ->where('lesson_details.lesson_id', Crypt::decryptString($lesson_id))
         ->with('attachments')
         ->first();
     }
