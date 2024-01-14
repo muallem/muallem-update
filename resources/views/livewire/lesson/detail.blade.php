@@ -24,6 +24,8 @@
                 <ul class="list-unstyled mb-0">
                     @foreach ($lesson_detail->attachments as $attachment)
                     {{$attachment->name}}
+                    <br>
+                    {{$student_id}}
                         
                         @if (\App\Helpers\AuthHelper::isAdmin())
                             @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
