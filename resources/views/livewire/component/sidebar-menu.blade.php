@@ -64,19 +64,21 @@
 @push('js')
 <script>
     document.addEventListener('livewire:load', function () {
-        // Set up a timer to trigger Livewire refresh every 10 seconds
         setInterval(function () {
             @this.getKata();
-            console.log('kata refresh')
+            refreshMenu();
         }, 15000);
 
-        const menuItems = document.querySelectorAll('a.has-arrow');
-        menuItems.forEach(item => {
-            item.addEventListener('click', (el) => {
-                const siblingUl = el.nextElementSibling;
-                siblingUl.classList.toggle('mm-showa');
+        function refreshMenu()
+        {
+            const menuItems = document.querySelectorAll('a.has-arrow');
+            menuItems.forEach(item => {
+                item.addEventListener('click', (el) => {
+                    const siblingUl = el.nextElementSibling;
+                    siblingUl.classList.toggle('mm-showa');
+                });
             });
-        });
+        }
     });
 </script>
 @endpush
