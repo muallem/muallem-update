@@ -22,8 +22,8 @@
             </div>
             <div class="chat-history p-3">
                 <ul class="list-unstyled mb-0">
-                    {{dd($lesson_detail->attachments)}}
                     @foreach ($lesson_detail->attachments as $attachment)
+                    {{$attachment->name}}
                         
                         @if (\App\Helpers\AuthHelper::isAdmin())
                             @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
