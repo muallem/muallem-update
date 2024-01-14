@@ -68,5 +68,15 @@
             @this.getKata();
         }, 15000);
     });
+    window.addEventListener('livewire:updated', () => {
+        // Re-attach event listeners to all sidebar-submenu elements
+        const menuItems = document.querySelectorAll('.sidebar-submenu');
+        menuItems.forEach(item => {
+            item.addEventListener('click', (el) => {
+                const siblingUl = el.nextElementSibling;
+                siblingUl.classList.toggle('mm-showa');
+            });
+        });
+    });
 </script>
 @endpush
