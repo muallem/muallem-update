@@ -73,7 +73,6 @@ class Detail extends Component
                     ->where('student_id', $this->student_id)
                     ->first();
                     if($status && $status->name === LessonDetailStatus::STATUS_SELESAI){
-                        $this->getData();
                         return;
                     }
                     $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
@@ -103,8 +102,9 @@ class Detail extends Component
             }
         } catch (\Throwable $th) {
             $this->emit('onFailSweetAlert', 'Gagal Mengirim Data !');
-            
         }
+
+        $this->getData();
     }
     public function render()
     {
