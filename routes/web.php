@@ -29,7 +29,7 @@ Route::group(['middleware' => ['my.auth', 'admin']], function () {
         Route::get('/lesson/{lesson_id}/{judul_id}', 'lesson')->name('lesson');
         Route::get('/judul', 'judul')->name('judul');
         Route::get('/rnd', 'rnd')->name('rnd');
-        Route::get('/lesson_detail/{lesson_id}/{judul_id}', [LessonController::class, 'show'])->name('lesson_detail');
+        Route::get('/lesson_detail/{lesson_detail_id}/{judul_id}', [LessonController::class, 'show'])->name('lesson_detail');
         // Route::get('/lesson_detail/{student_id}/{lesson_detail_id}', [LessonController::class, 'show'])->name('lesson_detail');
     });
 });
