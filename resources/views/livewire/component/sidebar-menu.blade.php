@@ -77,7 +77,7 @@
                 item.addEventListener('click', (el) => {
                     const siblingUl = el.target.nextElementSibling;
                     console.log(siblingUl)
-                    siblingUl.classList.toggle('mm-showa');
+                    siblingUl.classList.toggle('mm-show');
                 });
             });
         }
