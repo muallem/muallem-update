@@ -28,6 +28,7 @@ class StudentController extends Controller
     {
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', $judul_id)->with('user')->first();
+        $is_admin = (AuthHelper::isAdmin()) ? 'dashboard' : 'student';
         return redirect()->route('lesson_detail', ['lesson_detail_id' => Crypt::encryptString($lesson->lesson_details[0]->id)]);
         // return view('admin.lesson', compact('lesson', 'judul'));
     }

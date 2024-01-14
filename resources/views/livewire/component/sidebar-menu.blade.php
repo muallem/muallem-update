@@ -28,7 +28,11 @@
                                     </a>
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
                                         @foreach ($item['category']['lessons'] as $lesson)
-                                        <li><a href="{{route('dashboard.lesson_detail', ['lesson_detail_id' => Crypt::encryptString($lesson['lesson_details'][0]['id']), 'judul_id' => Crypt::encryptString($item['id'])])}}">{{$lesson['chapter']}}</a></li>
+                                        <li><a href="{{route('dashboard.lesson_detail', [
+                                            'lesson_detail_id' => Crypt::encryptString($lesson['lesson_details'][0]['id']), 
+                                            'judul_id' => Crypt::encryptString($item['id'])
+                                            ]
+                                            )}}">{{$lesson['chapter']}}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -49,7 +53,10 @@
                                 </a>
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
                                         @foreach ($thesis_student['category']['lessons'] as $lesson)
-                                        <li><a href="{{route('student.lesson', ['id' => $lesson['id'], 'judul_id' => $thesis_student['id']])}}">{{$lesson['chapter']}}</a></li>
+                                        <li><a href="{{route('student.lesson_detail', [
+                                            'lesson_detail_id' => Crypt::encryptString($lesson['lesson_details'][0]['id']),
+                                            'judul_id' => Crypt::encryptString($thesis_student['id'])
+                                            ])}}">{{$lesson['chapter']}}</a></li>
                                         @endforeach
                                     </ul>
                             </li>

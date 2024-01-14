@@ -40,7 +40,7 @@ Route::group(['middleware' => ['my.auth', 'student']], function () {
         Route::get('/kuan', 'kuan')->name('kuan');
         Route::get('/lesson/{id}/{judul_id}', [StudentController::class, 'lesson'])->name('lesson');
         Route::get('/rnd', 'rnd')->name('rnd');
-        Route::get('/lesson_detail/{student_id}/{lesson_detail_id}', [LessonController::class, 'show'])->name('lesson_detail');
+        Route::get('/lesson_detail/{lesson_detail_id}/{judul_id}', [LessonController::class, 'show'])->name('lesson_detail');
     });
 });
 Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
