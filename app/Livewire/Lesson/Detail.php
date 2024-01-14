@@ -24,6 +24,7 @@ class Detail extends Component
     public $judul;
     public $files = [];
     public $ori_lesson_detail;
+    public $attachments;
 
     protected $listeners = [
         'getData',
@@ -55,12 +56,10 @@ class Detail extends Component
                 ->where('lesson_detail_statuses.student_id', $this->student_id);
         })
         ->where('lesson_details.id', $this->lesson_detail_id)
-        ->with([
-            'attachments' => function($query){
-                return $query->select('*')->where('student_id', $this->student_id);
-            }
-        ])
         ->first();
+        $this->attachments = LessonDetailAttachment::where('lesson_detail_id', $this->lesson_detail_id)
+        ->where('student_id', $this->student_id)
+        ->get();
     }
 
     public function store()
