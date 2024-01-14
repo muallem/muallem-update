@@ -44,8 +44,10 @@
                                                 <ul class="nav nav-tabs nav-tabs-new2 d-flex justify-content-start" role="tablist">
                                                     @foreach ($lesson->lesson_details as $index => $item)
                                                         <li class="nav-item my-1" role="presentation" >
-                                                            
-                                                            <a style="font-size: 23px;" class="nav-link {{(preg_replace('/\s+/', '_', $item->title . '-' . $item->id) === preg_replace('/\s+/', '_', $lesson_detail->title . '-' . $lesson_detail->id)) ? 'active show' : ''}}" href="{{route('dashboard.lesson_detail', ['lesson_detail_id' => Crypt::encryptString($item->id), 'judul_id' => Crypt::encryptString($judul->id)])}}" aria-selected="true" role="tab" >
+                                                            @php
+                                                                $route = (\App\Helpers\AuthHelper::isAdmin()) ? 'dashboard' : 'student' ;
+                                                            @endphp
+                                                            <a style="font-size: 23px;" class="nav-link {{(preg_replace('/\s+/', '_', $item->title . '-' . $item->id) === preg_replace('/\s+/', '_', $lesson_detail->title . '-' . $lesson_detail->id)) ? 'active show' : ''}}" href="{{route( $route.'.lesson_detail', ['lesson_detail_id' => Crypt::encryptString($item->id), 'judul_id' => Crypt::encryptString($judul->id)])}}" aria-selected="true" role="tab" >
                                                                 {{$item->title}}
                                                             </a>
                                                         </li>
