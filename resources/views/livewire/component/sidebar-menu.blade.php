@@ -75,7 +75,7 @@
             const menuItems = document.querySelectorAll('.sidebar-submenu');
             menuItems.forEach(item => {
                 item.addEventListener('click', (el) => {
-                    console.log(el);
+                    console.log(el.target);
                     const siblingUl = el.nextElementSibling;
                     siblingUl.classList.toggle('mm-showa');
                 });
