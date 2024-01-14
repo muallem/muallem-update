@@ -28,6 +28,7 @@ class Create extends Component
         ]);
     
         $this->emit('onSuccessSweetAlert', "Berhasil", 'Berhasil Membuat Judul !');
+        $this->emit('refreshData');
         $this->emit('refreshStudentIndex');
     }
     public function render()
