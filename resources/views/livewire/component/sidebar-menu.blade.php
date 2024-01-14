@@ -69,6 +69,13 @@
             @this.getKata();
             console.log('kata refresh')
         }, 15000);
+
+        const menuItems = document.querySelectorAll('a.has-arrow');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                alert('woi')
+            });
+        });
     });
 </script>
 @endpush
