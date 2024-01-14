@@ -23,9 +23,6 @@
             <div class="chat-history p-3">
                 <ul class="list-unstyled mb-0">
                     @foreach ($attachments as $attachment)
-                    {{$attachment->name}}
-                    <br>
-                    {{$student_id}}
                         
                         @if (\App\Helpers\AuthHelper::isAdmin())
                             @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
@@ -51,7 +48,7 @@
                                     </div>
                                     <div class="message my-message d-inline-block">
                                         <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
-                                            class="text-decoration-none text-info "
+                                            class="text-decoration-none text-white "
                                             download="{{ $attachment->name }}"
                                         >
                                         <i class="fa fa-book"></i>
@@ -68,7 +65,7 @@
                                     </div>
                                     <div class="message my-message d-inline-block">
                                         <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
-                                            class="text-decoration-none text-info "
+                                            class="text-decoration-none text-white "
                                             download="{{ $attachment->name }}"
                                         >
                                         <i class="fa fa-book"></i>

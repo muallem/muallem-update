@@ -37,6 +37,7 @@ class SidebarMenu extends Component
         
             $this->thesis_student = Judul::where('student_id', session()->get('user_id'))->with('category', 'category.lessons', 'category.lessons.lesson_details')->first();
             $this->emit('contentUpdated');
+            $this->emit('getData');
     }
     public function render()
     {
