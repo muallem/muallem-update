@@ -72,9 +72,9 @@
 
         const menuItems = document.querySelectorAll('a.has-arrow');
         menuItems.forEach(item => {
-            item.addEventListener('click', (e) => {
+            item.addEventListener('click', (el) => {
                 const siblingUl = el.nextElementSibling;
-                siblingUl.classList.toggle('mm-showedsasjdhv');
+                siblingUl.classList.toggle('mm-showa');
             });
         });
     });
