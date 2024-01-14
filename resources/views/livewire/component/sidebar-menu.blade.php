@@ -74,8 +74,8 @@
             const menuItems = document.querySelectorAll('a.has-arrow');
             menuItems.forEach(item => {
                 item.addEventListener('click', (el) => {
+                    console.log(el);
                     const siblingUl = el.nextElementSibling;
-                    console.log(siblingUl);
                     siblingUl.classList.toggle('mm-showa');
                 });
             });
