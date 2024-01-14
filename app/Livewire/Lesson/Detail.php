@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use App\Models\LessonDetail;
 use Livewire\WithFileUploads;
 use App\Models\MateriFeedback;
+use App\Models\LessonDetailStatus;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\LessonDetailAttachment;
 
@@ -38,7 +39,13 @@ class Detail extends Component
 
     public function closeLesson($lesson_detail_id, $student_id)
     {
-        $this->emit('consoleLog', "$lesson_detail_id - $student_id");
+        $lesson_detail_status = new LessonDetailStatus();
+        $lesson_detail_status->lesson_detail_id = $lesson_detail_id;
+        $lesson_detail_status->student_id = $student_id;
+        $lesson_detail_status->name = LessonDetailStatus::STATUS_SELESAI;
+        $lesson_detail_status->save();
+
+        $this->getData();
     }
     public function getData()
     {
@@ -62,6 +69,13 @@ class Detail extends Component
             if ($this->files) {
                 foreach ($this->files as $file) {
                     // Process each uploaded file
+                    $status = LessonDetailStatus::where('lesson_detail_id', $this->lesson_detail_id)
+                    ->where('student_id', $this->student_id)
+                    ->first();
+                    if($status && $status->name === LessonDetailStatus::STATUS_SELESAI){
+                        $this->getData();
+                        return;
+                    }
                     $fileName = Str::random(20) . '.' . $file->getClientOriginalExtension();
                     $originalName = $file->getClientOriginalName();
 
