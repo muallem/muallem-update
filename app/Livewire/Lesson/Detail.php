@@ -47,7 +47,7 @@ class Detail extends Component
             $join->on('lesson_details.id', '=', 'lesson_detail_statuses.lesson_detail_id')
                 ->where('lesson_detail_statuses.student_id', $this->student_id);
         })
-        ->where('lesson_details.lesson_id', Crypt::decryptString($lesson_id))
+        ->where('lesson_details.id', $lesson_detail_id)
         ->with('attachments')
         ->first();
     }
