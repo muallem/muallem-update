@@ -1,6 +1,5 @@
 
 <div class="card">
-    {{dd($lesson_detail)}}
     <div class="card-body">
         <h4>{{$lesson_detail->title}}</h4>
         <p style="text-align: justify;" class="mt-3">
@@ -24,7 +23,7 @@
             <div class="chat-history p-3">
                 <ul class="list-unstyled mb-0">
 
-                    @foreach ($attachments as $attachment)
+                    @foreach ($lesson_detail->attachments as $attachment)
                         
                         @if (\App\Helpers\AuthHelper::isAdmin())
                             @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
