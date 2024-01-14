@@ -27,9 +27,14 @@ class LessonController extends Controller
      */
     public function show($lesson_detail_id, $judul_id)
     {
+
         $lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->first();
         $lesson = Lesson::where('id', $lesson_detail->lesson_id)->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', Crypt::decryptString($judul_id))->with('user')->first();
+
+        $data[] = $lesson;
+        $data[] = $judul;
+        return $data;
         return view('lesson.index', compact('lesson_detail', 'lesson', 'judul'));
     }
 
