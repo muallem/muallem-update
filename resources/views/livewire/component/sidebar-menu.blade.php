@@ -74,7 +74,7 @@
         menuItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 const siblingUl = el.nextElementSibling;
-                siblingUl.classList.toggle('mm-showed');
+                siblingUl.classList.toggle('mm-showedsasjdhv');
             });
         });
     });
