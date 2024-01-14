@@ -16,6 +16,7 @@ return new class extends Migration
             $table->bigInteger('lesson_detail_id')->unsigned();
             $table->string('name');
             $table->text('file');
+            $table->bigInteger('student_id')->unsigned();
             $table->bigInteger('remarks_id')->unsigned();
             $table->string('remarks_type');
             $table->timestamps();

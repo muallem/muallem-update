@@ -19,22 +19,31 @@ class Detail extends Component
 
     public $lesson_detail;
     public $lesson_detail_id;
+    public $student_id;
     public $judul;
     public $files = [];
+    public $ori_lesson_detail;
 
     protected $listeners = [
         'getData',
     ];
-    public function mount($lesson_detail_id)
+    public function mount($lesson_detail, $judul)
     {
-        $this->lesson_detail_id = $lesson_detail_id;
-        $this->judul = Judul::where('id', $judul_id)->with('user')->first();
+        $this->ori_lesson_detail = $lesson_detail;
+        $this->judul = $judul;
+        $this->lesson_detail_id = $lesson_detail->id;
+        $this->student_id = $judul->student_id;
         $this->getData();
     } 
 
     public function getData()
     {
-        $this->lesson_detail = LessonDetail::where('id', Crypt::decryptString($this->lesson_detail_id))->with('attachments', 'status')->first();
+        $this->lesson_detail = LessonDetail::select('lesson_detail.*', 'lesson_detail_statuses.name')
+        ->leftJoin('lesson_detail_statuses', 'lesson_detail.id', '=', 'lesson_detail_statuses.lesson_detail_id')
+        ->where('lesson_detail_statuses.student_id', $this->student_id)
+        ->where('id', Crypt::decryptString($this->lesson_detail_id))
+        ->with('attachments')
+        ->first();
     }
 
     public function store()
@@ -52,6 +61,7 @@ class Detail extends Component
                     $lesson_detail_attachment->lesson_detail_id = Crypt::decryptString($this->lesson_detail_id);
                     $lesson_detail_attachment->name = $originalName;
                     $lesson_detail_attachment->file = $fileName;
+                    $lesson_detail_attachment->student_id = $this->student_id;
                     $lesson_detail_attachment->remarks_id = session()->get('user_id');
                     if(AuthHelper::isAdmin()){
                         $lesson_detail_attachment->remarks_type = LessonDetailAttachment::REMARKS_TYPE_ADMIN;

@@ -31,9 +31,5 @@ class LessonDetailAttachment extends Model
     {
         return $this->belongsTo(LessonDetail::class, 'lesson_detail_id', 'id');
     }
-    public function status()
-    {
-        return $this->belongsTo(LessonDetailStatus::class, 'id', 'lesson_detail_id');
-    }
 
 }

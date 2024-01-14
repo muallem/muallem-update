@@ -25,11 +25,27 @@ class LessonController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function show($id)
+    public function show($lesson_id, $judul_id)
     {
-        $id = $id;
-        $lesson_detail = LessonDetail::where('id', Crypt::decryptString($id))->with('lesson')->first();
-        $lesson = Lesson::where('id', $lesson_detail->lesson->id)->with('lesson_details', 'category')->first();
-        return view('admin.lesson', compact('id', 'lesson', 'lesson_detail'));
+        return LessonDetail::select('lesson_detail.*', 'lesson_detail_statuses.name')
+        ->leftJoin('lesson_detail_statuses', 'lesson_detail.id', '=', 'lesson_detail_statuses.lesson_detail_id')
+        ->where('lesson_detail_statuses.student_id', 2)
+        ->where('lesson_id', Crypt::decryptString($lesson_id))
+        ->with('attachments')
+        ->first();
+
+        $lesson_detail = LessonDetail::where('lesson_id', Crypt::decryptString($lesson_id))->first();
+        $lesson = Lesson::where('id', Crypt::decryptString($lesson_id))->with('lesson_details', 'category')->first();
+        $judul = Judul::where('id', Crypt::decryptString($judul_id))->with('user')->first();
+        return view('lesson.index', compact('lesson_detail', 'lesson', 'judul'));
     }
+
+    // public function show($student_id, $lesson_detail_id)
+    // {
+    //     $lesson_detail_id = $lesson_detail_id;
+    //     $lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->with('lesson')->first();
+    //     $lesson = Lesson::where('id', $lesson_detail->lesson->id)->with('lesson_details', 'category')->first();
+    //     $student = User::
+    //     return view('admin.lesson', compact('lesson_detail_id', 'lesson', 'lesson_detail'));
+    // }
 }
