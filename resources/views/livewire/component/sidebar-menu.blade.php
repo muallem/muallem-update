@@ -23,7 +23,7 @@
                             <li class="ms-5"><a href="{{route('dashboard.judul', ['thesis_id' => $item['id']])}}"><i class="fa fa-file-text"></i> Judul {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
                             @if (!empty($item['category']))
                                 <li class="ms-5">
-                                    <a href="#" class="has-arrow sidebar-submenu" aria-expanded="true">
+                                    <a href="#" class="has-arrow sidebar-submenu" aria-expanded="false">
                                         <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}
                                     </a>
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
@@ -44,7 +44,7 @@
                         <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Judul</a></li>
                         @if(isset($thesis_student) && $thesis_student->category_id)
                             <li class="ms-5">
-                                <a href="#" class="has-arrow sidebar-submenu" aria-expanded="true">
+                                <a href="#" class="has-arrow sidebar-submenu" aria-expanded="false">
                                     <i class="fa fa-tasks"></i> {{$thesis_student->category->name}} 
                                 </a>
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
@@ -66,15 +66,7 @@
     document.addEventListener('livewire:load', function () {
         setInterval(function () {
             @this.getKata();
-            updateToggleMenu();
         }, 15000);
-
-        function updateToggleMenu(){
-            $(document).on('click', '.sidebar-submenu', function () {
-                $(this).next('.mm-collapse').slideToggle();
-                $(this).toggleClass('active');
-            });
-        }
     });
 </script>
 @endpush
