@@ -69,7 +69,7 @@
             $('.sidebar-submenu').off('click').on('click', function () {
                 var $mmCollapse = $(this).next('.mm-collapse');
                 $mmCollapse.css('height', $mmCollapse.height() === 0 ? $mmCollapse[0].scrollHeight + 'px' : '0');
-                console.log($mmCollapse);
+                $(this).next('.mm-collapse').slideToggle();
                 $(this).toggleClass('active');
             });
         });
