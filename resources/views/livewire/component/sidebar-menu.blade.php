@@ -64,23 +64,9 @@
 @push('js')
 <script>
     document.addEventListener('livewire:load', function () {
-        refreshMenu()
         setInterval(function () {
             @this.getKata();
-            refreshMenu();
         }, 15000);
-
-        function refreshMenu()
-        {
-            const menuItems = document.querySelectorAll('.sidebar-submenu');
-            menuItems.forEach(item => {
-                item.addEventListener('click', (el) => {
-                    const siblingUl = el.target.nextElementSibling;
-                    console.log(siblingUl)
-                    siblingUl.classList.toggle('mm-show');
-                });
-            });
-        }
     });
 </script>
 @endpush
