@@ -67,7 +67,8 @@
         Livewire.on('contentUpdated', function () {
             // Reapply jQuery logic here
             $('.sidebar-submenu').off('click').on('click', function () {
-                $(this).next('.mm-collapse').slideToggle();
+                var $mmCollapse = $(this).next('.mm-collapse');
+                $mmCollapse.css('height', $mmCollapse.height() === 0 ? $mmCollapse[0].scrollHeight + 'px' : '0');
                 $(this).toggleClass('active');
             });
         });
