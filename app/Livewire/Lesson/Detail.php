@@ -47,8 +47,12 @@ class Detail extends Component
             $join->on('lesson_details.id', '=', 'lesson_detail_statuses.lesson_detail_id')
                 ->where('lesson_detail_statuses.student_id', $this->student_id);
         })
-        ->where('lesson_details.id', $lesson_detail_id)
-        ->with('attachments')
+        ->where('lesson_details.id', $this->lesson_detail_id)
+        ->with([
+            'attachments' => function($query){
+                return $query->select('*')->where('student_id', $this->student_id);
+            }
+        ])
         ->first();
     }
 
