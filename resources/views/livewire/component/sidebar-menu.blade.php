@@ -28,7 +28,7 @@
                                 @if (!empty($item['category']))
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
                                         @foreach ($item['category']['lessons'] as $lesson)
-                                        <li><a href="{{route('dashboard.lesson_detail', ['lesson_id' => Crypt::encryptString($lesson['id']), 'judul_id' => Crypt::encryptString($item['id'])])}}">{{$lesson['chapter']}}</a></li>
+                                        <li><a href="{{route('dashboard.lesson_detail', ['lesson_id' => Crypt::encryptString($lesson['lesson_details'][0]['lesson_id']), 'judul_id' => Crypt::encryptString($item['id'])])}}">{{$lesson['chapter']}}</a></li>
                                         @endforeach
                                     </ul>
                                 @endif

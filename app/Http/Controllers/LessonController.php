@@ -25,10 +25,10 @@ class LessonController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function show($lesson_id, $judul_id)
+    public function show($lesson_detail_id, $judul_id)
     {
-        $lesson_detail = LessonDetail::where('lesson_id', Crypt::decryptString($lesson_id))->first();
-        $lesson = Lesson::where('id', Crypt::decryptString($lesson_id))->with('lesson_details', 'category')->first();
+        $lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->first();
+        $lesson = Lesson::where('id', Crypt::decryptString($lesson_detail->lesson_id))->with('lesson_details', 'category')->first();
         $judul = Judul::where('id', Crypt::decryptString($judul_id))->with('user')->first();
         return view('lesson.index', compact('lesson_detail', 'lesson', 'judul'));
     }
