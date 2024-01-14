@@ -64,15 +64,6 @@
 @push('js')
 <script>
     document.addEventListener('livewire:load', function () {
-        Livewire.on('contentUpdated', function () {
-            // Reapply jQuery logic here
-            $('.sidebar-submenu').off('click').on('click', function () {
-                var $mmCollapse = $(this).next('.mm-collapse');
-                $mmCollapse.css('height', $mmCollapse.height() === 0 ? $mmCollapse[0].scrollHeight + 'px' : '0');
-                $(this).next('.mm-collapse').slideToggle();
-                $(this).toggleClass('active');
-            });
-        });
         setInterval(function () {
             @this.getKata();
         }, 15000);
