@@ -72,8 +72,9 @@
 
         const menuItems = document.querySelectorAll('a.has-arrow');
         menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                alert('woi')
+            item.addEventListener('click', (e) => {
+                const siblingUl = el.nextElementSibling;
+                siblingUl.classList.toggle('mm-showed');
             });
         });
     });
