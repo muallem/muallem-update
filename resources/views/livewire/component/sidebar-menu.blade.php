@@ -21,18 +21,18 @@
                             </li>
                             {{-- {{route('dashboard.materi', ['thesis_id' => $item['id']])}} --}}
                             <li class="ms-5"><a href="{{route('dashboard.judul', ['thesis_id' => $item['id']])}}"><i class="fa fa-file-text"></i> Judul {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}</a></li>
-                            <li class="ms-5">
-                                <a href="#" class="has-arrow" aria-expanded="true">
-                                    <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}
-                                </a>
-                                @if (!empty($item['category']))
+                            @if (!empty($item['category']))
+                                <li class="ms-5">
+                                    <a href="#" class="has-arrow" aria-expanded="true">
+                                        <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}
+                                    </a>
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
                                         @foreach ($item['category']['lessons'] as $lesson)
                                         <li><a href="{{route('dashboard.lesson_detail', ['lesson_detail_id' => Crypt::encryptString($lesson['lesson_details'][0]['id']), 'judul_id' => Crypt::encryptString($item['id'])])}}">{{$lesson['chapter']}}</a></li>
                                         @endforeach
                                     </ul>
-                                @endif
                                 </li>
+                             @endif
                         @endforeach
                     </ul>
                 </nav>
