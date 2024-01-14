@@ -28,7 +28,7 @@
                             @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
                                 <li class="clearfix">
                                     <div class="message-data text-end mb-3 me-3">
-                                        <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                        <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created_at)->format('d F Y H:i:s')}}</span>
                                     </div>
                                     <div class="message other-message d-inline-block float-end"> 
                                         <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
@@ -44,7 +44,7 @@
 
                                 <li class="clearfix">
                                     <div class="message-data mb-3">
-                                        <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                        <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created_at)->format('d F Y H:i:s')}}</span>
                                     </div>
                                     <div class="message my-message d-inline-block">
                                         <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
@@ -61,7 +61,7 @@
                             @if ($attachment->remarks_type === \App\Models\LessonDetailAttachment::REMARKS_TYPE_ADMIN)
                                 <li class="clearfix">
                                     <div class="message-data mb-3">
-                                        <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                        <span class="small text-muted me-3">{{Carbon\Carbon::parse($attachment->created_at)->format('d F Y H:i:s')}}</span>
                                     </div>
                                     <div class="message my-message d-inline-block">
                                         <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
@@ -76,7 +76,7 @@
                             @else
                                 <li class="clearfix">
                                     <div class="message-data text-end mb-3 me-3">
-                                        <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created)->format('d F Y H:i:s')}}</span>
+                                        <span class="small text-muted me-2">{{Carbon\Carbon::parse($attachment->created_at)->format('d F Y H:i:s')}}</span>
                                     </div>
                                     <div class="message other-message d-inline-block float-end"> 
                                         <a href="{{ asset("storage/app/public/lesson_detail_attachments/$attachment->file") }}"
