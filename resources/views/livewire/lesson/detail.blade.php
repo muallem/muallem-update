@@ -22,7 +22,7 @@
             </div>
             <div class="chat-history p-3">
                 <ul class="list-unstyled mb-0">
-
+                    {{dd($lesson_detail->attachments)}}
                     @foreach ($lesson_detail->attachments as $attachment)
                         
                         @if (\App\Helpers\AuthHelper::isAdmin())
