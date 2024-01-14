@@ -29,12 +29,12 @@ class LessonController extends Controller
     {
         // return Crypt::decryptString($lesson_id);
         return LessonDetail::select('lesson_details.*', 
-        // 'lesson_detail_statuses.name'
+        'lesson_detail_statuses.name'
         )
-        // ->leftJoin('lesson_detail_statuses', function ($join) {
-        //     $join->on('lesson_details.id', '=', 'lesson_detail_statuses.lesson_detail_id')
-        //         ->where('lesson_detail_statuses.student_id', 2);
-        // })
+        ->leftJoin('lesson_detail_statuses', function ($join) {
+            $join->on('lesson_details.id', '=', 'lesson_detail_statuses.lesson_detail_id')
+                ->where('lesson_detail_statuses.student_id', 2);
+        })
         // ->leftJoin('lesson_detail_statuses', 'lesson_details.id', '=', 'lesson_detail_statuses.lesson_detail_id')
         
         ->where('lesson_details.lesson_id', Crypt::decryptString($lesson_id))
