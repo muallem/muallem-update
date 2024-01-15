@@ -64,7 +64,7 @@
             <div class="tab-pane fade show active" id="admin_menu" role="tabpanel" >
                 <nav class="sidebar-nav">
                     <ul class="metismenu list-unstyled">
-                        <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Super Admin</a></li>
+                        <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Judul</a></li>
                         @if(isset($thesis_student) && $thesis_student->category_id)
                             <li class="ms-5">
                                 <a href="#" class="has-arrow sidebar-submenu">
