@@ -24,7 +24,7 @@ class Detail extends Component
     public $student_id;
     public $judul;
 
-    public function mount($lesson_detail, $judul)
+    public function mount($lesson_detail)
     {
         $this->lesson_detail_id = $lesson_detail->id;
         $this->lesson_detail = LessonDetail::find($this->lesson_detail_id);

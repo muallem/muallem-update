@@ -24,17 +24,17 @@ class SuperAdminController extends Controller
      */
 
     /**
-     * Show the application dashboard.
+     * Show the application.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function materi()
     {
-        return view('superadmin.dashboard.materi.index');
+        return view('superadmin.materi.index');
     }
     public function category()
     {
-        return view('superadmin.dashboard.category.index');
+        return view('superadmin.category.index');
     }
     public function index()
     {
@@ -50,16 +50,15 @@ class SuperAdminController extends Controller
     public function show($id)
     {
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
-        return view('superadmin.dashboard.materi.detail', compact('lesson'));
+        return view('superadmin.materi.detail', compact('lesson'));
     }
     public function coba(){
         return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
     }
     public function materi_detail($lesson_detail_id)
     {
-        return Crypt::decryptString($lesson_detail_id);
         $lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->first();
         $lesson = Lesson::where('id', $lesson_detail->lesson_id)->with('lesson_details', 'category')->first();
-        return view('lesson.index', compact('lesson_detail', 'lesson'));
+        return view('superadmin.materi.show', compact('lesson_detail', 'lesson'));
     }
 }
