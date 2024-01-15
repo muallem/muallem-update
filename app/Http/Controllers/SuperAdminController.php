@@ -52,17 +52,12 @@ class SuperAdminController extends Controller
         $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
         return view('superadmin.dashboard.materi.detail', compact('lesson'));
     }
-    public function materi_old(Request $request)
-    {
-        $thesis = Judul::where('id', $request->thesis_id)->with('user')->first();
-
-        return view('superadmin.materi', compact('thesis'));
-    }
     public function coba(){
         return Thesis::select('id', 'title', 'group', 'student_id')->with('user')->get();
     }
     public function materi_detail($lesson_detail_id)
     {
+        return Crypt::decryptString($lesson_detail_id);
         $lesson_detail = LessonDetail::where('id', Crypt::decryptString($lesson_detail_id))->first();
         $lesson = Lesson::where('id', $lesson_detail->lesson_id)->with('lesson_details', 'category')->first();
         return view('lesson.index', compact('lesson_detail', 'lesson'));
