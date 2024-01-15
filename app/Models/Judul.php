@@ -35,6 +35,11 @@ class Judul extends Model
 
     protected $guarded = ['id'];
 
+    public function updateLastSeen(){
+        $this->last_seen = Carbon::now();
+        $this->save();
+    }
+
 
     public function user()
     {
