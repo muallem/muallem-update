@@ -5,6 +5,7 @@ namespace App\Livewire\Dashboard\Materi;
 use App\Models\Lesson;
 use Livewire\Component;
 use App\Traits\WithDatatable;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Database\Eloquent\Builder;
 
 class Datatable extends Component
