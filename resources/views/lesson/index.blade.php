@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                @livewire('lesson.detail', ['lesson_detail' => $lesson_detail, 'judul' => $judul])
+                @livewire('lesson.dashboard.materidetail', ['lesson_detail' => $lesson_detail, 'judul' => $judul])
             </div>
         </div>
 

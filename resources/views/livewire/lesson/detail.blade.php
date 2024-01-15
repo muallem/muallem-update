@@ -2,9 +2,9 @@
 <div class="card">
     <div class="card-body">
         <h4>{{$lesson_detail->title}}</h4>
-        <p style="text-align: justify;" class="mt-3">
-            {{$lesson_detail->body}}
-        </p>
+        <div class="mt-3">
+            {!! $lesson_detail->body !!}
+        </div>
     </div>
     <div class="chat_app d-flex justify-content-center">
         <div class="chat">
