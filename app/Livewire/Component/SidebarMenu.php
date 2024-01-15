@@ -38,12 +38,12 @@ class SidebarMenu extends Component
                 ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
                 ->leftJoin('categories', 'juduls.category_id', '=', 'categories.id')
                 ->groupBy('juduls.id', 'juduls.category_id', 'wpjs_users.user_login', 'categories.name')
-                ->get()->toArray();
+                ->get();
     
             foreach ($theses as $thesis) {
                 $thesis->updateLastSeen();
             }
-            $this->thesis_admin = $theses;
+            $this->thesis_admin = $theses->toArray();
         }else{
             $thesis_student = Judul::where('student_id', session()->get('user_id'))->with('category', 'category.lessons', 'category.lessons.lesson_details')->first();
             $thesis_student->updateLastSeen();
