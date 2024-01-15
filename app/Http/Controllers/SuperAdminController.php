@@ -38,7 +38,7 @@ class SuperAdminController extends Controller
             'categories.name as group')
             ->leftJoin('lesson_detail_attachments', function ($join) {
                 $join->on('juduls.student_id', '=', 'lesson_detail_attachments.student_id')
-                ->where('lesson_detail_attachments.created_at', '>', 'juduls.last_seen');
+                ->on('lesson_detail_attachments.created_at', '>', 'juduls.last_seen');
             })
             ->with('category', 'category.lessons', 'category.lessons.lesson_details')
             ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
