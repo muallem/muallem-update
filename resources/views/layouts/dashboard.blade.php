@@ -112,6 +112,7 @@
                             </div>
                         </div>
 
+                        <li class="nav-item flex-fill"><a class="nav-link active" id="superadmin_menu_nav_link" data-bs-toggle="tab" href="#superadmin_menu" role="tab">Super Admin</a></li>
                         <!-- nav tab: menu list -->
                         <ul class="main-menu metismenu list-unstyled">
                             <li>
