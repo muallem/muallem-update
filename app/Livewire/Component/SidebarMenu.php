@@ -23,10 +23,15 @@ class SidebarMenu extends Component
     {
 
         $this->kata += 1;
-        $thesis = Judul::select('juduls.id', 'juduls.category_id', 'wpjs_users.user_login', DB::raw('COUNT(materi_feedback.id) as materi_count'), 'categories.name as group')
-            ->leftJoin('materi_feedback', function ($join) {
-                $join->on('juduls.student_id', '=', 'materi_feedback.student_id')
-                    ->whereNull('materi_feedback.feedback');
+        $$thesis = Judul::select(
+            'juduls.id',
+            'juduls.category_id', 
+            'wpjs_users.user_login', 
+            DB::raw('COUNT(lesson_detail_attachments.id) as attachment_count'), 
+            'categories.name as group')
+            ->leftJoin('lesson_detail_attachments', function ($join) {
+                $join->on('juduls.student_id', '=', 'lesson_detail_attachments.student_id')
+                ->where('lesson_detail_attachments.created_at', '>', 'juduls.last_seen');
             })
             ->with('category', 'category.lessons', 'category.lessons.lesson_details')
             ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')

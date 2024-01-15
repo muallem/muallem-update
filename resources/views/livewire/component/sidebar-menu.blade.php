@@ -11,9 +11,9 @@
                                     <span>{{$item['user_login']}}</span> 
                                     {!! ($item['group']) ? '' : '<i class="fa fa-exclamation-circle"></i>' ; !!}
 
-                                    @if($item['materi_count'] > 0 )
+                                    @if($item['attachment_count'] > 0 )
                                         <span class="badge rounded-pill bg-primary">
-                                            {{ $item['materi_count'] }}
+                                            {{ $item['attachment_count'] }}
                                         </span>
                                     @endif
                                 </a>
@@ -24,7 +24,7 @@
                             @if (!empty($item['category']))
                                 <li class="ms-5">
                                     <a href="#" class="has-arrow sidebar-submenu">
-                                        <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['materi_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['materi_count'] ."</span>" : "" ; !!}
+                                        <i class="fa fa-tasks"></i> {{$item['group']}} {!! ($item['attachment_count'] > 0) ? "<span class='badge rounded-pill bg-primary'>". $item['attachment_count'] ."</span>" : "" ; !!}
                                     </a>
                                     <ul class="list-unstyled mm-collapse" style="height: 0px;">
                                         @foreach ($item['category']['lessons'] as $lesson)
