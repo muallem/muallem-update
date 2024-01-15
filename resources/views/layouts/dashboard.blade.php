@@ -112,9 +112,9 @@
                             </div>
                         </div>
 
-                        <li class="nav-item flex-fill"><a class="nav-link active" id="superadmin_menu_nav_link" data-bs-toggle="tab" href="#superadmin_menu" role="tab">Super Admin</a></li>
                         <!-- nav tab: menu list -->
                         <ul class="main-menu metismenu list-unstyled">
+                            <li class="nav-item flex-fill"><a class="nav-link active" id="superadmin_menu_nav_link" data-bs-toggle="tab" href="#superadmin_menu" role="tab">Super Admin</a></li>
                             <li>
                                 <a href="{{ route('superadmin.materi') }}" class="text-decoration-none text-dark" aria-expanded="false">
                                     <i class="fa fa-book"></i>
