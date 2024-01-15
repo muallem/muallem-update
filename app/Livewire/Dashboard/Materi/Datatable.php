@@ -66,12 +66,13 @@ class Datatable extends Component
                 'sortable' => false,
                 'searchable' => false,
                 'render' => function ($item) {
-                    $route = route('superadmin.materi.', ['id' => $item->id]);
+                    $route = route('superadmin.materi_detail', ['lesson_detail_id' => Crypt::encryptString($item->id)]);
                     $showHtml = "<div class='col-auto'>
                         <a type='button' class='btn btn-info' href='$route' target='_blank'>
                             <i class='fa fa-eye'></i>
                             Lihat
                         </a>
+                        <a href=''>Lihat</a>
                     </div>";
 
                     $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\" class='col-auto'>"
