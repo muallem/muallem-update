@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                @livewire('dasboard.materidetail', ['lesson_detail' => $lesson_detail])
+                @livewire('dasboard.materi.detail', ['lesson_detail' => $lesson_detail])
             </div>
         </div>
 
