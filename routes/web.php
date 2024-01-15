@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SuperAdminController;
 
 /*
 |--------------------------------------------------------------------------
