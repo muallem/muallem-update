@@ -1,22 +1,15 @@
 <?php
 
-namespace App\Livewire\Dashboard\Materi;
+namespace App\Livewire\Dashboard\Category;
 
-use App\Models\Lesson;
 use Livewire\Component;
+use App\Models\Category;
 use App\Traits\WithDatatable;
 use Illuminate\Database\Eloquent\Builder;
 
 class Datatable extends Component
 {
     use WithDatatable;
-
-    // Filter
-    public $end_date;
-    public $start_date;
-    public $filter_jenis;
-    public $filter_payor;
-
 
     protected $listeners = [
         'addFilter',
@@ -34,10 +27,9 @@ class Datatable extends Component
             $this->$key = $value;
         }
     }
-
     public function destroy($id)
     {
-        $item = Lesson::find($id);
+        $item = Category::find($id);
         $item->delete();
         $this->emit('onSuccessSweetAlert', 'Data Berhasil Dihapus!');
     }
@@ -46,18 +38,10 @@ class Datatable extends Component
     {
         return [
             [
-                'key' => 'chapter',
-                'name' => 'Nama Materi',
-                'render' => function ($item) {
-                    return $item->chapter;
-                },
-            ],
-            [
-                'sortable' => false,
-                'searchable' => false,
+                'key' => 'name',
                 'name' => 'Nama Kategori',
                 'render' => function ($item) {
-                    return $item->category->name;
+                    return $item->name;
                 },
             ],
 
@@ -66,15 +50,7 @@ class Datatable extends Component
                 'sortable' => false,
                 'searchable' => false,
                 'render' => function ($item) {
-                    $route = route('superadmin.materi.', ['id' => $item->id]);
-                    $showHtml = "<div class='col-auto'>
-                        <a type='button' class='btn btn-info' href='$route' target='_blank'>
-                            <i class='fa fa-eye'></i>
-                            Lihat
-                        </a>
-                    </div>";
-
-                    $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\" class='col-auto'>"
+                    $destroyHtml = "<form wire:submit.prevent=\"destroy('$item->id')\">"
                         . method_field('DELETE') . csrf_field() .
                         "<button type='submit' class='btn btn-danger'
                             onclick=\"return confirm('Delete Data?')\">
@@ -83,7 +59,6 @@ class Datatable extends Component
                     </form>";
 
                     $html = "<div class='row'>
-                        $showHtml
                         $destroyHtml                 
                     </div>";
 
@@ -96,13 +71,13 @@ class Datatable extends Component
     public function getQuery(): Builder
     {
 
-        $query = Lesson::with('category');
+        $query = Category::query();
 
         return $query;
     }
 
     public function getView(): string
     {
-        return 'livewire.dashboard.materi.datatable';
+        return 'livewire.dashboard.category.datatable';
     }
 }

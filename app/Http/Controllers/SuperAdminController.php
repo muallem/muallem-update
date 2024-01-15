@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
-class DashboardController extends Controller
+class SuperAdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -28,17 +28,13 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function lesson($lesson_id, $judul_id)
+    public function materi()
     {
-        $lesson = Lesson::where('id', $lesson_id)->with('lesson_details', 'category')->first();
-        $judul = Judul::where('id', $judul_id)->with('user')->first();
-        $is_admin = (AuthHelper::isAdmin()) ? 'dashboard' : 'student';
-        return redirect()->route($is_admin .'.lesson_detail', ['student_id' => Crypt::encryptString($lesson->lesson_details[0]->id), 'lesson_detail_id' => Crypt::encryptString($lesson->lesson_details[0]->id)]);
-        // return view('admin.lesson', compact('lesson', 'judul'));
+        return view('superadmin.dashboard.materi.index');
     }
     public function category()
     {
-        return view('admin.dashboard.category.index');
+        return view('superadmin.dashboard.category.index');
     }
     public function index()
     {
@@ -49,7 +45,23 @@ class DashboardController extends Controller
         //     },
         //     'lesson_titles.lesson_details'
         // ])->get();
-        return view('admin.index');
+        return view('superadmin.index');
+    }
+    public function show($id)
+    {
+        $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
+        return view('superadmin.dashboard.materi.detail', compact('lesson'));
+    }
+    public function materi_detail($id)
+    {
+        $lesson = Lesson::where('id', $id)->with('lesson_details', 'category')->first();
+        return view('superadmin.dashboard.materi.detail', compact('lesson'));
+    }
+    public function materi_old(Request $request)
+    {
+        $thesis = Judul::where('id', $request->thesis_id)->with('user')->first();
+
+        return view('superadmin.materi', compact('thesis'));
     }
     public function rnd()
     {
@@ -87,7 +99,7 @@ class DashboardController extends Controller
 
     public function judul(Request $request)
     {
-        return view('admin.judul', [
+        return view('superadmin.judul', [
             'thesis_id' => $request->thesis_id,
         ]);
     }

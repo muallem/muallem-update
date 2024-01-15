@@ -44,10 +44,11 @@ Route::group(['middleware' => ['my.auth', 'student']], function () {
     });
 });
 Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
-    Route::group(['controller' => DashboardController::class, 'prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
+    Route::group(['controller' => SuperAdminController::class, 'prefix' => 'superadmin', 'as' => 'superadmin.'], function () {
         Route::get('/category', 'category')->name('category');
         Route::get('/materi', 'materi')->name('materi');
-        Route::get('/materi/{id}', 'materi_detail')->name('materi.detail');
+        Route::get('/materi/{id}', 'show')->name('materi');
+        Route::get('/materi_detail/{lesson_detail_id}', 'materi_detail')->name('materi_detail');
     });
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
