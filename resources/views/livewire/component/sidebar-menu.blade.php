@@ -41,11 +41,30 @@
                     </ul>
                 </nav>
             </div>
+        @elseif(\App\Helpers\AuthHelper::isSuperAdmin())
+            <div class="tab-pane fade show active" id="admin_menu" role="tabpanel" >
+                <nav class="sidebar-nav">
+                    <ul class="main-menu metismenu list-unstyled">
+                        <li>
+                            <a href="{{ route('superadmin.materi') }}" class="text-decoration-none text-dark" aria-expanded="false">
+                                <i class="fa fa-book"></i>
+                                <span>Materi</span> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('superadmin.category') }}" class="text-decoration-none text-dark" aria-expanded="false">
+                                <i class="fa fa-th-large"></i>
+                                <span>Kategori</span> 
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         @else
             <div class="tab-pane fade show active" id="admin_menu" role="tabpanel" >
                 <nav class="sidebar-nav">
                     <ul class="metismenu list-unstyled">
-                        <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Judul</a></li>
+                        <li><a href="{{route('student.index')}}"><i class="fa fa-file-text"></i> Super Admin</a></li>
                         @if(isset($thesis_student) && $thesis_student->category_id)
                             <li class="ms-5">
                                 <a href="#" class="has-arrow sidebar-submenu">
