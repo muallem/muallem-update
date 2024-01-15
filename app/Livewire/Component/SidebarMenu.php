@@ -38,6 +38,7 @@ class SidebarMenu extends Component
                 ->leftJoin('wpjs_users', 'juduls.student_id', '=', 'wpjs_users.id')
                 ->leftJoin('categories', 'juduls.category_id', '=', 'categories.id')
                 ->groupBy('juduls.id', 'juduls.category_id', 'wpjs_users.user_login', 'categories.name')
+                ->orderBy('attachment_count', 'DESC')
                 ->get();
     
             foreach ($theses as $thesis) {
