@@ -43,8 +43,6 @@ class Detail extends Component
         } catch (\Throwable $th) {
             $this->emit('onFailSweetAlert', 'Gagal Menyimpan Data !');
         }
-
-        $this->getData();
     }
     public function render()
     {
