@@ -24,7 +24,7 @@ class SidebarMenu extends Component
 
         $this->kata += 1;
         if(AuthHelper::isAdmin()){
-            $thesis = Judul::select(
+            $theses = Judul::select(
                 'juduls.id',
                 'juduls.category_id', 
                 'wpjs_users.user_login', 
@@ -43,7 +43,7 @@ class SidebarMenu extends Component
             foreach ($theses as $thesis) {
                 $thesis->updateLastSeen();
             }
-            $this->thesis_admin = $thesis;
+            $this->thesis_admin = $theses;
         }else{
             $thesis_student = Judul::where('student_id', session()->get('user_id'))->with('category', 'category.lessons', 'category.lessons.lesson_details')->first();
             $thesis_student->updateLastSeen();
