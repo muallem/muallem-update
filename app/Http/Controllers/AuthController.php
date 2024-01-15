@@ -22,7 +22,7 @@ class AuthController extends Controller
             {
                 return redirect()->route('dashboard.index');
             }elseif( AuthHelper::isSuperAdmin()){
-                return redirect()->route('dashboard.materi');
+                return redirect()->route('superadmin.materi');
             }
             else
             {
