@@ -51,7 +51,7 @@ class Datatable extends Component
                 },
             ],
             [
-                'sortable' => false,
+                'key' => 'category_id',
                 'searchable' => false,
                 'name' => 'Nama Kategori',
                 'render' => function ($item) {
