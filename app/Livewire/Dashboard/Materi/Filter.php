@@ -19,6 +19,7 @@ class Filter extends Component
     // Modal Import
     public $input_file;
     public $input_category;
+    public $filter_category;
     public $input_name;
     public $categories = [];
     protected $rules = [
@@ -54,6 +55,12 @@ class Filter extends Component
             $this->emit("consoleLog", $e->getMessage());
             DB::rollBack();
         }
+    }
+    public function updated()
+    {
+        $this->emit('addFilter', [
+            'filter_category' => $this->filter_category,
+        ]);
     }
 
     public function render()

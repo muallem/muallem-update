@@ -13,10 +13,7 @@ class Datatable extends Component
     use WithDatatable;
 
     // Filter
-    public $end_date;
-    public $start_date;
-    public $filter_jenis;
-    public $filter_payor;
+    public $filter_category;
 
 
     protected $listeners = [
@@ -97,9 +94,10 @@ class Datatable extends Component
     public function getQuery(): Builder
     {
 
-        $query = Lesson::with('category', 'lesson_details');
-
-        return $query;
+        $query = Lesson::with('category', 'lesson_details')
+            ->when($this->filter_category, function ($query) {
+                $query->where('category_id', $this->filter_category);
+            });
     }
 
     public function getView(): string

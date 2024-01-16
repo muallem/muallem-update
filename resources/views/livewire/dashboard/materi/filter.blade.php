@@ -7,6 +7,16 @@
         </button>
     </div>
 
+    <div class="col-md-4 mb-2">
+        <label class="form-label">Kategori</label>
+        <select class="form-control" wire:model="filter_category">
+            <option value="">Seluruh</option>
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+    </div>
+
     {{-- Import Modal --}}
     <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog modal-lg">
