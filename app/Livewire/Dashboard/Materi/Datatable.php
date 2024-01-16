@@ -98,6 +98,7 @@ class Datatable extends Component
             ->when($this->filter_category, function ($query) {
                 $query->where('category_id', $this->filter_category);
             });
+        return $query;
     }
 
     public function getView(): string
