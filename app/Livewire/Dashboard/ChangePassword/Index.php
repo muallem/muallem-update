@@ -3,7 +3,6 @@
 namespace App\Livewire\Dashboard\ChangePassword;
 
 use App\Models\User;
-use App\Models\LessonDetailAttachment;
 use Livewire\Component;
 require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
 
@@ -28,6 +27,7 @@ class Index extends Component
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengubah Password!');
             
         } catch (\Throwable $th) {
+            $this->emit('consoleLog', $th);
             $this->emit('onFailSweetAlert', 'Gagal Mengubah Password!');
         }
     }
