@@ -22,12 +22,12 @@ class Index extends Component
                 }
                 $hasher = new \PasswordHash(8, true);
                 $user->user_pass = $hasher->HashPassword($this->input_new_password);
+                $this->emit('consoleLog', $user);
                 $user->save();
                 // Emit success event
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengubah Password!');
             
         } catch (\Throwable $th) {
-            $this->emit('consoleLog', $th);
             $this->emit('onFailSweetAlert', 'Gagal Mengubah Password!');
         }
     }
