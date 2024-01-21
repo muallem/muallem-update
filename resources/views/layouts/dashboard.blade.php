@@ -130,6 +130,12 @@
                                     <span>Kategori</span> 
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ route('superadmin.change_password') }}" class="text-decoration-none text-dark" aria-expanded="false">
+                                    <i class="fa fa-key"></i>
+                                    <span>Ganti Password</span> 
+                                </a>
+                            </li>
                         </ul>
                     </div> 
                 </div>  

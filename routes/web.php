@@ -48,6 +48,7 @@ Route::group(['middleware' => ['my.auth', 'superadmin']], function () {
     Route::group(['controller' => SuperAdminController::class, 'prefix' => 'superadmin', 'as' => 'superadmin.'], function () {
         Route::get('/category', 'category')->name('category');
         Route::get('/materi', 'materi')->name('materi');
+        Route::get('/change_password', 'change_password')->name('change_password');
         Route::get('/materi/{id}', 'show')->name('materi_show');
         Route::get('/materi_detail/{lesson_detail_id}', 'materi_detail')->name('materi_detail');
     });

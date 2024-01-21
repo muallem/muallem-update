@@ -32,6 +32,10 @@ class SuperAdminController extends Controller
     {   
         return view('superadmin.materi.index');
     }
+    public function change_password()
+    {   
+        return view('superadmin.change_password.index');
+    }
     public function category()
     {
         return view('superadmin.category.index');

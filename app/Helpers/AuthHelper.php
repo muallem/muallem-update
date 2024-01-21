@@ -46,21 +46,6 @@ class AuthHelper
         }
     }
 
-    public static function checkPassword($email, $newPassword){
-
-        // Include the necessary parts of the pluggable.php file
-        require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
-
-        $user = User::where('user_email', $email)->first();
-        $hasher = new \PasswordHash(8, true);
-        $hashedPassword = $hasher->HashPassword($newPassword);
-        $hasher = new \PasswordHash(8, true);
-        if (!$hasher->CheckPassword($newPassword, $hashedPassword)) {
-            return 'Gak Bener';
-        }
-
-        return 'Bener';
-    }
     public static function isSessionToken()
     {
         try{
