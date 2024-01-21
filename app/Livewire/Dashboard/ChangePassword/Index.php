@@ -22,8 +22,8 @@ class Index extends Component
                 }
                 $hasher = new \PasswordHash(8, true);
                 $user->user_pass = $hasher->HashPassword($this->input_new_password);
-                $this->emit('consoleLog', $user);
                 $user->save();
+                $this->emit('consoleLog', User::where('user_email', $this->input_email)->first());
                 // Emit success event
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengubah Password!');
             
