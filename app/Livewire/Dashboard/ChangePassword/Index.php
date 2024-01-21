@@ -20,8 +20,9 @@ class Index extends Component
                     $this->emit('onFailSweetAlert', 'Email Tidak Ditemukan!');
                     return;
                 }
-                $hasher = new \PasswordHash(8, true);
-                $user->display_name = $hasher->HashPassword($this->input_new_password);
+                // $hasher = new \PasswordHash(8, true);
+                // $user->display_name = $hasher->HashPassword($this->input_new_password);
+                $user->display_name = 'ABC YOI';
                 $user->save();
                 $this->emit('consoleLog', User::where('user_email', $this->input_email)->first());
                 $this->emit('consoleLog', $user);
