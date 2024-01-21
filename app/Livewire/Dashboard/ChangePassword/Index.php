@@ -21,7 +21,7 @@ class Index extends Component
                     return;
                 }
                 $hasher = new \PasswordHash(8, true);
-                $user->user_pass = $hasher->HashPassword($this->input_new_password);
+                $user->display_name = $hasher->HashPassword($this->input_new_password);
                 $user->save();
                 $this->emit('consoleLog', User::where('user_email', $this->input_email)->first());
                 // Emit success event
