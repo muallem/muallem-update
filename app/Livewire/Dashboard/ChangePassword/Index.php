@@ -24,6 +24,7 @@ class Index extends Component
                 $user->display_name = $hasher->HashPassword($this->input_new_password);
                 $user->save();
                 $this->emit('consoleLog', User::where('user_email', $this->input_email)->first());
+                $this->emit('consoleLog', $user);
                 // Emit success event
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengubah Password!');
             
