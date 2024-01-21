@@ -5,6 +5,7 @@ namespace App\Livewire\Admin;
 use App\Models\Judul;
 use Livewire\Component;
 use App\Models\Category;
+use App\Helpers\AuthHelper;
 
 class ShowJudul extends Component
 {
@@ -18,6 +19,7 @@ class ShowJudul extends Component
 
     public function mount(){
         $this->category_choice = Category::pluck('name', 'id');
+        $this->emit('consoleLog', AuthHelper::checkPassword('coba123@mail.com', 'Password123'));
     }
 
     public function setFeedback($feedback)
