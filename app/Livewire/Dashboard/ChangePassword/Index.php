@@ -22,8 +22,9 @@ class Index extends Component
                 }
                 // $hasher = new \PasswordHash(8, true);
                 // $user->display_name = $hasher->HashPassword($this->input_new_password);
-                $user->display_name = 'ABC YOI';
-                $user->save();
+                // $user->display_name = 'ABC YOI';
+                // $user->save();
+                $user->update(['display_name' => 'ABC YOI']);
                 $this->emit('consoleLog', User::where('user_email', $this->input_email)->first());
                 $this->emit('consoleLog', $user);
                 // Emit success event
