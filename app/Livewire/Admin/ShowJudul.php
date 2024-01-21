@@ -11,6 +11,7 @@ class ShowJudul extends Component
 {
     public $thesis_id;
     public $data_judul;
+    public $pass;
 
     public $category_choice = [];
     protected $listeners = [
@@ -19,7 +20,7 @@ class ShowJudul extends Component
 
     public function mount(){
         $this->category_choice = Category::pluck('name', 'id');
-        $this->emit('consoleLog', AuthHelper::checkPassword('coba123@mail.com', 'Password123'));
+        $this->pass = AuthHelper::checkPassword('coba123@mail.com', 'Password123');
     }
 
     public function setFeedback($feedback)

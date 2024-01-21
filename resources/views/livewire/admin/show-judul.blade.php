@@ -1,5 +1,6 @@
 
 <div class="row g-3 clearfix">
+    {{$pass}}
     <div class="col-lg-12 col-md-12">
         <div class="card mb-3 single_post">
             <div class="card-body">
