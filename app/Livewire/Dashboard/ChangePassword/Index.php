@@ -5,7 +5,7 @@ namespace App\Livewire\Dashboard\ChangePassword;
 use App\Models\User;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
-// require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
+require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
 
 class Index extends Component
 {
@@ -15,30 +15,19 @@ class Index extends Component
     public function save()
     {
         try {
+
+            $hasher = new \PasswordHash(8, true);
+            $new_password = $hasher->HashPassword($this->input_new_password);
+
             $affectedRows = DB::table('wpjs_users')
             ->where('user_email', $this->input_email)
-            ->update(['display_name' => 'ABC YOI']);
+            ->update(['user_pass' => $new_password]);
 
             if ($affectedRows > 0) {
                 $this->emit('onSuccessSweetAlert', 'Berhasil Mengubah Password!');
             } else {
                 $this->emit('onFailSweetAlert', 'Email Tidak Ditemukan!');
             }
-                // $user = User::where('user_email', $this->input_email)->first();
-                // if(!$user)
-                // {
-                //     $this->emit('onFailSweetAlert', 'Email Tidak Ditemukan!');
-                //     return;
-                // }
-                // // $hasher = new \PasswordHash(8, true);
-                // // $user->display_name = $hasher->HashPassword($this->input_new_password);
-                // // $user->display_name = 'ABC YOI';
-                // // $user->save();
-                // $user->update(['display_name' => 'ABC YOI']);
-                // $this->emit('consoleLog', User::where('user_email', $this->input_email)->first());
-                // $this->emit('consoleLog', $user);
-                // // Emit success event
-                // $this->emit('onSuccessSweetAlert', 'Berhasil Mengubah Password!');
             
         } catch (\Throwable $th) {
             $this->emit('onFailSweetAlert', 'Gagal Mengubah Password!');
