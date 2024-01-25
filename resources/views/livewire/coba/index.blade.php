@@ -11,7 +11,7 @@
         setInterval(function () {
             @this.getKata();
             console.log('kata refresh')
-        }, 5000);
+        }, 300000);
     });
 </script>
 @endpush

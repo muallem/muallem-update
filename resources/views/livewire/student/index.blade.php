@@ -30,7 +30,7 @@
         document.addEventListener('livewire:load', function() {
             setInterval(function () {
                 Livewire.emit('refreshData'); 
-            }, 15000); 
+            }, 30000); 
         });
     </script>
 @endpush

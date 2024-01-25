@@ -98,7 +98,7 @@
     document.addEventListener('livewire:load', function () {
         setInterval(function () {
             @this.getKata();
-        }, 15000);
+        }, 300000);
     });
 </script>
 @endpush
