@@ -50,7 +50,7 @@ class Judul extends Model
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
-    public function wpjs_users()
+    public function wp_users()
     {
         return $this->belongsTo(User::class, 'student_id', 'ID');
     }

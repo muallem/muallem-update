@@ -25,7 +25,7 @@
 
             <div class="card mb-3 single_post">
                 <div class="card-body">
-                    <h4>{{$thesis->wpjs_users->user_login}}</h4>
+                    <h4>{{$thesis->wp_users->user_login}}</h4>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12">

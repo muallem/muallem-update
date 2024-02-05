@@ -19,7 +19,7 @@ class Index extends Component
             $hasher = new \PasswordHash(8, true);
             $new_password = $hasher->HashPassword($this->input_new_password);
 
-            $affectedRows = DB::table('wpjs_users')
+            $affectedRows = DB::table('wp_users')
             ->where('user_email', $this->input_email)
             ->update(['user_pass' => $new_password]);
 

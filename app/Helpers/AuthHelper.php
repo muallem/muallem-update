@@ -26,7 +26,6 @@ class AuthHelper
         try {
             // Your login logic here
             $user = User::where("user_email", $user_email)->first();
-            return $user;
             $hasher = new \PasswordHash(8, true);
             if(!$user){
                 return response()->json(['message' => 'Not permitted', 'ok' => false], 402);

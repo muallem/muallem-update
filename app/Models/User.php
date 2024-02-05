@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    protected $table = 'wpjs_users';
+    protected $table = 'wp_users';
     public $timestamps = false;
     /**
      * The attributes that are mass assignable.
