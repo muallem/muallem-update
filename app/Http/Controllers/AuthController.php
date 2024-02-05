@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Helpers\AuthHelper;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ class AuthController extends Controller
 {
     public function index(Request $request)
     {
+        return User::all();
         return view('auth.login');
     }
     
