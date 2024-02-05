@@ -5,7 +5,7 @@ namespace App\Livewire\Dashboard\ChangePassword;
 use App\Models\User;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
-require_once '/home/n1488259/public_html/wp-includes/class-phpass.php';
+require_once '/home/u972394743/domains/muallem.id/public_html/wp-includes/class-phpass.php';
 
 class Index extends Component
 {
