@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     public function index(Request $request)
     {
-        return User::all();
+        return DB::table('coba')->get();
         return view('auth.login');
     }
     
