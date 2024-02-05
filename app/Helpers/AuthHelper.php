@@ -21,7 +21,7 @@ class AuthHelper
         $token = Encoder::encode($user_email.';'.$expired_time, env('APP_SECRET_KEY'));
         
         // Include the necessary parts of the pluggable.php file
-        require_once '/home/u972394743/domains//muallem.id/public_html/wp-includes/class-phpass.php';
+        require_once '/home/u972394743/domains/muallem.id/public_html/wp-includes/class-phpass.php';
 
         try {
             // Your login logic here
