@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function index(Request $request)
     {
-        return DB::table('coba')->get();
+        return DB::table('wp_users')->get();
         return view('auth.login');
     }
     
