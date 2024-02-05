@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Dashboard\ChangePassword;
+namespace App\Http\Livewire\Dashboard\ChangePassword;
 
 use App\Models\User;
 use Livewire\Component;

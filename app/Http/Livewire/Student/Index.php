@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Student;
+namespace App\Http\Livewire\Student;
 
 use App\Models\Judul;
 use Livewire\Component;

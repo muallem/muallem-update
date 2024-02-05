@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Component;
+namespace App\Http\Livewire\Component;
 
 
 use App\Models\Judul;

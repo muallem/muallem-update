@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Dashboard\Materi;
+namespace App\Http\Livewire\Dashboard\Materi;
 
 use App\Models\Judul;
 use App\Models\Materi;

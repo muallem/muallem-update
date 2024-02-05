@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Lesson;
+namespace App\Http\Livewire\Lesson;
 
 use App\Models\Judul;
 use App\Models\Materi;

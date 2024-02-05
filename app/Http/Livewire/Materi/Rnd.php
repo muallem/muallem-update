@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Materi;
+namespace App\Http\Livewire\Materi;
 
 use App\Models\Materi;
 use Livewire\Component;

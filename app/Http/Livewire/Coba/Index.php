@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Coba;
+namespace App\Http\Livewire\Coba;
 
 use App\Models\Judul;
 use Livewire\Component;
